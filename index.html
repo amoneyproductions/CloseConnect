@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloseConnect</title>
+  <meta name="description" content="Every campus resource worth knowing, in one calm place." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard / screen-reader users -->
+  <a class="skip-link" href="#results">Skip to resources</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <span class="brand-logo" id="brandLogo">CloseConnect</span>
+        <span class="brand-school" id="brandSchool"></span>
+      </div>
+      <h1 class="hero-title" id="heroTagline"></h1>
+      <p class="hero-intro" id="heroIntro"></p>
+    </div>
+  </header>
+
+  <main class="container" id="app">
+    <!-- Tabs -->
+    <nav class="tabs" id="tabs" role="tablist" aria-label="Who the resources are for">
+      <button class="tab is-active" role="tab" data-audience="undergrad" aria-selected="true">Undergrad</button>
+      <button class="tab" role="tab" data-audience="grad_alumni" aria-selected="false">Grad / Alumni</button>
+      <button class="tab" role="tab" data-audience="both" aria-selected="false">Both</button>
+    </nav>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input
+          id="search"
+          class="search"
+          type="search"
+          placeholder="Search resources…"
+          aria-label="Search resources by keyword"
+          autocomplete="off"
+        />
+      </div>
+      <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
+    </div>
+
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+    <!-- Results -->
+    <section id="results" class="results" aria-label="Resources"></section>
+
+    <!-- Empty state -->
+    <div id="emptyState" class="empty-state" hidden>
+      <p class="empty-title">Nothing matches that yet.</p>
+      <p class="empty-sub">Try a different keyword or clear the filters.</p>
+      <button class="btn-clear" id="clearAll">Clear filters</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footerNote"></p>
+    </div>
+  </footer>
+
+  <!-- Data first (school config + resources), then the app logic -->
+  <script src="data/school.js"></script>
+  <script src="data/resources.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

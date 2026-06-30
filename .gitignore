@@ -1,0 +1,11 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Dependencies (none needed to run the site, but just in case)
+node_modules/
+
+# Local env files
+.env
+.env.*

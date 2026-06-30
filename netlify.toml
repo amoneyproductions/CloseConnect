@@ -1,0 +1,10 @@
+# Netlify configuration for CloseConnect
+# This is a plain static site — no build step, no framework.
+# Netlify just serves the files in this folder as-is.
+
+[build]
+  # Nothing to compile; publish the project root.
+  publish = "."
+  command = ""
+
+# Friendly 404s could go here later. For now, defaults are fine.
