@@ -168,6 +168,12 @@ body {
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
+.search-hint {
+  margin: -6px 0 16px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
 .filter-chips {
   display: flex;
   flex-wrap: wrap;
@@ -248,6 +254,25 @@ body {
   border-radius: 999px;
   white-space: nowrap;
 }
+.card-why {
+  margin: 0 0 12px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.why-label { font-weight: 600; color: var(--primary); }
+.why-chip {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+}
+
 .card-desc {
   margin: 0 0 14px;
   color: var(--muted);

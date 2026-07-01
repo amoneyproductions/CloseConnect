@@ -16,6 +16,9 @@
      school      – which school it belongs to (matches CC_SCHOOL.id)
      location    – (optional) building/room, shown as a small note
      verify      – (optional) true if the link/name still needs a final check
+     keywords    – (optional) extra words to help the "ask" search match a
+                   student's question (concepts not already in the description,
+                   e.g. "team up", "interdisciplinary", "computer science")
 
    Category tags in use: Career, Entrepreneurship, Competitions, Academic Support,
                          Wellness, Engineering & CS, Alumni, General
@@ -344,6 +347,7 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "A global competition for student social entrepreneurs building ventures around the UN Sustainable Development Goals. Hosted by USD’s Kroc School, with funding and mentorship on the line.",
+    keywords: ["interdisciplinary", "team up", "connect", "competition", "pitch", "startup", "social impact", "global"],
     link: "https://www.sandiego.edu/cpc/gsic/",
     school: "USD"
   },
@@ -353,6 +357,7 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "A tech-innovation competition open to any USD student team with a technology component — any major, any program. Build a team and compete for the Starpoint Award.",
+    keywords: ["interdisciplinary", "team up", "engineering", "computer science", "technology", "competition", "startup", "cross-major"],
     link: "https://www.sandiego.edu/engineering/student-innovation/etrack-entrepreneurship-program/tech-competition/",
     school: "USD"
   },
@@ -382,6 +387,7 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "USD’s home for social innovation — changemaker courses, designated clubs, scholarships, and the fall Changemaker Challenge. A great place to find teammates for impact projects.",
+    keywords: ["team up", "connect", "interdisciplinary", "social impact", "community", "competition", "collaborate"],
     link: "https://www.sandiego.edu/changemaker/students/",
     school: "USD"
   },
@@ -391,6 +397,7 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Prototyping labs and makerspaces — including Donald’s Garage and the Belanich Engineering Center — plus the E-Track program, where students build and test real projects together.",
+    keywords: ["engineering", "computer science", "build", "prototype", "team up", "technology", "project", "collaborate"],
     link: "https://www.sandiego.edu/engineering/student-innovation/",
     school: "USD"
   },
