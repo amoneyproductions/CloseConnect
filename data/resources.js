@@ -17,7 +17,7 @@
      location    – (optional) building/room, shown as a small note
      verify      – (optional) true if the link/name still needs a final check
 
-   Category tags in use: Career, Entrepreneurship, Academic Support,
+   Category tags in use: Career, Entrepreneurship, Competitions, Academic Support,
                          Wellness, Engineering & CS, Alumni, General
    ============================================================================ */
 
@@ -100,7 +100,7 @@ window.CC_RESOURCES = [
   /* ------------------------ ENTREPRENEURSHIP ------------------------ */
   {
     name: "Fowler Business Concept Challenge",
-    category: "Entrepreneurship",
+    category: "Competitions",
     audiences: ["undergrad", "graduate"],
     description:
       "An annual pitch competition — open to all majors, undergrad and grad — where students pitch business ideas to real investors for scholarship money.",
@@ -118,14 +118,13 @@ window.CC_RESOURCES = [
     verify: true
   },
   {
-    name: "Brink Consulting",
+    name: "The Brink SBDC",
     category: "Entrepreneurship",
-    audiences: ["undergrad"],
+    audiences: ["undergrad", "graduate"],
     description:
-      "Hands-on consulting and venture support for student founders. (Name and current link still being confirmed — check before relying on it.)",
-    link: "https://www.sandiego.edu/business/centers/entrepreneurship/",
-    school: "USD",
-    verify: true
+      "USD’s innovation hub and San Diego’s top-ranked accelerator. Programs like the Lean Essential Sprint help aspiring founders test and launch their ideas with real mentorship.",
+    link: "https://www.sandiego.edu/sbdc/",
+    school: "USD"
   },
   {
     name: "Student International Business Council",
@@ -325,6 +324,131 @@ window.CC_RESOURCES = [
     description:
       "The full directory of USD student organizations across every interest. The fastest way to find your community.",
     link: "https://www.sandiego.edu/involvement/directory/",
+    school: "USD"
+  },
+
+  /* --------------------------- COMPETITIONS --------------------------- */
+  {
+    name: "V2 (Venture Vetting) Pitch Competition",
+    category: "Competitions",
+    audiences: ["undergrad", "graduate"],
+    description:
+      "USD’s campus-wide pitch competition. Hundreds join the V2 Learning Series, and 10 finalists pitch real angel investors for up to $25,000 in seed money.",
+    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship/",
+    school: "USD",
+    verify: true
+  },
+  {
+    name: "Fowler Global Social Innovation Challenge (GSIC)",
+    category: "Competitions",
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A global competition for student social entrepreneurs building ventures around the UN Sustainable Development Goals. Hosted by USD’s Kroc School, with funding and mentorship on the line.",
+    link: "https://www.sandiego.edu/cpc/gsic/",
+    school: "USD"
+  },
+  {
+    name: "Torero Entrepreneurship Challenge (TECh)",
+    category: "Competitions",
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A tech-innovation competition open to any USD student team with a technology component — any major, any program. Build a team and compete for the Starpoint Award.",
+    link: "https://www.sandiego.edu/engineering/student-innovation/etrack-entrepreneurship-program/tech-competition/",
+    school: "USD"
+  },
+  {
+    name: "Baja SAE — Torero Racing",
+    category: "Competitions",
+    audiences: ["undergrad"],
+    description:
+      "Design, build, and race an off-road vehicle with USD’s Torero Racing team, competing against schools worldwide. Hands-on engineering teamwork all year.",
+    link: "https://www.sandiego.edu/engineering/student-innovation/sae-baja/",
+    school: "USD"
+  },
+
+  /* ------------------ BUILD / TEAM-UP / INNOVATION HUBS ------------------ */
+  {
+    name: "Entrepreneurship & Innovation Catalyzer",
+    category: "Entrepreneurship",
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Home base for student founders in the Knauss Center — a startup incubator and makerspace that runs the V2 competition, the Torero Ventures Lab, and more.",
+    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship/",
+    school: "USD"
+  },
+  {
+    name: "Changemaker Hub",
+    category: "Entrepreneurship",
+    audiences: ["undergrad", "graduate"],
+    description:
+      "USD’s home for social innovation — changemaker courses, designated clubs, scholarships, and the fall Changemaker Challenge. A great place to find teammates for impact projects.",
+    link: "https://www.sandiego.edu/changemaker/students/",
+    school: "USD"
+  },
+  {
+    name: "Engineering Student Innovation & Makerspaces",
+    category: "Engineering & CS",
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Prototyping labs and makerspaces — including Donald’s Garage and the Belanich Engineering Center — plus the E-Track program, where students build and test real projects together.",
+    link: "https://www.sandiego.edu/engineering/student-innovation/",
+    school: "USD"
+  },
+
+  /* ----------------------- GRADUATE-SPECIFIC ----------------------- */
+  {
+    name: "Graduate Student Life",
+    category: "General",
+    audiences: ["graduate"],
+    description:
+      "The office and community hub for grad and law students — programs, events, and advocacy, based at the Graduate & Law Student Commons.",
+    link: "https://www.sandiego.edu/grad-life/",
+    school: "USD",
+    location: "Graduate & Law Student Commons, SLP 401"
+  },
+  {
+    name: "Graduate Academic Support",
+    category: "Academic Support",
+    audiences: ["graduate"],
+    description:
+      "Academic support and referrals gathered for grad students in one place — from the Graduate & Law Student Handbook to accommodations, tutoring, and food assistance.",
+    link: "https://www.sandiego.edu/grad-life/student-services/academic-support.php",
+    school: "USD"
+  },
+  {
+    name: "SOLES Graduate Writing Center",
+    category: "Academic Support",
+    audiences: ["graduate"],
+    description:
+      "Free writing coaching, workshops, and one-on-one sessions built for grad students — online or on campus, so busy schedules aren’t a barrier.",
+    link: "https://www.sandiego.edu/soles/students-and-alumni/current-students/writing-center.php",
+    school: "USD"
+  },
+  {
+    name: "Law Career & Professional Development",
+    category: "Career",
+    audiences: ["graduate"],
+    description:
+      "Career coaching, interview prep, and the exclusive #HireUSDLaw job board for USD School of Law students.",
+    link: "https://www.sandiego.edu/law/careers/students/services/",
+    school: "USD"
+  },
+  {
+    name: "Law Academic Success & Bar Programs",
+    category: "Academic Support",
+    audiences: ["graduate"],
+    description:
+      "Bar-exam prep strategy sessions, the 1L Fellows mentorship program, and academic improvement plans for USD law students.",
+    link: "https://www.sandiego.edu/law/student-affairs/bar-programs/",
+    school: "USD"
+  },
+  {
+    name: "Law Student Support & Wellness",
+    category: "Wellness",
+    audiences: ["graduate"],
+    description:
+      "Wellness programs, accommodations, and parental resources tailored to the realities of law school, through USD Law Student Affairs.",
+    link: "https://www.sandiego.edu/law/student-affairs/student-support/",
     school: "USD"
   }
 ];

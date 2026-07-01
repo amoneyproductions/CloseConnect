@@ -36,9 +36,9 @@ Open `data/resources.js` and copy one block:
 ```js
 {
   name: "Resource name",
-  category: "Career",          // Career, Entrepreneurship, Academic Support,
+  category: "Career",          // Career, Entrepreneurship, Competitions, Academic Support,
                                // Wellness, Engineering & CS, Alumni, General
-  audience: "both",            // "undergrad" | "grad_alumni" | "both"
+  audiences: ["undergrad"],    // any of: "undergrad" | "graduate" | "alumni"
   description: "Short, plain-language description.",
   link: "https://…",
   school: "USD",
@@ -47,7 +47,8 @@ Open `data/resources.js` and copy one block:
 }
 ```
 
-- `audience` controls which of the three tabs it appears under.
+- `audiences` controls which tabs it appears under (All / Undergrad / Graduate / Alumni).
+  List every group it serves — e.g. `["undergrad", "graduate"]`.
 - `category` controls the filter chips (new categories appear automatically).
 
 ## Launch a new school
@@ -63,10 +64,11 @@ That's it — no other files change.
 A few entries are marked with `verify: true` (they show a small "Verify link" flag on the
 card). These came from notes that couldn't be fully confirmed against USD's public pages:
 
-- **Brink Consulting** — confirm the current name and link.
 - **Entrepreneurship Club** — confirm the direct org page.
 - **Logic Center** — confirm it has its own page (currently points to the CAS tutoring hub).
 - **Alumni Email & Google Workspace** — confirm the alumni-specific policy with ITS.
+- **V2 Pitch Competition** — swap in the live V2 registration/landing page when it opens
+  (currently points to the Entrepreneurship Catalyzer hub).
 
 ## Out of scope for Phase 1 (coming later)
 
