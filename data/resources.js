@@ -7,7 +7,10 @@
    Each resource has:
      name        – what it's called
      category    – one tag from the list below (drives the category filter)
-     audience    – "undergrad" | "grad_alumni" | "both"  (drives the three tabs)
+     audiences   – WHO it's for: an array of any of
+                     "undergrad" | "graduate" | "alumni"
+                   A resource shows under a tab if its list includes that group.
+                   Something for everyone lists all three.
      description – short, plain-language, student-to-student
      link        – the URL to access it
      school      – which school it belongs to (matches CC_SCHOOL.id)
@@ -23,7 +26,7 @@ window.CC_RESOURCES = [
   {
     name: "Handshake",
     category: "Career",
-    audience: "both",
+    audiences: ["undergrad", "graduate", "alumni"],
     description:
       "USD’s main job and internship platform. Search roles, book career appointments, and find on-campus interviews — log in with your USD email.",
     link: "https://www.sandiego.edu/careers/handshake/",
@@ -32,7 +35,7 @@ window.CC_RESOURCES = [
   {
     name: "Career Development Center",
     category: "Career",
-    audience: "both",
+    audiences: ["undergrad", "graduate", "alumni"],
     description:
       "The hub for resume help, career advising, job-search support, and employer connections. Start here if you’re not sure where to start.",
     link: "https://www.sandiego.edu/careers/",
@@ -41,7 +44,7 @@ window.CC_RESOURCES = [
   {
     name: "Knauss Business Student Success Center",
     category: "Career",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Academic and career advising built for business majors — peer advisors, course planning, and business career services.",
     link: "https://www.sandiego.edu/business/student-experience/business-student-success-center/",
@@ -51,7 +54,7 @@ window.CC_RESOURCES = [
   {
     name: "Engineering Career Readiness (CONNECT)",
     category: "Career",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "A dedicated career liaison and the CONNECT program for engineering and CS students to build professional skills before graduation.",
     link: "https://www.sandiego.edu/engineering/student-resources/career-readiness/",
@@ -60,7 +63,7 @@ window.CC_RESOURCES = [
   {
     name: "Pre-Health Advising",
     category: "Career",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Specialized advising for any major heading toward med school, nursing, or another health profession. Keeps you on track for the requirements.",
     link: "https://www.sandiego.edu/cas/student-resources/advising/pre-health/",
@@ -69,7 +72,7 @@ window.CC_RESOURCES = [
   {
     name: "Pre-Law Advising",
     category: "Career",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Guidance for students planning on law school — course choices, the application timeline, and the LSAT.",
     link: "https://www.sandiego.edu/cas/student-resources/advising/pre-law.php",
@@ -78,16 +81,16 @@ window.CC_RESOURCES = [
   {
     name: "Torero Hub",
     category: "Career",
-    audience: "undergrad",
+    audiences: ["undergrad", "graduate"],
     description:
-      "Your go-to for non-academic questions like financial aid, billing, and registration. Every student gets a Torero Connect Counselor (TCC) to help navigate it.",
+      "Your go-to for non-academic questions like financial aid, billing, and registration. Serves undergrad and grad students, with a Torero Connect Counselor to help you navigate it.",
     link: "https://www.sandiego.edu/torero-hub/",
     school: "USD"
   },
   {
     name: "Student Employment Center",
     category: "Career",
-    audience: "undergrad",
+    audiences: ["undergrad", "graduate"],
     description:
       "On- and off-campus jobs plus Federal Work-Study info. A solid way to earn while you’re enrolled.",
     link: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/",
@@ -98,7 +101,7 @@ window.CC_RESOURCES = [
   {
     name: "Fowler Business Concept Challenge",
     category: "Entrepreneurship",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "An annual pitch competition — open to all majors, undergrad and grad — where students pitch business ideas to real investors for scholarship money.",
     link: "https://www.sandiego.edu/business/centers/entrepreneurship/fowler-business-concept-challenge.php",
@@ -107,7 +110,7 @@ window.CC_RESOURCES = [
   {
     name: "Entrepreneurship Club",
     category: "Entrepreneurship",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "A student org for anyone curious about starting things — events, speakers, and people who like building. Find it in the business student org directory.",
     link: "https://www.sandiego.edu/business/student-experience/student-organizations/",
@@ -117,7 +120,7 @@ window.CC_RESOURCES = [
   {
     name: "Brink Consulting",
     category: "Entrepreneurship",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Hands-on consulting and venture support for student founders. (Name and current link still being confirmed — check before relying on it.)",
     link: "https://www.sandiego.edu/business/centers/entrepreneurship/",
@@ -127,7 +130,7 @@ window.CC_RESOURCES = [
   {
     name: "Student International Business Council",
     category: "Entrepreneurship",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Real international business consulting projects for credit and experience — great résumé material and a tight community.",
     link: "https://www.sandiego.edu/business/student-experience/student-organizations/student-international-business-council.php",
@@ -138,9 +141,9 @@ window.CC_RESOURCES = [
   {
     name: "Writing Center",
     category: "Academic Support",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
-      "Free peer tutoring for any kind of academic writing, any major. Bring an essay at any stage — even just an outline.",
+      "Free peer tutoring for any kind of academic writing, any major and any level. Bring an essay at any stage — even just an outline.",
     link: "https://www.sandiego.edu/cas/student-resources/tutoring-and-centers.php",
     school: "USD",
     location: "Founders Hall 190B"
@@ -148,7 +151,7 @@ window.CC_RESOURCES = [
   {
     name: "Math Center",
     category: "Academic Support",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Drop-in peer tutoring for lower-level math courses. No appointment needed — just show up when you’re stuck.",
     link: "https://www.sandiego.edu/cas/math/tutoring.php",
@@ -158,7 +161,7 @@ window.CC_RESOURCES = [
   {
     name: "Logic Center",
     category: "Academic Support",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Peer tutoring specifically for logic courses. A lifesaver if symbolic logic isn’t clicking.",
     link: "https://www.sandiego.edu/cas/student-resources/tutoring-and-centers.php",
@@ -169,7 +172,7 @@ window.CC_RESOURCES = [
   {
     name: "Center for Student Success",
     category: "Academic Support",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Academic support for 1st- and 2nd-year students — peer advising, study strategies, and help if you land on academic probation.",
     link: "https://www.sandiego.edu/center-student-success/",
@@ -179,7 +182,7 @@ window.CC_RESOURCES = [
   {
     name: "TRiO Student Support Services",
     category: "Academic Support",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "A federally funded program with extra academic support, advising, and mentoring for eligible first-gen, low-income, or disabled students.",
     link: "https://www.sandiego.edu/student-support-services/",
@@ -191,7 +194,7 @@ window.CC_RESOURCES = [
   {
     name: "Disability & Learning Difference Resource Center (DLDRC)",
     category: "Wellness",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "Accommodations and support for students with disabilities or learning differences. They handle documentation and coordinate with your professors.",
     link: "https://www.sandiego.edu/disability/",
@@ -200,7 +203,7 @@ window.CC_RESOURCES = [
   {
     name: "Counseling Center",
     category: "Wellness",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "Free, confidential counseling for USD students — individual and group sessions, plus walk-in hours. No cost to you.",
     link: "https://www.sandiego.edu/counseling-center/",
@@ -210,7 +213,7 @@ window.CC_RESOURCES = [
   {
     name: "Center for Health & Wellness Promotion",
     category: "Wellness",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "Wellness education and substance-use support — programs, prevention, and one-on-one help to keep life balanced.",
     link: "https://www.sandiego.edu/health-wellness/",
@@ -220,7 +223,7 @@ window.CC_RESOURCES = [
   {
     name: "Student Health Center",
     category: "Wellness",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "On-campus medical care for everyday illness, checkups, and more. Close, convenient, and built for students.",
     link: "https://www.sandiego.edu/health-center/",
@@ -232,7 +235,7 @@ window.CC_RESOURCES = [
   {
     name: "Engineering & CS Student Organizations",
     category: "Engineering & CS",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "ACM, SHPE, the Cybersecurity Student Association, Theta Tau, SAE, and more — find your people and build projects outside of class.",
     link: "https://www.sandiego.edu/involvement/directory/",
@@ -241,7 +244,7 @@ window.CC_RESOURCES = [
   {
     name: "Engineering Academic Advising",
     category: "Engineering & CS",
-    audience: "undergrad",
+    audiences: ["undergrad"],
     description:
       "Every engineering student is assigned a faculty advisor to help with course planning and staying on track to graduate.",
     link: "https://www.sandiego.edu/engineering/student-resources/advising.php",
@@ -252,7 +255,7 @@ window.CC_RESOURCES = [
   {
     name: "USD Alumni Association",
     category: "Alumni",
-    audience: "grad_alumni",
+    audiences: ["alumni"],
     description:
       "Automatic lifetime membership for every USD grad — networking events, 23+ regional Torero Clubs, Homecoming, and alumni scholarships.",
     link: "https://www.sandiego.edu/alumni/",
@@ -261,7 +264,7 @@ window.CC_RESOURCES = [
   {
     name: "Alumni Career Development Benefits",
     category: "Alumni",
-    audience: "grad_alumni",
+    audiences: ["alumni"],
     description:
       "Grads keep free, lifelong access to career coaching, USD career events, and the Torero mentor network through the Career Development Center.",
     link: "https://www.sandiego.edu/alumni/benefits/careers/",
@@ -270,7 +273,7 @@ window.CC_RESOURCES = [
   {
     name: "Alumni Email & Google Workspace",
     category: "Alumni",
-    audience: "grad_alumni",
+    audiences: ["alumni"],
     description:
       "Keep your USD email and Google tools after graduation. (Exact alumni policy is worth confirming with ITS.)",
     link: "https://www.sandiego.edu/its/support/software/gsuite/",
@@ -280,7 +283,7 @@ window.CC_RESOURCES = [
   {
     name: "Alumni Library Access",
     category: "Alumni",
-    audience: "grad_alumni",
+    audiences: ["alumni"],
     description:
       "Borrow from Copley Library with your alumni card and tap into databases like JSTOR and HeinOnline through the Torero Network.",
     link: "https://www.sandiego.edu/library/services/alumni.php",
@@ -289,7 +292,7 @@ window.CC_RESOURCES = [
   {
     name: "Alumni Discounts & Perks",
     category: "Alumni",
-    audience: "grad_alumni",
+    audiences: ["alumni"],
     description:
       "Member savings — Bartell Hotels (15% off), the Columbia Sportswear employee store, and the USD Alumni Insurance Program.",
     link: "https://www.sandiego.edu/alumni/benefits/",
@@ -300,7 +303,7 @@ window.CC_RESOURCES = [
   {
     name: "USD Knowledge Base",
     category: "General",
-    audience: "both",
+    audiences: ["undergrad", "graduate", "alumni"],
     description:
       "A searchable FAQ for almost any USD question — tech help, accounts, services. When in doubt, search here first.",
     link: "https://usdkb.sandiego.edu/",
@@ -309,7 +312,7 @@ window.CC_RESOURCES = [
   {
     name: "One Stop Student Center",
     category: "General",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "Financial aid, the registrar, and student accounts in one place — now part of the Torero Hub.",
     link: "https://www.sandiego.edu/torero-hub/",
@@ -318,7 +321,7 @@ window.CC_RESOURCES = [
   {
     name: "Clubs, Orgs & Learning Communities",
     category: "General",
-    audience: "both",
+    audiences: ["undergrad", "graduate"],
     description:
       "The full directory of USD student organizations across every interest. The fastest way to find your community.",
     link: "https://www.sandiego.edu/involvement/directory/",

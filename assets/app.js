@@ -19,7 +19,7 @@
 
   // --- App state ---
   var state = {
-    audience: "undergrad", // matches the default active tab
+    audience: "all", // matches the default active tab ("all" shows everything)
     category: "all",
     query: ""
   };
@@ -155,7 +155,10 @@
      Filtering + rendering
      ------------------------------------------------------------------------- */
   function matches(r) {
-    if (r.audience !== state.audience) return false;
+    // A resource lists every group it serves in `audiences`.
+    // (Falls back to a legacy single `audience` value if present.)
+    var auds = r.audiences || (r.audience ? [r.audience] : []);
+    if (state.audience !== "all" && auds.indexOf(state.audience) === -1) return false;
     if (state.category !== "all" && r.category !== state.category) return false;
     if (state.query) {
       var hay = (r.name + " " + r.description + " " + r.category).toLowerCase();
