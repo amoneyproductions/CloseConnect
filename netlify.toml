@@ -7,4 +7,7 @@
   publish = "."
   command = ""
 
-# Friendly 404s could go here later. For now, defaults are fine.
+# Serverless functions (the Claude AI advisor lives here).
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

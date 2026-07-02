@@ -168,10 +168,95 @@ body {
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
+/* Search row: input + Ask Advisor button */
+.search-row {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+  margin-bottom: 14px;
+}
+.search-row .search-wrap {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.ask-btn {
+  flex: none;
+  border: 0;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0 20px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: filter 0.15s, transform 0.05s;
+}
+.ask-btn:hover { filter: brightness(1.06); }
+.ask-btn:active { transform: translateY(1px); }
+.ask-btn:disabled { opacity: 0.55; cursor: default; }
+.ask-btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
 .search-hint {
-  margin: -6px 0 16px;
+  margin: -4px 0 16px;
   color: var(--muted);
   font-size: 0.86rem;
+}
+.search-hint strong { color: var(--accent); font-weight: 700; }
+
+/* AI advisor answer panel */
+.advisor {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--accent-soft) 0%, var(--card) 100%);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin: 0 0 20px;
+  box-shadow: var(--shadow);
+}
+.advisor-head { margin-bottom: 8px; }
+.advisor-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 4px 11px;
+  border-radius: 999px;
+}
+.advisor-badge--muted { background: var(--muted); }
+.advisor-answer {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+.advisor-note { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.advisor-loading {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+.advisor-loading::after {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  text-align: left;
+  animation: cc-dots 1.2s steps(4, end) infinite;
+}
+@keyframes cc-dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+}
+
+@media (max-width: 520px) {
+  .search-row { flex-wrap: wrap; }
+  .ask-btn { width: 100%; padding: 12px 20px; }
 }
 
 .filter-chips {

@@ -115,8 +115,26 @@
     results: document.getElementById("results"),
     resultCount: document.getElementById("resultCount"),
     emptyState: document.getElementById("emptyState"),
-    clearAll: document.getElementById("clearAll")
+    clearAll: document.getElementById("clearAll"),
+    askAi: document.getElementById("askAi"),
+    advisor: document.getElementById("advisor")
   };
+
+  // True while AI advisor results are on screen (so typing/chips can reset it).
+  var aiMode = false;
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+  function hideAdvisor() {
+    els.advisor.hidden = true;
+    els.advisor.innerHTML = "";
+  }
+  function exitAiMode() {
+    if (aiMode) { aiMode = false; hideAdvisor(); }
+  }
 
   /* --------------------------------------------------------------------------- */
   function applySchool() {
@@ -183,6 +201,7 @@
     b.setAttribute("aria-pressed", value === state.category ? "true" : "false");
     b.addEventListener("click", function () {
       state.category = value;
+      exitAiMode();
       syncChips();
       render();
     });
@@ -209,6 +228,7 @@
     els.tabs.addEventListener("click", function (e) {
       var tab = e.target.closest(".tab");
       if (!tab) return;
+      exitAiMode();
       setActiveTab(tab.getAttribute("data-audience"));
       render();
     });
@@ -218,19 +238,118 @@
   function wireSearch() {
     els.search.addEventListener("input", function () {
       state.query = els.search.value.trim();
+      exitAiMode(); // typing returns to instant concept filtering
       // Typing a question searches across everyone — reset the tab to "All"
       // so results aren't hidden by the current audience filter.
       if (state.query && state.audience !== "all") setActiveTab("all");
       render();
     });
+    els.search.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); runAdvisor(); }
+    });
+    els.askAi.addEventListener("click", runAdvisor);
     els.clearAll.addEventListener("click", function () {
       state.query = "";
       state.category = "all";
       els.search.value = "";
+      exitAiMode();
       syncChips();
       render();
       els.search.focus();
     });
+  }
+
+  /* ---------------------------------------------------------------------------
+     AI advisor (calls the Claude-backed serverless function)
+     ------------------------------------------------------------------------- */
+  function runAdvisor() {
+    var q = els.search.value.trim();
+    if (q.length < 6) { exitAiMode(); render(); return; } // too short — just filter
+
+    aiMode = true;
+    setActiveTab("all");
+    els.emptyState.hidden = true;
+    els.results.innerHTML = "";
+    els.resultCount.textContent = "";
+    els.askAi.disabled = true;
+    els.advisor.hidden = false;
+    els.advisor.innerHTML =
+      '<div class="advisor-head"><span class="advisor-badge">CloseConnect Advisor</span></div>' +
+      '<p class="advisor-loading">Thinking through your question</p>';
+
+    var payload = {
+      question: q,
+      resources: allResources.map(function (r) {
+        return {
+          name: r.name,
+          categories: categoriesOf(r),
+          audiences: audiencesOf(r),
+          description: r.description
+        };
+      })
+    };
+
+    fetch("/.netlify/functions/advisor", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error("status " + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        els.askAi.disabled = false;
+        renderAdvisor(data, q);
+      })
+      .catch(function () {
+        // Never leave the student stranded — fall back to the concept matcher.
+        els.askAi.disabled = false;
+        aiMode = false;
+        els.advisor.hidden = false;
+        els.advisor.innerHTML =
+          '<div class="advisor-head"><span class="advisor-badge advisor-badge--muted">Advisor unavailable</span></div>' +
+          '<p class="advisor-note">Couldn’t reach the advisor just now — here are keyword matches instead.</p>';
+        state.query = q;
+        render();
+      });
+  }
+
+  function renderAdvisor(data, q) {
+    var recs = (data && Array.isArray(data.recommendations)) ? data.recommendations : [];
+    var byName = {};
+    allResources.forEach(function (r) { byName[r.name.toLowerCase()] = r; });
+
+    var matched = [];
+    recs.forEach(function (rec) {
+      var r = byName[String(rec.name || "").toLowerCase()];
+      if (r && matched.indexOf(r) === -1) matched.push({ r: r, reason: rec.reason });
+    });
+
+    var html = '<div class="advisor-head"><span class="advisor-badge">CloseConnect Advisor</span></div>';
+    if (data && data.answer) html += '<p class="advisor-answer">' + escapeHtml(data.answer) + "</p>";
+    els.advisor.hidden = false;
+    els.advisor.innerHTML = html;
+
+    els.results.innerHTML = "";
+    if (!matched.length) {
+      // AI gave prose but no matchable picks — show concept matches underneath.
+      state.query = q;
+      var res = currentResults();
+      els.resultCount.textContent = res.items.length
+        ? "Related resources — " + res.items.length : "";
+      var f0 = document.createDocumentFragment();
+      res.items.forEach(function (item) { f0.appendChild(makeCard(item.r, item.reasons)); });
+      els.results.appendChild(f0);
+      return;
+    }
+
+    els.emptyState.hidden = true;
+    els.resultCount.textContent =
+      "Advisor picked " + matched.length + " resource" + (matched.length === 1 ? "" : "s");
+    var frag = document.createDocumentFragment();
+    matched.forEach(function (m) { frag.appendChild(makeCard(m.r, m.reason || "")); });
+    els.results.appendChild(frag);
   }
 
   /* ---------------------------------------------------------------------------
@@ -345,7 +464,7 @@
     els.results.appendChild(frag);
   }
 
-  function makeCard(r, reasons) {
+  function makeCard(r, why) {
     var card = document.createElement("article");
     card.className = "card";
 
@@ -371,15 +490,18 @@
       card.appendChild(tags);
     }
 
-    // "Why it fits" line (ask mode only)
-    if (reasons && reasons.length) {
-      var why = document.createElement("p");
-      why.className = "card-why";
-      why.innerHTML = '<span class="why-label">Why this fits:</span> ' +
-        reasons.map(function (x) {
-          return '<span class="why-chip">' + x + '</span>';
-        }).join(" ");
-      card.appendChild(why);
+    // "Why it fits" line — an AI sentence (string) or concept chips (array).
+    if (why) {
+      var whyEl = document.createElement("p");
+      whyEl.className = "card-why";
+      if (typeof why === "string") {
+        whyEl.innerHTML = '<span class="why-label">Why this fits:</span> ' + escapeHtml(why);
+        card.appendChild(whyEl);
+      } else if (why.length) {
+        whyEl.innerHTML = '<span class="why-label">Why this fits:</span> ' +
+          why.map(function (x) { return '<span class="why-chip">' + escapeHtml(x) + '</span>'; }).join(" ");
+        card.appendChild(whyEl);
+      }
     }
 
     var desc = document.createElement("p");

@@ -70,6 +70,31 @@ card). These came from notes that couldn't be fully confirmed against USD's publ
 - **V2 Pitch Competition** — swap in the live V2 registration/landing page when it opens
   (currently points to the Entrepreneurship Catalyzer hub).
 
+## AI advisor (Claude)
+
+The "Ask Advisor" button sends a student's question to a Claude model and returns a
+personalized answer plus recommended resources. It runs through a Netlify serverless
+function so the API key stays private.
+
+Files:
+- `netlify/functions/advisor.js` — the serverless function (calls Claude).
+- The `[functions]` block in `netlify.toml` tells Netlify where it lives.
+- `assets/app.js` wires the button; if the function is unreachable it silently falls
+  back to the free built-in concept search, so the site never breaks.
+
+**One-time setup (required for the advisor to work):**
+
+1. Get an Anthropic API key at https://console.anthropic.com (this is a paid API,
+   separate from a Claude.ai subscription; add a little billing credit).
+2. In Netlify: **Site configuration → Environment variables → Add a variable.**
+   Key: `ANTHROPIC_API_KEY`  ·  Value: your key.
+3. Redeploy (push any commit, or Netlify → Deploys → Trigger deploy).
+
+Cost is roughly a fraction of a cent to ~2¢ per question on the default fast model
+(`claude-haiku-4-5`). To change the model, edit `MODEL` at the top of
+`netlify/functions/advisor.js`. Until the key is set, the button falls back to the
+free concept search.
+
 ## Out of scope for Phase 1 (coming later)
 
 User accounts, posting questions/advice (the networking board), and alumni-to-student

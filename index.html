@@ -33,22 +33,28 @@
 
     <!-- Controls -->
     <div class="controls">
-      <div class="search-wrap">
-        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input
-          id="search"
-          class="search"
-          type="search"
-          placeholder="Ask anything — e.g. “sophomore marketing student with a website idea, want to team up with CS students”"
-          aria-label="Describe your situation and get matched to the best resources"
-          autocomplete="off"
-        />
+      <div class="search-row">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input
+            id="search"
+            class="search"
+            type="search"
+            placeholder="Ask anything — e.g. “sophomore marketing student with a website idea, want to team up with CS students”"
+            aria-label="Describe your situation and get matched to the best resources"
+            autocomplete="off"
+          />
+        </div>
+        <button id="askAi" class="ask-btn" type="button" aria-label="Ask the advisor">Ask&nbsp;Advisor</button>
       </div>
-      <p class="search-hint">Type a keyword, or describe your situation in a sentence — we’ll rank the resources that fit best.</p>
+      <p class="search-hint">Type a keyword to filter instantly, or describe your situation and press <strong>Ask Advisor</strong> for personalized recommendations.</p>
       <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
     </div>
 
     <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+    <!-- AI advisor answer (appears after Ask Advisor) -->
+    <div id="advisor" class="advisor" aria-live="polite" hidden></div>
 
     <!-- Results -->
     <section id="results" class="results" aria-label="Resources"></section>
