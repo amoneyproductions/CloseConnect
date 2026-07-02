@@ -365,7 +365,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Baja SAE — Torero Racing",
-    categories: ["Competitions", "Engineering & CS"],
+    categories: ["Competitions", "Engineering & CS", "Entrepreneurship"],
     audiences: ["undergrad"],
     description:
       "Design, build, and race an off-road vehicle with USD’s Torero Racing team, competing against schools worldwide. Hands-on engineering teamwork all year.",
