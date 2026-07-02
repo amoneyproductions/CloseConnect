@@ -6,7 +6,9 @@
 
    Each resource has:
      name        – what it's called
-     category    – one tag from the list below (drives the category filter)
+     categories  – one OR MORE tags from the list below (drives the filter chips).
+                   A resource can double-dip, e.g. ["Competitions", "Engineering & CS"].
+                   A single `category: "X"` string still works too.
      audiences   – WHO it's for: an array of any of
                      "undergrad" | "graduate" | "alumni"
                    A resource shows under a tab if its list includes that group.
@@ -46,7 +48,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Knauss Business Student Success Center",
-    category: "Career",
+    categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
     description:
       "Academic and career advising built for business majors — peer advisors, course planning, and business career services.",
@@ -56,7 +58,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Engineering Career Readiness (CONNECT)",
-    category: "Career",
+    categories: ["Career", "Engineering & CS"],
     audiences: ["undergrad"],
     description:
       "A dedicated career liaison and the CONNECT program for engineering and CS students to build professional skills before graduation.",
@@ -65,7 +67,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Pre-Health Advising",
-    category: "Career",
+    categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
     description:
       "Specialized advising for any major heading toward med school, nursing, or another health profession. Keeps you on track for the requirements.",
@@ -74,7 +76,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Pre-Law Advising",
-    category: "Career",
+    categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
     description:
       "Guidance for students planning on law school — course choices, the application timeline, and the LSAT.",
@@ -103,7 +105,7 @@ window.CC_RESOURCES = [
   /* ------------------------ ENTREPRENEURSHIP ------------------------ */
   {
     name: "Fowler Business Concept Challenge",
-    category: "Competitions",
+    categories: ["Competitions", "Entrepreneurship"],
     audiences: ["undergrad", "graduate"],
     description:
       "An annual pitch competition — open to all majors, undergrad and grad — where students pitch business ideas to real investors for scholarship money.",
@@ -195,7 +197,7 @@ window.CC_RESOURCES = [
   /* --------------------------- WELLNESS --------------------------- */
   {
     name: "Disability & Learning Difference Resource Center (DLDRC)",
-    category: "Wellness",
+    categories: ["Wellness", "Academic Support"],
     audiences: ["undergrad", "graduate"],
     description:
       "Accommodations and support for students with disabilities or learning differences. They handle documentation and coordinate with your professors.",
@@ -245,7 +247,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Engineering Academic Advising",
-    category: "Engineering & CS",
+    categories: ["Engineering & CS", "Academic Support"],
     audiences: ["undergrad"],
     description:
       "Every engineering student is assigned a faculty advisor to help with course planning and staying on track to graduate.",
@@ -333,7 +335,7 @@ window.CC_RESOURCES = [
   /* --------------------------- COMPETITIONS --------------------------- */
   {
     name: "V2 (Venture Vetting) Pitch Competition",
-    category: "Competitions",
+    categories: ["Competitions", "Entrepreneurship"],
     audiences: ["undergrad", "graduate"],
     description:
       "USD’s campus-wide pitch competition. Hundreds join the V2 Learning Series, and 10 finalists pitch real angel investors for up to $25,000 in seed money.",
@@ -343,7 +345,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Fowler Global Social Innovation Challenge (GSIC)",
-    category: "Competitions",
+    categories: ["Competitions", "Entrepreneurship"],
     audiences: ["undergrad", "graduate"],
     description:
       "A global competition for student social entrepreneurs building ventures around the UN Sustainable Development Goals. Hosted by USD’s Kroc School, with funding and mentorship on the line.",
@@ -353,7 +355,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Torero Entrepreneurship Challenge (TECh)",
-    category: "Competitions",
+    categories: ["Competitions", "Engineering & CS", "Entrepreneurship"],
     audiences: ["undergrad", "graduate"],
     description:
       "A tech-innovation competition open to any USD student team with a technology component — any major, any program. Build a team and compete for the Starpoint Award.",
@@ -363,7 +365,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Baja SAE — Torero Racing",
-    category: "Competitions",
+    categories: ["Competitions", "Engineering & CS"],
     audiences: ["undergrad"],
     description:
       "Design, build, and race an off-road vehicle with USD’s Torero Racing team, competing against schools worldwide. Hands-on engineering teamwork all year.",
@@ -393,7 +395,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Engineering Student Innovation & Makerspaces",
-    category: "Engineering & CS",
+    categories: ["Engineering & CS", "Entrepreneurship"],
     audiences: ["undergrad", "graduate"],
     description:
       "Prototyping labs and makerspaces — including Donald’s Garage and the Belanich Engineering Center — plus the E-Track program, where students build and test real projects together.",

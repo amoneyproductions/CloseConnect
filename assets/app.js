@@ -145,7 +145,7 @@
   function textOf(r) {
     if (!r.__text) {
       r.__text = (
-        r.name + " " + r.description + " " + r.category + " " +
+        r.name + " " + r.description + " " + categoriesOf(r).join(" ") + " " +
         ((r.keywords || []).join(" "))
       ).toLowerCase();
     }
@@ -154,12 +154,19 @@
   function audiencesOf(r) {
     return r.audiences || (r.audience ? [r.audience] : []);
   }
+  // A resource can belong to several categories. Supports a `categories` array
+  // or a legacy single `category` string.
+  function categoriesOf(r) {
+    return r.categories || (r.category ? [r.category] : []);
+  }
 
   /* ---- Category chips ---- */
   function buildCategoryFilters() {
     var cats = [];
     allResources.forEach(function (r) {
-      if (r.category && cats.indexOf(r.category) === -1) cats.push(r.category);
+      categoriesOf(r).forEach(function (cat) {
+        if (cat && cats.indexOf(cat) === -1) cats.push(cat);
+      });
     });
     cats.sort();
     var frag = document.createDocumentFragment();
@@ -258,9 +265,10 @@
       }
       if (hit) {
         score += 3;
-        if (CATEGORY_BOOST[concept.key] === r.category) score += 3;
+        var cats = categoriesOf(r);
+        if (cats.indexOf(CATEGORY_BOOST[concept.key]) !== -1) score += 3;
         if (concept.key === "team" &&
-            (r.category === "Competitions" || r.category === "Entrepreneurship")) score += 2;
+            (cats.indexOf("Competitions") !== -1 || cats.indexOf("Entrepreneurship") !== -1)) score += 2;
         if ((concept.key === "graduate" || concept.key === "law") &&
             audiencesOf(r).indexOf("graduate") !== -1) score += 2;
         if (concept.key === "alumni" && audiencesOf(r).indexOf("alumni") !== -1) score += 2;
@@ -286,11 +294,12 @@
       // Browse mode: filter by tab + category, sort by category then name.
       var list = allResources.filter(function (r) {
         if (state.audience !== "all" && audiencesOf(r).indexOf(state.audience) === -1) return false;
-        if (state.category !== "all" && r.category !== state.category) return false;
+        if (state.category !== "all" && categoriesOf(r).indexOf(state.category) === -1) return false;
         return true;
       });
       list.sort(function (a, b) {
-        if (a.category !== b.category) return a.category < b.category ? -1 : 1;
+        var ca = categoriesOf(a)[0] || "", cb = categoriesOf(b)[0] || "";
+        if (ca !== cb) return ca < cb ? -1 : 1;
         return a.name < b.name ? -1 : 1;
       });
       return { mode: "browse", items: list.map(function (r) { return { r: r, reasons: [] }; }) };
@@ -300,7 +309,7 @@
     var analysis = analyzeQuery(state.query);
     var scored = [];
     allResources.forEach(function (r) {
-      if (state.category !== "all" && r.category !== state.category) return;
+      if (state.category !== "all" && categoriesOf(r).indexOf(state.category) === -1) return;
       var s = scoreResource(r, analysis);
       // Require a real signal (a concept or a name/keyword hit), not one stray word.
       if (s.score >= 3) scored.push({ r: r, score: s.score, reasons: s.reasons });
@@ -345,12 +354,22 @@
     var name = document.createElement("h2");
     name.className = "card-name";
     name.textContent = r.name;
-    var tag = document.createElement("span");
-    tag.className = "card-tag";
-    tag.textContent = r.category;
     top.appendChild(name);
-    top.appendChild(tag);
     card.appendChild(top);
+
+    // Category tags — a resource can belong to more than one bucket.
+    var cats = categoriesOf(r);
+    if (cats.length) {
+      var tags = document.createElement("div");
+      tags.className = "card-tags";
+      cats.forEach(function (cat) {
+        var tag = document.createElement("span");
+        tag.className = "card-tag";
+        tag.textContent = cat;
+        tags.appendChild(tag);
+      });
+      card.appendChild(tags);
+    }
 
     // "Why it fits" line (ask mode only)
     if (reasons && reasons.length) {
