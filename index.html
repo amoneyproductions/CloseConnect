@@ -33,21 +33,21 @@
 
     <!-- Controls -->
     <div class="controls">
-      <div class="search-row">
-        <div class="search-wrap">
-          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <input
-            id="search"
-            class="search"
-            type="search"
-            placeholder="Ask anything — e.g. “sophomore marketing student with a website idea, want to team up with CS students”"
-            aria-label="Describe your situation and get matched to the best resources"
-            autocomplete="off"
-          />
-        </div>
-        <button id="askAi" class="ask-btn" type="button" aria-label="Ask the advisor">Ask&nbsp;Advisor</button>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input
+          id="search"
+          class="search"
+          type="search"
+          placeholder="Ask anything — e.g. “sophomore marketing student with a website idea, want to team up with CS students”"
+          aria-label="Describe your situation and get matched to the best resources"
+          autocomplete="off"
+        />
+        <button id="askAi" class="send-btn" type="button" aria-label="Ask the advisor" title="Ask the advisor">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
-      <p class="search-hint">Type a keyword to filter instantly, or describe your situation and press <strong>Ask Advisor</strong> for personalized recommendations.</p>
+      <p class="search-hint">Describe your situation and press <strong>Enter</strong> (or the arrow) — the advisor reads your question and finds the resources that fit.</p>
       <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
     </div>
 

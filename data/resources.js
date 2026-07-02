@@ -18,9 +18,11 @@
      school      – which school it belongs to (matches CC_SCHOOL.id)
      location    – (optional) building/room, shown as a small note
      verify      – (optional) true if the link/name still needs a final check
-     keywords    – (optional) extra words to help the "ask" search match a
-                   student's question (concepts not already in the description,
-                   e.g. "team up", "interdisciplinary", "computer science")
+     keywords    – (optional) extra words to help matching / the AI advisor
+     details     – (optional) a richer paragraph the AI can use and the card's
+                   "More info" expander shows, so students don't have to click out
+     links       – (optional) array of { label, url } secondary links shown in the
+                   expander (e.g. a signup page, a networking platform)
 
    Category tags in use: Career, Entrepreneurship, Competitions, Academic Support,
                          Wellness, Engineering & CS, Alumni, General
@@ -34,6 +36,8 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate", "alumni"],
     description:
       "USD’s main job and internship platform. Search roles, book career appointments, and find on-campus interviews — log in with your USD email.",
+    details:
+      "Beyond jobs and internships, Handshake is where you schedule career-counselor appointments, find career events and workshops, sign up for on-campus interviews, and get openings tailored to your major. Log in with your USD email via single sign-on. It connects USD students with 20,000+ employers.",
     link: "https://www.sandiego.edu/careers/handshake/",
     school: "USD"
   },
@@ -43,6 +47,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate", "alumni"],
     description:
       "The hub for resume help, career advising, job-search support, and employer connections. Start here if you’re not sure where to start.",
+    details:
+      "In Manchester Hall 101, open Monday–Friday 8:30 a.m.–5 p.m. Book a 1-on-1 appointment (in person or virtual) with a career counselor through Handshake, or use daily drop-in hours for quick questions. They help with resumes, cover letters, interview prep, the job/internship search, and career exploration, and they run the T.E.A.M. networking platform plus HireUSD events. Phone (619) 260-4654 · careers@sandiego.edu.",
+    links: [
+      { label: "Hours & drop-ins", url: "https://www.sandiego.edu/careers/about/hours.php" },
+      { label: "T.E.A.M. networking platform", url: "https://mentoring.sandiego.edu/" }
+    ],
     link: "https://www.sandiego.edu/careers/",
     school: "USD"
   },
@@ -109,6 +119,11 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "An annual pitch competition — open to all majors, undergrad and grad — where students pitch business ideas to real investors for scholarship money.",
+    details:
+      "Open to students from every school and major — all you need is a business idea. The top 16 teams compete for $45,000 in scholarships. It runs on an academic-year cycle: a kickoff session in September (with all submission details) and finals in early December. Learn more and register at sandiego.edu/fbcc.",
+    links: [
+      { label: "Fowler Business Concept Challenge (sandiego.edu/fbcc)", url: "https://www.sandiego.edu/fbcc" }
+    ],
     link: "https://www.sandiego.edu/business/centers/entrepreneurship/fowler-business-concept-challenge.php",
     school: "USD"
   },
@@ -201,6 +216,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Accommodations and support for students with disabilities or learning differences. They handle documentation and coordinate with your professors.",
+    details:
+      "For enrolled students with a documented disability or learning difference. To get set up: contact the office and submit documentation, then meet to arrange academic accommodations. They also provide disability-management support and coordinate with housing, parking, and public safety.",
+    links: [
+      { label: "Academic accommodations", url: "https://www.sandiego.edu/disability/services/academic-accommodations.php" },
+      { label: "Documentation guidelines", url: "https://www.sandiego.edu/disability/documentation/" }
+    ],
     link: "https://www.sandiego.edu/disability/",
     school: "USD"
   },
@@ -210,6 +231,11 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Free, confidential counseling for USD students — individual and group sessions, plus walk-in hours. No cost to you.",
+    details:
+      "Free and confidential for enrolled students — individual and group counseling, psychiatric consultation, and walk-in hours, all at no cost. When the office is closed, USD offers TimelyCare telehealth for after-hours support. In a crisis you can call or text 988 (Suicide & Crisis Lifeline) or text HOME to 741741. Front desk: (619) 260-4655.",
+    links: [
+      { label: "How to access services & hours", url: "https://www.sandiego.edu/counseling-center/services/contact-us-office-hours.php" }
+    ],
     link: "https://www.sandiego.edu/counseling-center/",
     school: "USD",
     location: "Serra Hall 300"
@@ -262,6 +288,13 @@ window.CC_RESOURCES = [
     audiences: ["alumni"],
     description:
       "Automatic lifetime membership for every USD grad — networking events, 23+ regional Torero Clubs, Homecoming, and alumni scholarships.",
+    details:
+      "Every USD graduate is automatically a lifetime member — no dues. The standout for networking is T.E.A.M. (Torero Employer and Alumni Mentors), USD's internal LinkedIn-style platform for connecting with alumni and students, flash mentoring (short, low-pressure sessions by phone, video, or in person), and job postings. It's integrated with LinkedIn so joining is quick. You also get a free membership card, Torero Clubs in 23+ regions, Homecoming, and alumni scholarships.",
+    links: [
+      { label: "T.E.A.M. networking & mentoring platform", url: "https://mentoring.sandiego.edu/" },
+      { label: "USD Alumni LinkedIn group", url: "https://www.linkedin.com/groups/43872/" },
+      { label: "Torero Network", url: "https://toreronetwork.sandiego.edu/" }
+    ],
     link: "https://www.sandiego.edu/alumni/",
     school: "USD"
   },
@@ -271,6 +304,12 @@ window.CC_RESOURCES = [
     audiences: ["alumni"],
     description:
       "Grads keep free, lifelong access to career coaching, USD career events, and the Torero mentor network through the Career Development Center.",
+    details:
+      "As an alum you keep free, lifelong career support through the Career Development Center: limited complimentary career coaching, admission to all USD career events and fairs, and membership in T.E.A.M. (Torero Employer and Alumni Mentors) for networking and mentoring with the wider Torero community.",
+    links: [
+      { label: "Alumni career services", url: "https://www.sandiego.edu/careers/alumni/services.php" },
+      { label: "T.E.A.M. platform", url: "https://mentoring.sandiego.edu/" }
+    ],
     link: "https://www.sandiego.edu/alumni/benefits/careers/",
     school: "USD"
   },
@@ -349,6 +388,8 @@ window.CC_RESOURCES = [
     description:
       "A global competition for student social entrepreneurs building ventures around the UN Sustainable Development Goals. Hosted by USD’s Kroc School, with funding and mentorship on the line.",
     keywords: ["interdisciplinary", "team up", "connect", "competition", "pitch", "startup", "social impact", "global"],
+    details:
+      "Run by USD's Kroc School of Peace Studies: student teams build ventures aligned with the UN Sustainable Development Goals, get mentorship, and compete for funding. Over the years it has drawn 3,000+ students from 25+ countries. Open to undergrad and grad students — a strong fit if your idea has a social or environmental mission.",
     link: "https://www.sandiego.edu/cpc/gsic/",
     school: "USD"
   },
@@ -359,6 +400,8 @@ window.CC_RESOURCES = [
     description:
       "A tech-innovation competition open to any USD student team with a technology component — any major, any program. Build a team and compete for the Starpoint Award.",
     keywords: ["interdisciplinary", "team up", "engineering", "computer science", "technology", "competition", "startup", "cross-major"],
+    details:
+      "Part of the engineering E-Track program: any USD student team with a technology component can enter, regardless of major, and compete for the Starpoint Award with mentoring along the way. This is the one to look at if you want to pair a non-technical idea (like a marketing or business concept) with engineering and CS students to actually build it.",
     link: "https://www.sandiego.edu/engineering/student-innovation/etrack-entrepreneurship-program/tech-competition/",
     school: "USD"
   },

@@ -38,18 +38,23 @@ exports.handler = async function (event) {
 
   // Only send the model what it needs.
   const catalog = resources.map(function (r) {
-    return {
+    const item = {
       name: String(r.name || ""),
       categories: Array.isArray(r.categories) ? r.categories : [],
       audiences: Array.isArray(r.audiences) ? r.audiences : [],
       description: String(r.description || "")
     };
+    if (r.details) item.details = String(r.details);
+    if (Array.isArray(r.links) && r.links.length) item.links = r.links;
+    return item;
   });
 
   const system =
     "You are the CloseConnect advisor for University of San Diego (USD) students, grad students, and alumni. " +
     "A person describes their situation and you recommend the most relevant resources ONLY from the provided catalog. " +
     "Voice: warm, concise, specific — like a helpful fellow USD student, never a marketing brochure. Address the person directly ('you'). " +
+    "Use the 'details' and 'links' fields to give genuinely useful, specific help — students find it hard to click through many pages, so surface the key facts (deadlines, how to start, cost, where to go, phone numbers) directly in your answer and in each reason. " +
+    "When a resource's 'links' entry directly answers the person (e.g. a signup page or networking platform like T.E.A.M.), you may name it in the reason. " +
     "Rules: recommend 3 to 6 resources, most relevant first. Use resource names EXACTLY as written in the catalog. " +
     "Never invent resources, links, or facts. If nothing fits well, say so honestly and suggest the closest option. " +
     "Respond with ONLY valid JSON (no markdown, no code fences) in exactly this shape: " +

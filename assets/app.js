@@ -120,8 +120,9 @@
     advisor: document.getElementById("advisor")
   };
 
-  // True while AI advisor results are on screen (so typing/chips can reset it).
-  var aiMode = false;
+  // True while advisor results (AI answer or the AI-down fallback) are on screen,
+  // so browsing (tabs/chips) or editing the box returns to the plain directory.
+  var specialMode = false;
 
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -132,8 +133,14 @@
     els.advisor.hidden = true;
     els.advisor.innerHTML = "";
   }
-  function exitAiMode() {
-    if (aiMode) { aiMode = false; hideAdvisor(); }
+  // Leave advisor/fallback view and return to the browsable directory.
+  function exitSpecial() {
+    if (specialMode) {
+      specialMode = false;
+      state.query = "";
+      hideAdvisor();
+      render();
+    }
   }
 
   /* --------------------------------------------------------------------------- */
@@ -201,7 +208,9 @@
     b.setAttribute("aria-pressed", value === state.category ? "true" : "false");
     b.addEventListener("click", function () {
       state.category = value;
-      exitAiMode();
+      specialMode = false;
+      state.query = "";
+      hideAdvisor();
       syncChips();
       render();
     });
@@ -228,7 +237,9 @@
     els.tabs.addEventListener("click", function (e) {
       var tab = e.target.closest(".tab");
       if (!tab) return;
-      exitAiMode();
+      specialMode = false;
+      state.query = "";
+      hideAdvisor();
       setActiveTab(tab.getAttribute("data-audience"));
       render();
     });
@@ -236,13 +247,10 @@
 
   /* ---- Search ---- */
   function wireSearch() {
+    // The search box is AI-only now: typing does NOT filter the directory live.
+    // Editing simply leaves any advisor result view and returns to browsing.
     els.search.addEventListener("input", function () {
-      state.query = els.search.value.trim();
-      exitAiMode(); // typing returns to instant concept filtering
-      // Typing a question searches across everyone — reset the tab to "All"
-      // so results aren't hidden by the current audience filter.
-      if (state.query && state.audience !== "all") setActiveTab("all");
-      render();
+      if (specialMode) exitSpecial();
     });
     els.search.addEventListener("keydown", function (e) {
       if (e.key === "Enter") { e.preventDefault(); runAdvisor(); }
@@ -252,7 +260,8 @@
       state.query = "";
       state.category = "all";
       els.search.value = "";
-      exitAiMode();
+      specialMode = false;
+      hideAdvisor();
       syncChips();
       render();
       els.search.focus();
@@ -264,9 +273,9 @@
      ------------------------------------------------------------------------- */
   function runAdvisor() {
     var q = els.search.value.trim();
-    if (q.length < 6) { exitAiMode(); render(); return; } // too short — just filter
+    if (q.length < 6) { exitSpecial(); return; } // nothing to ask
 
-    aiMode = true;
+    specialMode = true;
     setActiveTab("all");
     els.emptyState.hidden = true;
     els.results.innerHTML = "";
@@ -284,7 +293,9 @@
           name: r.name,
           categories: categoriesOf(r),
           audiences: audiencesOf(r),
-          description: r.description
+          description: r.description,
+          details: r.details,
+          links: r.links
         };
       })
     };
@@ -305,7 +316,7 @@
       .catch(function () {
         // Never leave the student stranded — fall back to the concept matcher.
         els.askAi.disabled = false;
-        aiMode = false;
+        specialMode = true;
         els.advisor.hidden = false;
         els.advisor.innerHTML =
           '<div class="advisor-head"><span class="advisor-badge advisor-badge--muted">Advisor unavailable</span></div>' +
@@ -514,6 +525,52 @@
       meta.className = "card-meta";
       meta.textContent = "📍 " + r.location;
       card.appendChild(meta);
+    }
+
+    // "More info" expander — surfaces richer detail + secondary links inline
+    // so students don't have to click out to learn the basics.
+    if (r.details || (r.links && r.links.length)) {
+      var moreBtn = document.createElement("button");
+      moreBtn.className = "card-more";
+      moreBtn.type = "button";
+      moreBtn.textContent = "More info";
+      moreBtn.setAttribute("aria-expanded", "false");
+
+      var panel = document.createElement("div");
+      panel.className = "card-details";
+      panel.hidden = true;
+
+      if (r.details) {
+        var dtext = document.createElement("p");
+        dtext.className = "card-details-text";
+        dtext.textContent = r.details;
+        panel.appendChild(dtext);
+      }
+      if (r.links && r.links.length) {
+        var linkWrap = document.createElement("div");
+        linkWrap.className = "card-links";
+        r.links.forEach(function (lnk) {
+          if (!lnk || !lnk.url) return;
+          var a = document.createElement("a");
+          a.href = lnk.url;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.className = "card-sublink";
+          a.textContent = "→ " + (lnk.label || lnk.url);
+          linkWrap.appendChild(a);
+        });
+        panel.appendChild(linkWrap);
+      }
+
+      moreBtn.addEventListener("click", function () {
+        var opening = panel.hidden;
+        panel.hidden = !opening;
+        moreBtn.textContent = opening ? "Less" : "More info";
+        moreBtn.setAttribute("aria-expanded", opening ? "true" : "false");
+      });
+
+      card.appendChild(moreBtn);
+      card.appendChild(panel);
     }
 
     var foot = document.createElement("div");
