@@ -256,9 +256,9 @@ body {
   padding: 12px 0;
 }
 .advisor-spinner svg {
-  width: 82px;
-  height: 82px;
-  color: var(--accent);
+  width: 64px;
+  height: 64px;
+  color: #003b70; /* crisp USD navy */
   animation: cc-sun-spin 4.5s ease-in-out infinite;
 }
 @keyframes cc-sun-spin {
