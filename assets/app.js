@@ -304,7 +304,7 @@
     els.askAi.disabled = true;
     els.advisor.hidden = false;
     els.advisor.innerHTML =
-      '<div class="advisor-spinner" role="status" aria-label="Searching">' + SUN_LOADER + '</div>';
+      '<div class="advisor-spinner" role="status" aria-label="Searching">' + CC_SPINNER_SVG + '</div>';
 
     var payload = {
       question: q,
@@ -357,10 +357,13 @@
       if (r && matched.indexOf(r) === -1) matched.push({ r: r, reason: rec.reason });
     });
 
-    var html = '<div class="advisor-head"><span class="advisor-badge">CloseConnect Advisor</span></div>';
-    if (data && data.answer) html += '<p class="advisor-answer">' + escapeHtml(data.answer) + "</p>";
-    els.advisor.hidden = false;
-    els.advisor.innerHTML = html;
+    var answer = (data && data.answer) ? String(data.answer) : "";
+    if (answer) {
+      els.advisor.hidden = false;
+      els.advisor.innerHTML = '<p class="advisor-answer">' + escapeHtml(answer) + "</p>";
+    } else {
+      hideAdvisor();
+    }
 
     els.results.innerHTML = "";
     if (!matched.length) {

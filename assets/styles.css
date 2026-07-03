@@ -255,26 +255,20 @@ body {
   align-items: center;
   padding: 12px 0;
 }
-.advisor-spinner .sun-loader {
-  width: 78px;
-  height: 78px;
+.advisor-spinner svg {
+  width: 82px;
+  height: 82px;
   color: var(--accent);
+  animation: cc-sun-spin 4.5s ease-in-out infinite;
 }
-.sun-loader .sun-rays,
-.sun-loader .sun-core {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-.sun-loader .sun-rays { animation: cc-sun-spin 5s linear infinite; }
-.sun-loader .sun-core { animation: cc-sun-pulse 1.8s ease-in-out infinite; }
-@keyframes cc-sun-spin { to { transform: rotate(360deg); } }
-@keyframes cc-sun-pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+@keyframes cc-sun-spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.08); }
+  100% { transform: rotate(360deg) scale(1); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .sun-loader .sun-rays,
-  .sun-loader .sun-core { animation: none; }
+  .advisor-spinner svg { animation: cc-sun-breathe 2s ease-in-out infinite; }
+  @keyframes cc-sun-breathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
 }
 
 /* "More info" expander on cards */
