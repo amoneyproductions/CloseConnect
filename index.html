@@ -61,11 +61,14 @@
       <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
     </div>
 
-    <!-- Upcoming deadlines & events (collapsible) -->
-    <details id="eventsBox" class="events-box">
-      <summary>📅 Upcoming deadlines &amp; events</summary>
+    <!-- Upcoming deadlines & events (always shown on the home view) -->
+    <section id="eventsBox" class="events-box" aria-label="Upcoming deadlines and events">
+      <div class="events-head">
+        <h2 class="events-title-h">📅 Upcoming deadlines &amp; events</h2>
+        <p class="events-sub">Approximate timing — open any event for the exact dates.</p>
+      </div>
       <div id="eventsList" class="events-list"></div>
-    </details>
+    </section>
 
     <p class="result-count" id="resultCount" aria-live="polite"></p>
 

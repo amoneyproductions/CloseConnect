@@ -117,8 +117,14 @@
     emptyState: document.getElementById("emptyState"),
     clearAll: document.getElementById("clearAll"),
     askAi: document.getElementById("askAi"),
-    advisor: document.getElementById("advisor")
+    advisor: document.getElementById("advisor"),
+    eventsBox: document.getElementById("eventsBox")
   };
+
+  // Events panel shows on the home/browse view, hides while the advisor answers.
+  function setEventsVisible(v) {
+    if (els.eventsBox) els.eventsBox.hidden = !(v && (window.CC_EVENTS || []).length);
+  }
 
   // True while advisor results (AI answer or the AI-down fallback) are on screen,
   // so browsing (tabs/chips) or editing the box returns to the plain directory.
@@ -139,6 +145,7 @@
       specialMode = false;
       state.query = "";
       hideAdvisor();
+      setEventsVisible(true);
       render();
     }
   }
@@ -247,6 +254,7 @@
       specialMode = false;
       state.query = "";
       hideAdvisor();
+      setEventsVisible(true);
       syncChips();
       render();
     });
@@ -276,6 +284,7 @@
       specialMode = false;
       state.query = "";
       hideAdvisor();
+      setEventsVisible(true);
       setActiveTab(tab.getAttribute("data-audience"));
       render();
     });
@@ -298,6 +307,7 @@
       els.search.value = "";
       specialMode = false;
       hideAdvisor();
+      setEventsVisible(true);
       syncChips();
       render();
       els.search.focus();
@@ -318,6 +328,7 @@
     if (aiUsedToday() >= AI_LIMIT) {
       specialMode = true;
       setActiveTab("all");
+      setEventsVisible(false);
       els.results.innerHTML = "";
       els.resultCount.textContent = "";
       els.emptyState.hidden = true;
@@ -330,6 +341,7 @@
 
     specialMode = true;
     setActiveTab("all");
+    setEventsVisible(false);
     els.emptyState.hidden = true;
     els.results.innerHTML = "";
     els.resultCount.textContent = "";
@@ -746,6 +758,7 @@
     wireTabs();
     wireSearch();
     renderEvents();
+    setEventsVisible(true);
     render();
   }
   document.addEventListener("DOMContentLoaded", init);

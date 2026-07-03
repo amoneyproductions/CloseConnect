@@ -347,19 +347,27 @@ body {
   border: 1px solid var(--border);
   background: var(--card);
   border-radius: 14px;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
-.events-box > summary {
-  cursor: pointer;
-  padding: 14px 18px;
-  font-weight: 700;
+.events-head {
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid var(--border);
+}
+.events-title-h {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
   color: var(--primary);
-  list-style: none;
 }
-.events-box > summary::-webkit-details-marker { display: none; }
-.events-box[open] > summary { border-bottom: 1px solid var(--border); }
-.events-list { padding: 4px 18px 10px; }
+.events-sub {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.events-list { padding: 6px 18px 12px; }
 .event-row {
   display: flex;
   gap: 14px;
