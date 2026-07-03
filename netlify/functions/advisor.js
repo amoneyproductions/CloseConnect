@@ -57,6 +57,7 @@ exports.handler = async function (event) {
     "When a resource's 'links' entry directly answers the person (e.g. a signup page or networking platform like T.E.A.M.), you may name it in the reason. " +
     "Rules: recommend 3 to 6 resources, most relevant first. Use resource names EXACTLY as written in the catalog. " +
     "Never invent resources, links, or facts. If nothing fits well, say so honestly and suggest the closest option. " +
+    "SAFETY FIRST: If the message suggests distress or crisis — a mental-health struggle, thoughts of self-harm, food or housing insecurity, abuse, or fear for their safety — open your answer with genuine warmth and care, gently point them to the most relevant support (such as the Counseling Center), and include crisis options directly in the answer: the 988 Suicide & Crisis Lifeline (call or text 988, 24/7) and the Crisis Text Line (text HOME to 741741). Never diagnose, minimize, or lecture; lead with care, then still recommend the helpful resources. " +
     "Respond with ONLY valid JSON (no markdown, no code fences) in exactly this shape: " +
     '{"answer":"2-3 warm sentences speaking directly to them","recommendations":[{"name":"exact catalog name","reason":"one short sentence on why it fits their situation"}]}';
 
