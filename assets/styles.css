@@ -247,6 +247,32 @@ body {
   75% { content: "..."; }
 }
 
+/* Emblem loading spinner (shown while the advisor thinks) */
+.advisor-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.advisor-spinner svg {
+  width: 72px;
+  height: 72px;
+  color: var(--accent);
+  animation: cc-emblem-flow 1.8s ease-in-out infinite;
+}
+@keyframes cc-emblem-flow {
+  0%   { transform: rotate(0deg) scale(1); opacity: 0.85; }
+  50%  { transform: rotate(180deg) scale(1.1); opacity: 1; }
+  100% { transform: rotate(360deg) scale(1); opacity: 0.85; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .advisor-spinner svg { animation: cc-emblem-pulse 1.6s ease-in-out infinite; }
+  @keyframes cc-emblem-pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+}
+
 /* "More info" expander on cards */
 .card-more {
   align-self: flex-start;
