@@ -143,6 +143,24 @@
     }
   }
 
+  // --- Daily AI question limit (cost control while unlicensed) ---
+  // Counts per browser per day via localStorage. Set aiUnlimited in school.js
+  // (e.g. once the school licenses CloseConnect) to lift the cap.
+  var AI_LIMIT = school.aiUnlimited ? Infinity :
+    (typeof school.aiDailyLimit === "number" ? school.aiDailyLimit : 5);
+  function aiDayKey() {
+    var d = new Date();
+    return "cc_ai_" + d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+  }
+  function aiUsedToday() {
+    try { return parseInt(localStorage.getItem(aiDayKey()) || "0", 10) || 0; }
+    catch (e) { return 0; }
+  }
+  function aiBumpToday() {
+    try { localStorage.setItem(aiDayKey(), String(aiUsedToday() + 1)); }
+    catch (e) {}
+  }
+
   // Animated "sun" loader (USD-blue tribal sun): rays rotate, bullseye pulses.
   var SUN_LOADER = (function () {
     var rays = "", N = 16, i, a, tipR;
@@ -296,6 +314,20 @@
     var q = els.search.value.trim();
     if (q.length < 6) { exitSpecial(); return; } // nothing to ask
 
+    // Daily limit reached — explain and let them keep browsing.
+    if (aiUsedToday() >= AI_LIMIT) {
+      specialMode = true;
+      setActiveTab("all");
+      els.results.innerHTML = "";
+      els.resultCount.textContent = "";
+      els.emptyState.hidden = true;
+      els.advisor.hidden = false;
+      els.advisor.innerHTML = '<p class="advisor-answer">You’ve used your ' + AI_LIMIT +
+        ' free advisor questions for today — they reset tomorrow. You can still browse and search every resource below. ' +
+        '(USD staff: unlimited access is available with a license.)</p>';
+      return;
+    }
+
     specialMode = true;
     setActiveTab("all");
     els.emptyState.hidden = true;
@@ -305,6 +337,8 @@
     els.advisor.hidden = false;
     els.advisor.innerHTML =
       '<div class="advisor-spinner" role="status" aria-label="Searching">' + CC_SPINNER_SVG + '</div>';
+
+    aiBumpToday(); // count this question against today's limit
 
     var payload = {
       question: q,
