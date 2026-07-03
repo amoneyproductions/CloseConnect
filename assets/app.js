@@ -143,6 +143,24 @@
     }
   }
 
+  // Animated "sun" loader (USD-blue tribal sun): rays rotate, bullseye pulses.
+  var SUN_LOADER = (function () {
+    var rays = "", N = 16, i, a, tipR;
+    for (i = 0; i < N; i++) {
+      a = (360 / N) * i;
+      tipR = (i % 2 === 0) ? 47 : 39; // alternate long/short spikes
+      rays += '<polygon points="47,31 53,31 50,' + (50 - tipR) +
+        '" transform="rotate(' + a + ' 50 50)"/>';
+    }
+    return '<svg class="sun-loader" viewBox="0 0 100 100" width="76" height="76" aria-hidden="true">' +
+      '<g class="sun-rays" fill="currentColor">' + rays + '</g>' +
+      '<g class="sun-core" fill="none" stroke="currentColor" stroke-width="3">' +
+      '<circle cx="50" cy="50" r="15"/>' +
+      '<circle cx="50" cy="50" r="10"/>' +
+      '<circle cx="50" cy="50" r="5" fill="currentColor" stroke="none"/>' +
+      '</g></svg>';
+  })();
+
   /* --------------------------------------------------------------------------- */
   function applySchool() {
     var c = school.colors || {};
@@ -286,7 +304,7 @@
     els.askAi.disabled = true;
     els.advisor.hidden = false;
     els.advisor.innerHTML =
-      '<div class="advisor-spinner" role="status" aria-label="Searching">' + CC_SPINNER_SVG + '</div>';
+      '<div class="advisor-spinner" role="status" aria-label="Searching">' + SUN_LOADER + '</div>';
 
     var payload = {
       question: q,

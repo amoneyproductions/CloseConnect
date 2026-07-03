@@ -247,30 +247,34 @@ body {
   75% { content: "..."; }
 }
 
-/* Emblem loading spinner (shown while the advisor thinks) */
+/* Animated blue sun loader (shown while the advisor thinks):
+   the rays rotate continuously while the center bullseye gently pulses. */
 .advisor-spinner {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 0;
+  padding: 12px 0;
 }
-.advisor-spinner svg {
-  width: 72px;
-  height: 72px;
+.advisor-spinner .sun-loader {
+  width: 78px;
+  height: 78px;
   color: var(--accent);
-  animation: cc-emblem-flow 1.8s ease-in-out infinite;
 }
-@keyframes cc-emblem-flow {
-  0%   { transform: rotate(0deg) scale(1); opacity: 0.85; }
-  50%  { transform: rotate(180deg) scale(1.1); opacity: 1; }
-  100% { transform: rotate(360deg) scale(1); opacity: 0.85; }
+.sun-loader .sun-rays,
+.sun-loader .sun-core {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.sun-loader .sun-rays { animation: cc-sun-spin 5s linear infinite; }
+.sun-loader .sun-core { animation: cc-sun-pulse 1.8s ease-in-out infinite; }
+@keyframes cc-sun-spin { to { transform: rotate(360deg); } }
+@keyframes cc-sun-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .advisor-spinner svg { animation: cc-emblem-pulse 1.6s ease-in-out infinite; }
-  @keyframes cc-emblem-pulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-  }
+  .sun-loader .sun-rays,
+  .sun-loader .sun-core { animation: none; }
 }
 
 /* "More info" expander on cards */
