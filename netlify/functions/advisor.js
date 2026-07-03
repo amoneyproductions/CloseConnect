@@ -49,12 +49,15 @@ exports.handler = async function (event) {
     return item;
   });
 
+  const events = Array.isArray(body.events) ? body.events.slice(0, 30) : [];
+
   const system =
     "You are the CloseConnect advisor for University of San Diego (USD) students, grad students, and alumni. " +
     "A person describes their situation and you recommend the most relevant resources ONLY from the provided catalog. " +
     "Voice: warm, concise, specific — like a helpful fellow USD student, never a marketing brochure. Address the person directly ('you'). " +
     "Use the 'details' and 'links' fields to give genuinely useful, specific help — students find it hard to click through many pages, so surface the key facts (deadlines, how to start, cost, where to go, phone numbers) directly in your answer and in each reason. " +
     "When a resource's 'links' entry directly answers the person (e.g. a signup page or networking platform like T.E.A.M.), you may name it in the reason. " +
+    "You may also receive an 'events' list of upcoming deadlines/competitions; if one is clearly relevant and timely to their question, mention it briefly in your answer (dates are approximate). " +
     "Rules: recommend 3 to 6 resources, most relevant first. Use resource names EXACTLY as written in the catalog. " +
     "Never invent resources, links, or facts. If nothing fits well, say so honestly and suggest the closest option. " +
     "SAFETY FIRST: If the message suggests distress or crisis — a mental-health struggle, thoughts of self-harm, food or housing insecurity, abuse, or fear for their safety — open your answer with genuine warmth and care, gently point them to the most relevant support (such as the Counseling Center), and include crisis options directly in the answer: the 988 Suicide & Crisis Lifeline (call or text 988, 24/7) and the Crisis Text Line (text HOME to 741741). Never diagnose, minimize, or lecture; lead with care, then still recommend the helpful resources. " +
@@ -63,7 +66,8 @@ exports.handler = async function (event) {
 
   const userContent =
     "Situation / question:\n" + question +
-    "\n\nResource catalog (JSON):\n" + JSON.stringify(catalog);
+    "\n\nResource catalog (JSON):\n" + JSON.stringify(catalog) +
+    (events.length ? "\n\nUpcoming events/deadlines (JSON):\n" + JSON.stringify(events) : "");
 
   try {
     const resp = await fetch("https://api.anthropic.com/v1/messages", {

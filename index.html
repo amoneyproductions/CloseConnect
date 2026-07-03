@@ -11,6 +11,16 @@
   <!-- Skip link for keyboard / screen-reader users -->
   <a class="skip-link" href="#results">Skip to resources</a>
 
+  <!-- Hidden static form so Netlify Forms detects & captures feedback.
+       The visible thumbs/report buttons submit to this via JavaScript. -->
+  <form name="feedback" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="feedback" />
+    <input type="text" name="resource" />
+    <input type="text" name="vote" />
+    <input type="text" name="note" />
+    <input type="text" name="bot-field" />
+  </form>
+
   <header class="site-header">
     <div class="container">
       <div class="brand">
@@ -51,6 +61,12 @@
       <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
     </div>
 
+    <!-- Upcoming deadlines & events (collapsible) -->
+    <details id="eventsBox" class="events-box">
+      <summary>📅 Upcoming deadlines &amp; events</summary>
+      <div id="eventsList" class="events-list"></div>
+    </details>
+
     <p class="result-count" id="resultCount" aria-live="polite"></p>
 
     <!-- AI advisor answer (appears after Ask Advisor) -->
@@ -76,6 +92,7 @@
   <!-- Data first (school config + resources), then the app logic -->
   <script src="data/school.js"></script>
   <script src="data/resources.js"></script>
+  <script src="data/events.js"></script>
   <script src="assets/app.js"></script>
 </body>
 </html>

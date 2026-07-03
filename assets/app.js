@@ -351,6 +351,9 @@
           details: r.details,
           links: r.links
         };
+      }),
+      events: (window.CC_EVENTS || []).map(function (e) {
+        return { title: e.title, when: e.when, note: e.note };
       })
     };
 
@@ -649,7 +652,91 @@
       foot.appendChild(flag);
     }
     card.appendChild(foot);
+    card.appendChild(makeFeedback(r.name));
     return card;
+  }
+
+  /* ---- Feedback (captured by Netlify Forms) ---- */
+  function submitFeedback(resource, vote) {
+    try {
+      var data = new URLSearchParams();
+      data.append("form-name", "feedback");
+      data.append("resource", resource || "");
+      data.append("vote", vote || "");
+      data.append("note", "");
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data.toString()
+      });
+    } catch (e) {}
+  }
+  function makeFeedback(name) {
+    var wrap = document.createElement("div");
+    wrap.className = "card-feedback";
+    var q = document.createElement("span");
+    q.className = "fb-q";
+    q.textContent = "Helpful?";
+    wrap.appendChild(q);
+    function send(vote) {
+      submitFeedback(name, vote);
+      wrap.innerHTML = '<span class="fb-thanks">Thanks — noted!</span>';
+    }
+    [["up", "👍", "Helpful"], ["down", "👎", "Not helpful"]].forEach(function (v) {
+      var b = document.createElement("button");
+      b.className = "fb-btn";
+      b.type = "button";
+      b.textContent = v[1];
+      b.setAttribute("aria-label", v[2]);
+      b.addEventListener("click", function () { send(v[0]); });
+      wrap.appendChild(b);
+    });
+    var rep = document.createElement("button");
+    rep.className = "fb-report";
+    rep.type = "button";
+    rep.textContent = "Report broken link";
+    rep.addEventListener("click", function () { send("broken-link"); });
+    wrap.appendChild(rep);
+    return wrap;
+  }
+
+  /* ---- Upcoming deadlines & events ---- */
+  function renderEvents() {
+    var box = document.getElementById("eventsBox");
+    var list = document.getElementById("eventsList");
+    if (!box || !list) return;
+    var events = window.CC_EVENTS || [];
+    if (!events.length) { box.hidden = true; return; }
+    var frag = document.createDocumentFragment();
+    events.forEach(function (ev) {
+      var row = document.createElement("div");
+      row.className = "event-row";
+      var when = document.createElement("span");
+      when.className = "event-when";
+      when.textContent = ev.when || "";
+      var body = document.createElement("div");
+      body.className = "event-body";
+      var t;
+      if (ev.link) {
+        t = document.createElement("a");
+        t.href = ev.link;
+        t.target = "_blank";
+        t.rel = "noopener noreferrer";
+      } else {
+        t = document.createElement("span");
+      }
+      t.className = "event-title";
+      t.textContent = ev.title || "";
+      var n = document.createElement("p");
+      n.className = "event-note";
+      n.textContent = ev.note || "";
+      body.appendChild(t);
+      body.appendChild(n);
+      row.appendChild(when);
+      row.appendChild(body);
+      frag.appendChild(row);
+    });
+    list.appendChild(frag);
   }
 
   /* ---- Init ---- */
@@ -658,6 +745,7 @@
     buildCategoryFilters();
     wireTabs();
     wireSearch();
+    renderEvents();
     render();
   }
   document.addEventListener("DOMContentLoaded", init);
