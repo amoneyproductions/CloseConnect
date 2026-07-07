@@ -651,5 +651,73 @@ window.CC_RESOURCES = [
     keywords: ["veteran", "military", "va", "benefits", "rotc", "gi bill", "service member"],
     link: "https://www.sandiego.edu/military/",
     school: "USD"
+  },
+  {
+    name: "Undocumented Student Resources",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A central place for undocumented and DACA students — support, legal information, scholarships, and staff who can help you navigate USD confidentially.",
+    details:
+      "Gathers financial aid and scholarship options, legal resources (including the Law School's guides), and campus contacts for undocumented and DACAmented students. A confidential starting point if you have questions about your situation.",
+    keywords: ["undocumented", "daca", "immigration", "support", "dreamer", "confidential"],
+    link: "https://www.sandiego.edu/undocumented/",
+    school: "USD"
+  },
+  {
+    name: "Department of Public Safety",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Campus safety around the clock — request a free safety escort, use blue-light emergency phones, and reach dispatch anytime.",
+    details:
+      "Call (619) 260-7777 for non-emergency help or a safety escort across campus. Over 100 blue-light phones auto-dial campus emergency dispatch. Public Safety handles patrols, emergencies, and lost-and-found.",
+    keywords: ["safety", "escort", "emergency", "public safety", "blue light", "security"],
+    link: "https://www.sandiego.edu/safety/",
+    school: "USD"
+  },
+  {
+    name: "Torero Renaissance Scholars",
+    categories: ["Community", "Academic Support"],
+    audiences: ["undergrad"],
+    description:
+      "Support and community for current and former foster-youth students — mentoring, resources, and a team dedicated to helping you thrive and graduate.",
+    details:
+      "Partnered with the Mulvaney Center, TRS boosts enrollment and retention for foster-youth students with a dedicated support team, year-round programming, and connections to campus resources.",
+    keywords: ["foster youth", "support", "retention", "mentoring", "community", "first gen"],
+    link: "https://www.sandiego.edu/torero-renaissance-scholars/",
+    school: "USD"
+  },
+  {
+    name: "Honors Program",
+    categories: ["Academic Support"],
+    audiences: ["undergrad"],
+    description:
+      "An interdisciplinary honors track — small seminar classes, research alongside faculty, and an Honors Diploma. Open by application.",
+    details:
+      "Established in 1979, the program offers innovative honors courses, undergraduate research, and community engagement. Honors graduates earn an Honors Diploma and receive their degree first at Commencement.",
+    keywords: ["honors", "research", "seminar", "interdisciplinary", "academic"],
+    link: "https://www.sandiego.edu/honors/",
+    school: "USD"
+  },
+  {
+    name: "Associated Students (Student Government & Involvement)",
+    categories: ["Community"],
+    audiences: ["undergrad"],
+    description:
+      "USD's student government — it represents students, funds student organizations, and runs campus events and programming. A direct way to lead and get involved.",
+    keywords: ["student government", "involvement", "leadership", "clubs", "events", "programming"],
+    link: "https://www.sandiego.edu/associated-students/",
+    school: "USD"
+  },
+  {
+    name: "COMPASS — Career Readiness (Arts & Sciences)",
+    categories: ["Career"],
+    audiences: ["undergrad"],
+    description:
+      "Career and major exploration built for College of Arts & Sciences students — figure out your path and connect your major to a career.",
+    keywords: ["career", "major exploration", "arts and sciences", "compass", "advising"],
+    link: "https://www.sandiego.edu/cas/student-resources/career-readiness/compass.php",
+    school: "USD"
   }
 ];
