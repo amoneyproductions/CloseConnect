@@ -120,7 +120,7 @@ window.CC_RESOURCES = [
     description:
       "An annual pitch competition — open to all majors, undergrad and grad — where students pitch business ideas to real investors for scholarship money.",
     details:
-      "Open to students from every school and major — all you need is a business idea. The top 16 teams compete for $45,000 in scholarships. It runs on an academic-year cycle: a kickoff session in September (with all submission details) and finals in early December. Learn more and register at sandiego.edu/fbcc.",
+      "Open to students from every school and major — all you need is a business idea. The top 16 teams compete for $45,000 in scholarships. It runs on an academic-year cycle: a kickoff session in September (with all submission details) and finals in early December.",
     links: [
       { label: "Fowler Business Concept Challenge (sandiego.edu/fbcc)", url: "https://www.sandiego.edu/fbcc" }
     ],
