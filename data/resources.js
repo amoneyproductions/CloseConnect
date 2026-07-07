@@ -25,7 +25,7 @@
                    expander (e.g. a signup page, a networking platform)
 
    Category tags in use: Career, Entrepreneurship, Competitions, Academic Support,
-                         Wellness, Engineering & CS, Alumni, General
+                         Wellness, Engineering & CS, Community, Alumni, General
    ============================================================================ */
 
 window.CC_RESOURCES = [
@@ -500,6 +500,156 @@ window.CC_RESOURCES = [
     description:
       "Wellness programs, accommodations, and parental resources tailored to the realities of law school, through USD Law Student Affairs.",
     link: "https://www.sandiego.edu/law/student-affairs/student-support/",
+    school: "USD"
+  },
+
+  /* ------------------ COMMUNITY & INVOLVEMENT ------------------ */
+  {
+    name: "Mulvaney Center for Community, Awareness & Social Action",
+    categories: ["Community"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "USD's hub for community engagement and service-learning — volunteer, join community-based programs, and connect classroom learning to real social change.",
+    details:
+      "Part of the Changemaker Hub. Runs course-based service-learning across ~150 classes with 130+ community partners, plus programs like the Youth Engagement Initiative (tutoring K–12 in Linda Vista) and the MICAH summer fellowship. A great way to get involved off campus and build leadership.",
+    keywords: ["volunteer", "community", "service", "social justice", "get involved"],
+    link: "https://www.sandiego.edu/mccasa/",
+    school: "USD"
+  },
+  {
+    name: "United Front Multicultural Commons",
+    categories: ["Community"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Home for USD's multicultural student community — cultural student orgs, programming, and identity resource centers on the 4th floor of the Student Life Pavilion.",
+    details:
+      "Houses the Black Student Resource Center, the Women's Commons (with a lactation room), and the LGBTQ+ Commons, plus Safe Space Allies training. A welcoming place to find community and support around identity.",
+    keywords: ["multicultural", "identity", "LGBTQ", "black student", "women", "diversity", "belonging"],
+    link: "https://www.sandiego.edu/united-front/",
+    school: "USD",
+    location: "Student Life Pavilion, 4th floor (SLP 418)"
+  },
+  {
+    name: "Campus Recreation",
+    categories: ["Community", "Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Intramural leagues, sport clubs, fitness and group classes, and outdoor adventures — 30+ rec classes each semester, open to all skill levels.",
+    keywords: ["intramural", "fitness", "gym", "sports", "recreation", "outdoor", "community"],
+    link: "https://www.sandiego.edu/campus-recreation/",
+    school: "USD"
+  },
+  {
+    name: "Changemaker Design Lab",
+    categories: ["Entrepreneurship", "Community"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A hands-on program where student teams use human-centered design to tackle real social-justice challenges on campus — and pitch fundable solutions.",
+    details:
+      "A nine-week experience: teams research a social-change topic, co-create solutions with people who have lived experience, and present at an end-of-semester showcase. Participants receive a $600 stipend, and promising ideas get funding to pilot the next semester.",
+    keywords: ["design thinking", "social innovation", "team", "stipend", "changemaker", "interdisciplinary"],
+    link: "https://www.sandiego.edu/changemaker/ideas-into-action/design-lab.php",
+    school: "USD"
+  },
+
+  /* ------------------ MORE ACADEMIC SUPPORT ------------------ */
+  {
+    name: "Office of Undergraduate Research",
+    categories: ["Academic Support"],
+    audiences: ["undergrad"],
+    description:
+      "Find and get funded for research with faculty — including the Summer Undergraduate Research Experience (SURE) and travel grants to present your work.",
+    keywords: ["research", "faculty", "sure", "lab", "grant", "conference"],
+    link: "https://www.sandiego.edu/ugresearch/",
+    school: "USD"
+  },
+  {
+    name: "Copley Library — Research Help",
+    categories: ["Academic Support"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Get research help from a librarian by chat, text, or email — with 24/7 after-hours chat — plus subject specialists and 190+ research databases.",
+    details:
+      "Use the Ask-A-Librarian link on the library homepage for quick help, or book a session with a subject specialist for in-depth, discipline-specific research. Copley holds 180,000+ e-books and 190+ databases. (619) 260-4799.",
+    keywords: ["library", "research", "librarian", "database", "citation", "sources", "copley"],
+    link: "https://www.sandiego.edu/library/services/research-help-and-tools.php",
+    school: "USD"
+  },
+  {
+    name: "National Fellowships Office",
+    categories: ["Career", "Academic Support"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Advising to help you win nationally competitive fellowships and scholarships — funding for grad school, research, and teaching abroad (think Fulbright).",
+    details:
+      "Fellowships fund graduate study, research, English teaching abroad, and language study; some also recognize undergrad research or public service. Deadlines fall throughout the year and some need a campus endorsement, so start early. Email nationalfellowships@sandiego.edu · BEC 117.",
+    keywords: ["fellowship", "fulbright", "scholarship", "grant", "research", "study abroad", "grad school"],
+    link: "https://www.sandiego.edu/cas/student-resources/scholarships/fellowships.php",
+    school: "USD"
+  },
+
+  /* ------------------ MORE WELLNESS / BASIC NEEDS ------------------ */
+  {
+    name: "USD Food Pantry",
+    categories: ["Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Free food, fresh produce, hygiene supplies, and a Torero Closet for any student who needs them — no questions asked.",
+    details:
+      "In Hahn University Center 116, the pantry stocks groceries, fresh produce, dairy and protein, plus school supplies, hygiene items, and laundry detergent. Part of USD's effort to end student food insecurity.",
+    keywords: ["food", "pantry", "basic needs", "hygiene", "insecurity", "free", "help", "hungry"],
+    link: "https://www.sandiego.edu/food-pantry/",
+    school: "USD",
+    location: "Hahn University Center 116"
+  },
+  {
+    name: "CARE — Campus Assault Resources & Education",
+    categories: ["Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Free, confidential advocates for anyone affected by sexual assault, harassment, or relationship violence — support, options, and help navigating reporting.",
+    details:
+      "CARE advocates offer confidential support and can walk you through your options and resources, whether or not you choose to report. All CARE/Wellness services are free for enrolled students. If you or a friend needs help, start here.",
+    keywords: ["assault", "violence", "harassment", "advocate", "confidential", "safety", "title ix", "support"],
+    link: "https://www.sandiego.edu/care/get-help.php",
+    school: "USD"
+  },
+
+  /* ------------------ GLOBAL & POPULATION-SPECIFIC ------------------ */
+  {
+    name: "Study Abroad (International Center)",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "USD ranks #1 in the nation for study abroad — 75+ programs in 44 countries, many led by USD faculty, across every major.",
+    details:
+      "The International Center (Serra Hall 201) is your one-stop shop for going abroad, from a full semester to short faculty-led trips — USD even has its own Madrid Center. Browse programs and start an application through the International Center.",
+    keywords: ["study abroad", "international", "global", "travel", "madrid", "semester abroad"],
+    link: "https://www.sandiego.edu/international/study-abroad/",
+    school: "USD",
+    location: "Serra Hall 201"
+  },
+  {
+    name: "Office of International Students & Scholars (OISS)",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Visa and immigration support for international students — F-1/J-1 status, work authorization, orientation, and help settling into life at USD.",
+    details:
+      "OISS helps you maintain your visa status, understand employment options (like OPT/CPT), and navigate university life, with orientation and compliance workshops. international@sandiego.edu · (619) 260-4598.",
+    keywords: ["international", "visa", "f-1", "j-1", "immigration", "opt", "cpt", "status"],
+    link: "https://www.sandiego.edu/international/oiss/",
+    school: "USD",
+    location: "Serra Hall 315"
+  },
+  {
+    name: "Military & Veterans Program",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Support for military-connected students and veterans — VA education benefits, ROTC, and community through the Epstein Family Military Center.",
+    keywords: ["veteran", "military", "va", "benefits", "rotc", "gi bill", "service member"],
+    link: "https://www.sandiego.edu/military/",
     school: "USD"
   }
 ];
