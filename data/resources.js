@@ -378,7 +378,7 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "USD’s campus-wide pitch competition. Hundreds join the V2 Learning Series, and 10 finalists pitch real angel investors for up to $25,000 in seed money.",
-    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship",
+    link: "https://www.sandiego.edu/business/",
     school: "USD"
   },
   {
@@ -422,7 +422,7 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Home base for student founders in the Knauss Center — a startup incubator and makerspace that runs the V2 competition, the Torero Ventures Lab, and more.",
-    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship",
+    link: "https://www.sandiego.edu/business/",
     school: "USD"
   },
   {

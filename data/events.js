@@ -36,7 +36,7 @@ window.CC_EVENTS = [
     title: "V2 (Venture Vetting) Pitch Competition",
     when: "Spring semester — join early in the spring, final pitches near the end of spring",
     note: "USD's biggest pitch competition — finalists present to real investors for up to $25,000 in seed money.",
-    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship"
+    link: "https://www.sandiego.edu/business/"
   },
   {
     title: "Torero Entrepreneurship Challenge (TECh)",
