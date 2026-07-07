@@ -731,5 +731,55 @@ window.CC_RESOURCES = [
     keywords: ["startup", "prototype", "team", "interdisciplinary", "venture", "build", "engineering", "business"],
     link: "https://www.sandiego.edu/business/centers/entrepreneurship/torero-ventures-lab.php",
     school: "USD"
+  },
+
+  /* ------------------ ALUMNI COMMUNITY & OPPORTUNITIES ------------------ */
+  {
+    name: "Regional Torero Clubs",
+    categories: ["Community"],
+    audiences: ["alumni"],
+    description:
+      "Local USD alumni chapters — 23+ regional clubs (San Diego, LA, NYC, Seattle, DC, Phoenix, Denver and more) that host events and networking wherever you land. No dues to join.",
+    details:
+      "Each club has its own president and committee running events, meetups, and game-watch parties. It's the easiest way to stay connected to USD and meet fellow Toreros in your city — whether you're across the country or across town.",
+    keywords: ["alumni", "networking", "chapter", "city", "community", "torero club", "events", "affinity"],
+    link: "https://www.sandiego.edu/alumni/communities/regional-torero-clubs/",
+    school: "USD"
+  },
+  {
+    name: "Homecoming & Reunions",
+    categories: ["Community"],
+    audiences: ["alumni"],
+    description:
+      "USD's annual Homecoming & Family Weekend — class reunions, a tailgate and football game, alumni events, and a special Mass each fall. Come back and reconnect.",
+    details:
+      "The big yearly gathering of the whole Torero community. Young alumni (grads within about the last decade) get discounted pricing. A great excuse to see classmates and campus again.",
+    keywords: ["homecoming", "reunion", "alumni", "event", "community", "family weekend", "tailgate"],
+    link: "https://www.sandiego.edu/alumni/events/homecoming-and-reunions/",
+    school: "USD"
+  },
+  {
+    name: "Alumni Volunteering & Giving Back",
+    categories: ["Community"],
+    audiences: ["alumni"],
+    description:
+      "Ways to stay involved as an alum — mentor current students, sit on panels, join a club committee, or give back through the Alumni Association.",
+    details:
+      "The Alumni Association engages grads through four pillars: communication, experience, philanthropy, and volunteerism. You can apply to be an alumni mentor, volunteer for events and panels, or support students through class giving and scholarships.",
+    keywords: ["alumni", "volunteer", "mentor", "give back", "get involved", "community", "philanthropy"],
+    link: "https://www.sandiego.edu/alumni/about/",
+    school: "USD"
+  },
+  {
+    name: "SOLES Alumni Travel Programs",
+    categories: ["Community", "Alumni"],
+    audiences: ["alumni", "graduate"],
+    description:
+      "Cross-cultural, educational travel experiences for alumni of USD's School of Leadership and Education Sciences — see the world with fellow Toreros.",
+    details:
+      "Run by SOLES's Global Center, these alumni trips build cultural intelligence and a commitment to positive global change. A niche but memorable way for SOLES grads to keep learning and stay connected.",
+    keywords: ["alumni", "travel", "global", "soles", "education", "community", "lifelong learning"],
+    link: "https://www.sandiego.edu/soles/centers-and-institutes/global-center/alumni-global-experience.php",
+    school: "USD"
   }
 ];
