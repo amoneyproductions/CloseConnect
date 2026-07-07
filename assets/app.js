@@ -723,7 +723,15 @@
     events.forEach(function (ev) {
       var row = document.createElement("div");
       row.className = "event-row";
-      var when = document.createElement("span");
+      var when;
+      if (ev.link) {
+        when = document.createElement("a");
+        when.href = ev.link;
+        when.target = "_blank";
+        when.rel = "noopener noreferrer";
+      } else {
+        when = document.createElement("span");
+      }
       when.className = "event-when";
       when.textContent = ev.when || "";
       var body = document.createElement("div");

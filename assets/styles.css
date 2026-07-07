@@ -396,7 +396,9 @@ body {
   color: var(--accent);
   font-weight: 700;
   font-size: 0.85rem;
+  text-decoration: none;
 }
+a.event-when:hover { text-decoration: underline; }
 .event-body { flex: 1; min-width: 0; }
 .event-title {
   color: var(--text);
