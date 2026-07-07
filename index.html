@@ -21,6 +21,13 @@
     <input type="text" name="bot-field" />
   </form>
 
+  <!-- Hidden form so Netlify captures the weekly link-check report and can
+       email it. Set an email notification on this "linkcheck" form in Netlify. -->
+  <form name="linkcheck" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="linkcheck" />
+    <textarea name="report"></textarea>
+  </form>
+
   <header class="site-header">
     <div class="container">
       <div class="brand">

@@ -11,3 +11,7 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Weekly broken-link checker — runs Mondays at 14:00 UTC (~6–7am Pacific).
+[functions."link-check"]
+  schedule = "0 14 * * 1"
