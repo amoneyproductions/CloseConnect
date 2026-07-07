@@ -781,5 +781,123 @@ window.CC_RESOURCES = [
     keywords: ["alumni", "travel", "global", "soles", "education", "community", "lifelong learning"],
     link: "https://www.sandiego.edu/soles/centers-and-institutes/global-center/alumni-global-experience.php",
     school: "USD"
+  },
+
+  /* ------------------ SPIRITUAL LIFE, COMMUNITY & CAMPUS LIFE ------------------ */
+  {
+    name: "University Ministry",
+    categories: ["Community", "Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "USD's spiritual and faith life — Mass, prayer, retreats, and faith-sharing groups. A Catholic university that genuinely welcomes every background and faith tradition.",
+    details:
+      "Beyond weekly Mass, University Ministry runs retreats like the Search Retreat (a phone-free weekend in the Julian mountains) and the Silent Retreat, plus interfaith programming and service. Students of all faiths — and those still figuring it out — are welcome.",
+    keywords: ["ministry", "faith", "spiritual", "retreat", "mass", "religion", "community", "catholic", "interfaith"],
+    link: "https://www.sandiego.edu/ministry/",
+    school: "USD"
+  },
+  {
+    name: "Fraternity & Sorority Life",
+    categories: ["Community"],
+    audiences: ["undergrad"],
+    description:
+      "USD's Greek community — around 2,000 students across 17 chapters, built around service, leadership, and belonging. Recruitment happens each year.",
+    details:
+      "Nine sororities and eight fraternities across the Panhellenic, Interfraternity, and Multicultural Greek Councils. Greek Week and philanthropy events are highlights, and it's a big way to find community and leadership on campus.",
+    keywords: ["greek", "fraternity", "sorority", "community", "recruitment", "leadership", "belonging"],
+    link: "https://www.sandiego.edu/fraternity-sorority-life/",
+    school: "USD"
+  },
+  {
+    name: "Torero Closet (Professional Attire)",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Borrow free professional clothing for interviews, career fairs, and new jobs — no price tags, just help looking the part.",
+    details:
+      "Stocked with donated professional outfits, the closet lets you pick interview-ready attire for free, with volunteers to help you find the right fit. Ask the Career Development Center for current hours and access.",
+    keywords: ["clothing", "interview", "professional", "attire", "career", "closet", "free", "suit"],
+    link: "https://www.sandiego.edu/careers/",
+    school: "USD"
+  },
+  {
+    name: "USD Law Legal Clinics",
+    categories: ["Academic Support"],
+    audiences: ["graduate"],
+    description:
+      "Represent real clients in real cases as a law student — 14 clinics providing free legal services to San Diegans while you build practice-ready skills.",
+    details:
+      "One of the nation's most extensive clinical programs (since 1971). Clinics span areas like housing rights and immigration; you handle intake, interviewing, and representation under supervising attorneys, and graduate practice-ready.",
+    keywords: ["law", "legal", "clinic", "pro bono", "experience", "practice", "advocacy", "externship"],
+    link: "https://www.sandiego.edu/law/clinics/",
+    school: "USD"
+  },
+  {
+    name: "Residential Life & Housing",
+    categories: ["Community", "General"],
+    audiences: ["undergrad"],
+    description:
+      "On-campus housing and residential education — from finding your hall and roommate to the programs and support that make where you live a community.",
+    keywords: ["housing", "dorm", "residence", "roommate", "residential", "living", "community"],
+    link: "https://www.sandiego.edu/student-experience/housing.php",
+    school: "USD"
+  },
+  {
+    name: "Living Learning Communities",
+    categories: ["Community", "Academic Support"],
+    audiences: ["undergrad"],
+    description:
+      "Live and study alongside students who share an interest — themed communities for first-year and transfer students that blend residence life with academics.",
+    keywords: ["living learning", "llc", "first year", "transfer", "community", "residence", "themed"],
+    link: "https://www.sandiego.edu/learning-communities/llc/",
+    school: "USD"
+  },
+  {
+    name: "Outdoor Adventures",
+    categories: ["Community", "Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Get outside with USD — hikes, overnight trips, rec classes, and the Pre-Orientation Adventure, all focused on adventure, leadership, and making friends.",
+    details:
+      "Local day trips, regional and international outings, and gear for rent. The Pre-Orientation Adventure helps incoming students make friends before classes even start. Great for stress relief and community.",
+    keywords: ["outdoor", "adventure", "hiking", "trips", "recreation", "nature", "community", "gear"],
+    link: "https://www.sandiego.edu/outdoor-adventures/",
+    school: "USD"
+  },
+
+  /* ------------------ CAMPUS LIFE, MONEY & MORE ------------------ */
+  {
+    name: "Torero Program Board",
+    categories: ["Community"],
+    audiences: ["undergrad"],
+    description:
+      "The student board behind USD's big campus events — Welcome Week, OLÉ! Weekend, concerts, and more. Free fun that's already covered by your student activity fee.",
+    details:
+      "TPB programs large-scale events for the whole student body and is part of the student government structure. Get involved to help plan events, or just show up and enjoy them.",
+    keywords: ["events", "activities", "concerts", "programming", "fun", "community", "welcome week", "tpb"],
+    link: "https://www.sandiego.edu/torero-program-board/",
+    school: "USD"
+  },
+  {
+    name: "Financial Aid & Scholarships",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Grants, scholarships, work-study, and loans — how to apply (FAFSA or the Dream Act app), check your aid, and find money for school.",
+    details:
+      "USD awards $160M+ in grants and scholarships a year, and 75%+ of undergrads get some aid. Merit scholarships are usually automatic at admission; need-based aid uses the FAFSA or the California/USD Dream Act Application. Questions go through the One Stop (UC 126) or (619) 260-2700.",
+    keywords: ["financial aid", "scholarship", "fafsa", "grant", "loan", "work study", "money", "tuition", "dream act"],
+    link: "https://www.sandiego.edu/torero-hub/financial-aid/",
+    school: "USD"
+  },
+  {
+    name: "Student Wellness Center (Palomar Health)",
+    categories: ["Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A newer on-campus wellness center run with Palomar Health — convenient medical care and wellness services that complement the Student Health Center.",
+    keywords: ["wellness", "health", "medical", "clinic", "care", "palomar", "sick"],
+    link: "https://www.sandiego.edu/wellness/wellness-center/",
+    school: "USD"
   }
 ];
