@@ -229,19 +229,35 @@
     return r.categories || (r.category ? [r.category] : []);
   }
 
-  /* ---- Category chips ---- */
+  /* ---- Category chips (only categories that exist for the active audience) ---- */
   function buildCategoryFilters() {
     var cats = [];
     allResources.forEach(function (r) {
+      if (state.audience !== "all" && audiencesOf(r).indexOf(state.audience) === -1) return;
       categoriesOf(r).forEach(function (cat) {
         if (cat && cats.indexOf(cat) === -1) cats.push(cat);
       });
     });
     cats.sort();
+    // If the selected category doesn't apply to this audience, fall back to All.
+    if (state.category !== "all" && cats.indexOf(state.category) === -1) {
+      state.category = "all";
+    }
+    els.categoryFilters.innerHTML = "";
     var frag = document.createDocumentFragment();
     frag.appendChild(makeChip("all", "All"));
     cats.forEach(function (cat) { frag.appendChild(makeChip(cat, cat)); });
     els.categoryFilters.appendChild(frag);
+  }
+
+  // Hide any audience tab that has no resources at all (future-proofing).
+  function pruneAudienceTabs() {
+    els.tabs.querySelectorAll(".tab").forEach(function (t) {
+      var aud = t.getAttribute("data-audience");
+      if (aud === "all") return;
+      var has = allResources.some(function (r) { return audiencesOf(r).indexOf(aud) !== -1; });
+      t.hidden = !has;
+    });
   }
   function makeChip(value, label) {
     var b = document.createElement("button");
@@ -277,6 +293,7 @@
       t.classList.toggle("is-active", active);
       t.setAttribute("aria-selected", active ? "true" : "false");
     });
+    buildCategoryFilters(); // chips reflect what exists for this audience
   }
   function wireTabs() {
     els.tabs.addEventListener("click", function (e) {
@@ -763,6 +780,7 @@
   /* ---- Init ---- */
   function init() {
     applySchool();
+    pruneAudienceTabs();
     buildCategoryFilters();
     wireTabs();
     wireSearch();
