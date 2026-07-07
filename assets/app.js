@@ -196,17 +196,18 @@
     };
     Object.keys(map).forEach(function (k) { if (map[k]) root.style.setProperty(k, map[k]); });
 
+    var productName = school.logoText || "Resourceful";
     if (school.logoImage) {
       els.brandLogo.innerHTML =
-        '<img src="' + school.logoImage + '" alt="' + (school.logoText || "CloseConnect") + '" />';
+        '<img src="' + school.logoImage + '" alt="' + productName + '" />';
     } else {
-      els.brandLogo.textContent = school.logoText || "CloseConnect";
+      els.brandLogo.textContent = productName;
     }
     els.brandSchool.textContent = school.name ? "· " + school.name : "";
     els.heroTagline.textContent = school.tagline || "";
     els.heroIntro.textContent = school.intro || "";
     els.footerNote.textContent = school.footerNote || "";
-    if (school.name) document.title = "CloseConnect · " + (school.shortName || school.name);
+    if (school.name) document.title = productName + " · " + (school.shortName || school.name);
   }
 
   /* ---- Searchable text for a resource (cached) ---- */

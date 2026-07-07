@@ -39,12 +39,12 @@ window.CC_SCHOOL = {
 
   // Logo is plain text by default (no image needed to launch a new school).
   // To use an image instead, set logoImage to a file path and it will be used.
-  logoText: "CloseConnect",
+  logoText: "Resourceful",
   logoImage: null,
 
   // Footer note. Good place for a "who made this / feedback" line.
   footerNote:
-    "CloseConnect is a student project. Spot a broken link or a resource we’re missing? Let us know — this list grows with your help.",
+    "Resourceful is a student project. Spot a broken link or a resource we’re missing? Let us know — this list grows with your help.",
 
   // AI advisor daily question limit per visitor (cost control while unlicensed).
   // Flip aiUnlimited to true — e.g. once the school licenses CloseConnect — to
