@@ -124,7 +124,7 @@ window.CC_RESOURCES = [
     links: [
       { label: "Fowler Business Concept Challenge (sandiego.edu/fbcc)", url: "https://www.sandiego.edu/fbcc" }
     ],
-    link: "https://www.sandiego.edu/business/centers/entrepreneurship/fowler-business-concept-challenge.php",
+    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship/fowler-business-concept-challenge.php",
     school: "USD"
   },
   {
@@ -718,6 +718,18 @@ window.CC_RESOURCES = [
       "Career and major exploration built for College of Arts & Sciences students — figure out your path and connect your major to a career.",
     keywords: ["career", "major exploration", "arts and sciences", "compass", "advising"],
     link: "https://www.sandiego.edu/cas/student-resources/career-readiness/compass.php",
+    school: "USD"
+  },
+  {
+    name: "Torero Ventures Lab",
+    categories: ["Entrepreneurship", "Engineering & CS"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A hands-on, interdisciplinary class (business + engineering) where you test a real business idea — customer discovery, prototyping, and building a founding team.",
+    details:
+      "A 4-unit class co-taught by business and engineering faculty, open to juniors, seniors, and grad students from any major. You get in through a competitive pitch in the spring, then take the class the following fall with faculty and mentor support. Capped at 25 students; instructor consent required.",
+    keywords: ["startup", "prototype", "team", "interdisciplinary", "venture", "build", "engineering", "business"],
+    link: "https://www.sandiego.edu/business/centers/entrepreneurship/torero-ventures-lab.php",
     school: "USD"
   }
 ];

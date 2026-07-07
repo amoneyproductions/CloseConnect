@@ -24,7 +24,7 @@ window.CC_EVENTS = [
     title: "Fowler Business Concept Challenge",
     when: "Apply in September — the competition runs through December (final pitches in December)",
     note: "Pitch a business idea (any major welcome). The top 16 teams share $45,000 in scholarships.",
-    link: "https://www.sandiego.edu/business/centers/entrepreneurship/fowler-business-concept-challenge.php"
+    link: "https://www.sandiego.edu/business/centers-and-institutes/entrepreneurship/fowler-business-concept-challenge.php"
   },
   {
     title: "HireUSD Career & Internship Fairs",
