@@ -19,11 +19,11 @@ window.CC_SCHOOL = {
   shortName: "USD",
 
   // One welcoming line under the title. Keep it warm and student-to-student.
-  tagline: "Every USD resource worth knowing, in one calm place.",
+  tagline: "Everything USD. One place.",
 
   // A second, smaller line of intro copy.
   intro:
-    "Career help, entrepreneurship, tutoring, wellness, alumni perks — it’s all here. No login, no digging through five different sites. Just find what you need and go.",
+    "Every program, resource, and opportunity at USD — career help, tutoring, entrepreneurship, wellness, funding, and more — organized so you can actually find what you need, when you need it.",
 
   // Colors. Swap these for another school's palette later.
   // Defaults are USD's deep blue with a friendly lighter blue accent.
