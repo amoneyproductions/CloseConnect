@@ -61,14 +61,15 @@
       <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
     </div>
 
-    <!-- Upcoming deadlines & events (always shown on the home view) -->
-    <section id="eventsBox" class="events-box" aria-label="Upcoming deadlines and events">
-      <div class="events-head">
-        <h2 class="events-title-h">📅 Upcoming deadlines &amp; events</h2>
-        <p class="events-sub">Approximate timing — open any event for the exact dates.</p>
-      </div>
+    <!-- Upcoming deadlines & events (collapsible dropdown on the home view) -->
+    <details id="eventsBox" class="events-box">
+      <summary class="events-summary">
+        <span class="events-summary-title">📅 Upcoming deadlines &amp; events</span>
+        <svg class="events-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <p class="events-sub">Approximate timing — open any event for the exact dates.</p>
       <div id="eventsList" class="events-list"></div>
-    </section>
+    </details>
 
     <p class="result-count" id="resultCount" aria-live="polite"></p>
 
