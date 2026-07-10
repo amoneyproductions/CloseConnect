@@ -88,8 +88,7 @@
     career: "Career",
     wellness: "Wellness",
     writing: "Academic Support",
-    academic: "Academic Support",
-    engineering: "Engineering & CS"
+    academic: "Academic Support"
   };
 
   var STOPWORDS = {

@@ -7,7 +7,7 @@
    Each resource has:
      name        – what it's called
      categories  – one OR MORE tags from the list below (drives the filter chips).
-                   A resource can double-dip, e.g. ["Competitions"].
+                   A resource can double-dip, e.g. ["Competitions", "Engineering & CS"].
                    A single `category: "X"` string still works too.
      audiences   – WHO it's for: an array of any of
                      "undergrad" | "graduate" | "alumni"
@@ -71,7 +71,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Engineering Career Readiness (CONNECT)",
-    categories: ["Career"],
+    categories: ["Career", "Engineering & CS"],
     audiences: ["undergrad"],
     description:
       "A dedicated career liaison and the CONNECT program for engineering and CS students to build professional skills before graduation.",
@@ -348,7 +348,7 @@ window.CC_RESOURCES = [
   /* ------------------------ ENGINEERING & CS ------------------------ */
   {
     name: "Engineering & CS Student Organizations",
-    categories: ["Community"],
+    category: "Engineering & CS",
     audiences: ["undergrad"],
     description:
       "ACM, SHPE, the Cybersecurity Student Association, Theta Tau, SAE, and more, find your people and build projects outside of class.",
@@ -950,7 +950,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Torero Ventures Lab",
-    categories: ["Entrepreneurship"],
+    categories: ["Entrepreneurship", "Engineering & CS"],
     audiences: ["undergrad", "graduate"],
     description:
       "A hands-on, interdisciplinary class (business + engineering) where you test a real business idea, customer discovery, prototyping, and building a founding team.",
