@@ -31,7 +31,7 @@ window.CC_SCHOOL = {
     primary: "#0a3a66",      // headers, logo, primary accents (softened USD navy)
     accent: "#2b6cb0",       // links, active states (friendly blue)
     accentSoft: "#e9f1f9",   // soft fills / active tab background
-    bg: "#faf9f6",           // page background (warm off-white)
+    bg: "#f1efe6",           // page background (eggshell)
     card: "#ffffff",         // card background
     text: "#232a31",         // body text (warm dark)
     muted: "#5f6b78"         // secondary text
