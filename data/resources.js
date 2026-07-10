@@ -808,12 +808,13 @@ window.CC_RESOURCES = [
     description:
       "USD ranks #1 in the nation for study abroad, 75+ programs in 44 countries, many led by USD faculty, across every major.",
     details:
-      "WHERE THE FORMS ARE: go to the 'Academics Abroad, Semester' page (link below) and open the 'Transfer Evaluation Process' section, the request form and the Pre-Approved Course List are right there. HOW IT WORKS: each program has a Pre-Approved Course List of classes that transfer back to USD automatically. If the course you want is NOT on that list, you have to complete a transfer evaluation before you leave. It can take several months, so start immediately, and only submit a course once you've picked your host university. Steps: (1) Submit the Transfer Evaluation Request Form (a Google form, linked below) to start the review. (2) Once approved, the course gets added to the Pre-Approved Course List for your program. (3) Check that list for your course's status. Meet with BOTH your USD academic advisor and your Study Abroad Manager well before the application deadline, it is ultimately your responsibility to make sure a course will transfer for USD credit. Questions: International Center, Serra Hall 201, (619) 260-4598.",
+      "WHERE THE FORMS ARE: go to the 'Academics Abroad, Semester' page (link below) and open the 'Transfer Evaluation Process' section, the request form and the Pre-Approved Course List are right there. HOW IT WORKS: each program has a Pre-Approved Course List of classes that transfer back to USD automatically. If the course you want is NOT on that list, you have to complete a transfer evaluation before you leave. It can take several months, so start immediately, and only submit a course once you've picked your host university. Steps: (1) Submit the Transfer Evaluation Request Form (a Google form, linked below) to start the review. (2) Once approved, the course gets added to the Pre-Approved Course List for your program. (3) Check that list for your course's status. Meet with BOTH your USD academic advisor and your Study Abroad Manager well before the application deadline, it is ultimately your responsibility to make sure a course will transfer for USD credit. SHORT-TERM OPTION: besides full semesters, USD runs 3 to 4 week faculty-led programs during Intersession and Summer where you take one or two USD courses abroad, see the Short-Term Opportunities page. DEADLINES: study abroad apps are due months ahead of the term (fall programs around February to March, summer around February, spring and intersession around mid-September), and that same date is the need-based scholarship deadline. Spain and Italy programs have separate, earlier, mandatory visa-batch workshops and appointments, so start extra early for those. You apply and track all your forms and due dates by logging into Via, the study abroad application portal, check it often. Questions: International Center, Serra Hall 201, (619) 260-4598.",
     keywords: ["study abroad", "international", "global", "travel", "madrid", "semester abroad", "course approval", "pre-approved course list", "transfer evaluation", "credit transfer", "change schedule", "not pre-approved", "form", "petition", "syllabus"],
     links: [
       { label: "Academics Abroad, Semester (Transfer Evaluation Process tab)", url: "https://www.sandiego.edu/international/study-abroad/academics-abroad/semester.php" },
       { label: "Transfer Evaluation Request Form", url: "https://docs.google.com/forms/d/e/1FAIpQLScF9pB8B8vZ1_dIKYEy9n4wAVZEn25fxBuuoUsxO4cSFboaDw/viewform" },
-      { label: "My Study Abroad portal", url: "https://www.sandiego.edu/international/study-abroad/my-application.php" },
+      { label: "Short-term programs (Intersession & Summer)", url: "https://www.sandiego.edu/international/study-abroad/programs/short-term-opportunities.php" },
+      { label: "Apply & track deadlines (Via portal)", url: "https://www.sandiego.edu/international/study-abroad/my-application.php" },
       { label: "Study abroad policies", url: "https://www.sandiego.edu/international/study-abroad/policies.php" }
     ],
     link: "https://www.sandiego.edu/international/study-abroad/",
@@ -847,6 +848,24 @@ window.CC_RESOURCES = [
       { label: "Request to Certify (each semester)", url: "https://www.sandiego.edu/military/benefits-administration/request-to-certify.php" }
     ],
     link: "https://www.sandiego.edu/military/",
+    school: "USD"
+  },
+  {
+    name: "Parking & Mobility Services",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Parking permits, where to park, citations and appeals, plus shuttles and other ways to get around USD.",
+    details:
+      "Runs campus parking and transportation. TO PARK ON CAMPUS you need a permit: buy an E-Permit online through My Parking Account and register your license plate, your plate IS your permit (enforcement scans plates, no hangtag). Student permits recently ran about $395 for the year or $220 per semester, but rates change annually, so check the current rate before you buy. WHERE TO PARK: student lots are marked, read the Rules & Regulations so you don't get ticketed in the wrong zone or at the wrong time. GOT A CITATION: pay it or appeal it online through My Parking Account within the deadline on the ticket. If you'd rather skip the permit, ask about the tram/shuttle and other options. Current rates and details are on the student parking page and FAQ.",
+    keywords: ["parking", "permit", "car", "citation", "ticket", "appeal", "commuter", "e-permit", "license plate", "shuttle", "tram", "mobility", "where to park"],
+    links: [
+      { label: "Student parking info", url: "https://www.sandiego.edu/mobility-services/parking/parking-information/students.php" },
+      { label: "Buy an E-Permit (My Parking Account)", url: "https://www.sandiego.edu/mobility-services/parking/online-services/purchase-e-permit.php" },
+      { label: "Rules & regulations", url: "https://www.sandiego.edu/mobility-services/parking/parking-information/general-parking-information.php" },
+      { label: "Parking FAQ", url: "https://www.sandiego.edu/mobility-services/parking/faq.php" }
+    ],
+    link: "https://www.sandiego.edu/mobility-services/parking/",
     school: "USD"
   },
   {
