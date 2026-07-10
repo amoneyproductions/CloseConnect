@@ -388,8 +388,7 @@
       els.emptyState.hidden = true;
       els.advisor.hidden = false;
       els.advisor.innerHTML = '<p class="advisor-answer">You’ve used your ' + AI_LIMIT +
-        ' free advisor questions for today, they reset tomorrow. You can still browse and search every resource below. ' +
-        '(USD staff: unlimited access is available with a license.)</p>';
+        ' questions for today, they reset tomorrow. You can still browse and search every resource below.</p>';
       return;
     }
 
