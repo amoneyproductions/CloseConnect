@@ -59,7 +59,7 @@
           id="search"
           class="search"
           type="search"
-          placeholder="Ask anything, e.g. “sophomore marketing student with a website idea, want to team up with CS students”"
+          placeholder="Ask anything — e.g. “sophomore marketing student with a website idea, want to team up with CS students”"
           aria-label="Describe your situation and get matched to the best resources"
           autocomplete="off"
         />
@@ -67,17 +67,17 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
-      <p class="search-hint">Describe your situation and press <strong>Enter</strong> (or the arrow), the advisor reads your question and finds the resources that fit.</p>
+      <p class="search-hint">Describe your situation and press <strong>Enter</strong> (or the arrow) — the advisor reads your question and finds the resources that fit.</p>
       <div class="filter-chips" id="categoryFilters" role="group" aria-label="Filter by category"></div>
     </div>
 
     <!-- Upcoming deadlines & events (collapsible dropdown on the home view) -->
     <details id="eventsBox" class="events-box">
       <summary class="events-summary">
-        <span class="events-summary-title">Upcoming deadlines &amp; events</span>
+        <span class="events-summary-title">📅 Upcoming deadlines &amp; events</span>
         <svg class="events-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </summary>
-      <p class="events-sub">Approximate timing, open any event for the exact dates.</p>
+      <p class="events-sub">Approximate timing — open any event for the exact dates.</p>
       <div id="eventsList" class="events-list"></div>
     </details>
 

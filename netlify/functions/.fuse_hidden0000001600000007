@@ -1,5 +1,5 @@
 /* ============================================================================
-   Weekly broken-link checker, Netlify scheduled function
+   Weekly broken-link checker  —  Netlify scheduled function
    ----------------------------------------------------------------------------
    Once a week it reads the site's resource/event data, checks every link, and
    posts a report to the Netlify "linkcheck" form. Set an email notification on
@@ -30,7 +30,7 @@ exports.handler = async function () {
   }
 
   // 2) Check each link. Only flag genuine "dead" signals (404/410/5xx/no
-  //    response), ignore 401/403/405/429/999 which usually just mean the site
+  //    response) — ignore 401/403/405/429/999 which usually just mean the site
   //    blocks bots but the page is fine (e.g. LinkedIn).
   const broken = [];
   async function check(u) {
@@ -49,10 +49,10 @@ exports.handler = async function () {
         clearTimeout(t);
       }
       if (res.status === 404 || res.status === 410 || res.status >= 500) {
-        broken.push("HTTP " + res.status + ", " + u);
+        broken.push("HTTP " + res.status + "  —  " + u);
       }
     } catch (e) {
-      broken.push((e.name === "AbortError" ? "timeout" : "unreachable") + ", " + u);
+      broken.push((e.name === "AbortError" ? "timeout" : "unreachable") + "  —  " + u);
     }
   }
   for (let i = 0; i < urls.length; i += 8) {

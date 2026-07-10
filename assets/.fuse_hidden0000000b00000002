@@ -1,5 +1,5 @@
 /* ============================================================================
-   CloseConnect, app logic
+   CloseConnect — app logic
    ----------------------------------------------------------------------------
    Reads CC_SCHOOL (data/school.js) and CC_RESOURCES (data/resources.js) and
    renders the directory. Two modes:
@@ -7,7 +7,7 @@
      • Browse mode (search box empty): filter by the active tab + category chip.
      • Ask mode (search box has text): understand the CONCEPTS in a student's
        question and rank every resource by how well it fits, newest/best first,
-       with a short "why it fits" line on each card. No backend, no API, the
+       with a short "why it fits" line on each card. No backend, no API — the
        concept map below does the matching entirely in the browser.
 
    You shouldn't need to edit this file to add resources or launch a new school.
@@ -31,9 +31,9 @@
   };
 
   /* ---------------------------------------------------------------------------
-     CONCEPTS, the heart of the "ask" search.
+     CONCEPTS — the heart of the "ask" search.
      Each concept has a friendly `label` (shown in the "why it fits" line) and a
-     list of `words`/phrases that signal it, in BOTH a student's question and a
+     list of `words`/phrases that signal it — in BOTH a student's question and a
      resource's text. Substring matching, so "collaborat" catches collaborate /
      collaboration. Order doesn't matter.
      ------------------------------------------------------------------------- */
@@ -259,20 +259,20 @@
       t.hidden = !has;
     });
   }
-  // One small icon + color key per category, keeps chips and cards cohesive
+  // One small icon + color key per category — keeps chips and cards cohesive
   // and scannable. Colors themselves live in styles.css (via data-cat).
   var CAT_META = {
-    "Academic Support": { key: "academic" },
-    "Community":        { key: "community" },
-    "Entrepreneurship": { key: "entrepreneurship" },
-    "Career":           { key: "career" },
-    "Wellness":         { key: "wellness" },
-    "General":          { key: "general" },
-    "Engineering & CS": { key: "engineering" },
-    "Alumni":           { key: "alumni" },
-    "Competitions":     { key: "competitions" }
+    "Academic Support": { icon: "📚", key: "academic" },
+    "Community":        { icon: "🤝", key: "community" },
+    "Entrepreneurship": { icon: "🚀", key: "entrepreneurship" },
+    "Career":           { icon: "💼", key: "career" },
+    "Wellness":         { icon: "🌿", key: "wellness" },
+    "General":          { icon: "✨", key: "general" },
+    "Engineering & CS": { icon: "💻", key: "engineering" },
+    "Alumni":           { icon: "🎓", key: "alumni" },
+    "Competitions":     { icon: "🏆", key: "competitions" }
   };
-  function catMeta(name) { return CAT_META[name] || { key: "default" }; }
+  function catMeta(name) { return CAT_META[name] || { icon: "•", key: "default" }; }
 
   function makeChip(value, label) {
     var b = document.createElement("button");
@@ -358,7 +358,7 @@
     var q = els.search.value.trim();
     if (q.length < 6) { exitSpecial(); return; } // nothing to ask
 
-    // Daily limit reached, explain and let them keep browsing.
+    // Daily limit reached — explain and let them keep browsing.
     if (aiUsedToday() >= AI_LIMIT) {
       specialMode = true;
       setActiveTab("all");
@@ -368,7 +368,7 @@
       els.emptyState.hidden = true;
       els.advisor.hidden = false;
       els.advisor.innerHTML = '<p class="advisor-answer">You’ve used your ' + AI_LIMIT +
-        ' free advisor questions for today, they reset tomorrow. You can still browse and search every resource below. ' +
+        ' free advisor questions for today — they reset tomorrow. You can still browse and search every resource below. ' +
         '(USD staff: unlimited access is available with a license.)</p>';
       return;
     }
@@ -417,13 +417,13 @@
         renderAdvisor(data, q);
       })
       .catch(function () {
-        // Never leave the student stranded, fall back to the concept matcher.
+        // Never leave the student stranded — fall back to the concept matcher.
         els.askAi.disabled = false;
         specialMode = true;
         els.advisor.hidden = false;
         els.advisor.innerHTML =
           '<div class="advisor-head"><span class="advisor-badge advisor-badge--muted">Advisor unavailable</span></div>' +
-          '<p class="advisor-note">Couldn’t reach the advisor just now, here are keyword matches instead.</p>';
+          '<p class="advisor-note">Couldn’t reach the advisor just now — here are keyword matches instead.</p>';
         state.query = q;
         render();
       });
@@ -450,11 +450,11 @@
 
     els.results.innerHTML = "";
     if (!matched.length) {
-      // AI gave prose but no matchable picks, show concept matches underneath.
+      // AI gave prose but no matchable picks — show concept matches underneath.
       state.query = q;
       var res = currentResults();
       els.resultCount.textContent = res.items.length
-        ? "Related resources, " + res.items.length : "";
+        ? "Related resources — " + res.items.length : "";
       var f0 = document.createDocumentFragment();
       res.items.forEach(function (item) { f0.appendChild(makeCard(item.r, item.reasons)); });
       els.results.appendChild(f0);
@@ -570,7 +570,7 @@
     if (res.mode === "ask") {
       var n = res.items.length;
       els.resultCount.textContent =
-        "Best matches for your question, " + n + " result" + (n === 1 ? "" : "s");
+        "Best matches for your question — " + n + " result" + (n === 1 ? "" : "s");
     } else {
       var noun = res.items.length === 1 ? "resource" : "resources";
       els.resultCount.textContent = res.items.length + " " + noun;
@@ -593,7 +593,7 @@
     top.appendChild(name);
     card.appendChild(top);
 
-    // Category tags, a resource can belong to more than one bucket.
+    // Category tags — a resource can belong to more than one bucket.
     var cats = categoriesOf(r);
     if (cats.length) {
       var tags = document.createElement("div");
@@ -608,7 +608,7 @@
       card.appendChild(tags);
     }
 
-    // "Why it fits" line, an AI sentence (string) or concept chips (array).
+    // "Why it fits" line — an AI sentence (string) or concept chips (array).
     if (why) {
       var whyEl = document.createElement("p");
       whyEl.className = "card-why";
@@ -630,11 +630,11 @@
     if (r.location) {
       var meta = document.createElement("p");
       meta.className = "card-meta";
-      meta.textContent = r.location;
+      meta.textContent = "📍 " + r.location;
       card.appendChild(meta);
     }
 
-    // "More info" expander, surfaces richer detail + secondary links inline
+    // "More info" expander — surfaces richer detail + secondary links inline
     // so students don't have to click out to learn the basics.
     if (r.details || (r.links && r.links.length)) {
       var moreBtn = document.createElement("button");
@@ -727,14 +727,14 @@
     wrap.appendChild(q);
     function send(vote) {
       submitFeedback(name, vote);
-      wrap.innerHTML = '<span class="fb-thanks">Thanks, noted!</span>';
+      wrap.innerHTML = '<span class="fb-thanks">Thanks — noted!</span>';
     }
-    [["up", "Yes"], ["down", "No"]].forEach(function (v) {
+    [["up", "👍", "Helpful"], ["down", "👎", "Not helpful"]].forEach(function (v) {
       var b = document.createElement("button");
       b.className = "fb-btn";
       b.type = "button";
       b.textContent = v[1];
-      b.setAttribute("aria-label", v[0] === "up" ? "Helpful" : "Not helpful");
+      b.setAttribute("aria-label", v[2]);
       b.addEventListener("click", function () { send(v[0]); });
       wrap.appendChild(b);
     });

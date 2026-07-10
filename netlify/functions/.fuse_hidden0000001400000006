@@ -1,5 +1,5 @@
 /* ============================================================================
-   CloseConnect AI advisor, Netlify serverless function
+   CloseConnect AI advisor — Netlify serverless function
    ----------------------------------------------------------------------------
    The browser POSTs { question, resources } here. This function calls Claude
    with the student's question + the resource catalog and returns a short,
@@ -9,7 +9,7 @@
    environment variable (set in Netlify → Site configuration → Environment
    variables). It is NEVER stored in the repo and never sent to the browser.
 
-   No npm dependencies, uses the built-in fetch (Netlify Node 18+).
+   No npm dependencies — uses the built-in fetch (Netlify Node 18+).
    ============================================================================ */
 
 const MODEL = "claude-haiku-4-5-20251001"; // fast + inexpensive; swap if desired.
@@ -54,14 +54,13 @@ exports.handler = async function (event) {
   const system =
     "You are the Resourceful advisor for University of San Diego (USD) students, grad students, and alumni. " +
     "A person describes their situation and you recommend the most relevant resources ONLY from the provided catalog. " +
-    "Voice: warm, concise, specific, like a helpful fellow USD student, never a marketing brochure. Address the person directly ('you'). " +
-    "Writing style: never use em dashes in your prose; use commas or periods instead. " +
-    "Use the 'details' and 'links' fields to give genuinely useful, specific help, students find it hard to click through many pages, so surface the key facts (deadlines, how to start, cost, where to go, phone numbers) directly in your answer and in each reason. " +
+    "Voice: warm, concise, specific — like a helpful fellow USD student, never a marketing brochure. Address the person directly ('you'). " +
+    "Use the 'details' and 'links' fields to give genuinely useful, specific help — students find it hard to click through many pages, so surface the key facts (deadlines, how to start, cost, where to go, phone numbers) directly in your answer and in each reason. " +
     "When a resource's 'links' entry directly answers the person (e.g. a signup page or networking platform like T.E.A.M.), you may name it in the reason. " +
     "You may also receive an 'events' list of upcoming deadlines/competitions; if one is clearly relevant and timely to their question, mention it briefly in your answer (dates are approximate). " +
     "Rules: recommend 3 to 6 resources, most relevant first. Use resource names EXACTLY as written in the catalog. " +
     "Never invent resources, links, or facts. If nothing fits well, say so honestly and suggest the closest option. " +
-    "SAFETY FIRST: If the message suggests distress or crisis, a mental-health struggle, thoughts of self-harm, food or housing insecurity, abuse, or fear for their safety, open your answer with genuine warmth and care, gently point them to the most relevant support (such as the Counseling Center), and include crisis options directly in the answer: the 988 Suicide & Crisis Lifeline (call or text 988, 24/7) and the Crisis Text Line (text HOME to 741741). Never diagnose, minimize, or lecture; lead with care, then still recommend the helpful resources. " +
+    "SAFETY FIRST: If the message suggests distress or crisis — a mental-health struggle, thoughts of self-harm, food or housing insecurity, abuse, or fear for their safety — open your answer with genuine warmth and care, gently point them to the most relevant support (such as the Counseling Center), and include crisis options directly in the answer: the 988 Suicide & Crisis Lifeline (call or text 988, 24/7) and the Crisis Text Line (text HOME to 741741). Never diagnose, minimize, or lecture; lead with care, then still recommend the helpful resources. " +
     "Respond with ONLY valid JSON (no markdown, no code fences) in exactly this shape: " +
     '{"answer":"2-3 warm sentences speaking directly to them","recommendations":[{"name":"exact catalog name","reason":"one short sentence on why it fits their situation"}]}';
 
@@ -96,7 +95,7 @@ exports.handler = async function (event) {
     const parsed = safeJson(text);
 
     if (!parsed || !Array.isArray(parsed.recommendations)) {
-      // Model didn't return clean JSON, hand back what we have so the UI can cope.
+      // Model didn't return clean JSON — hand back what we have so the UI can cope.
       return json(200, {
         answer: (parsed && parsed.answer) || text || "Here are some resources that may help.",
         recommendations: []

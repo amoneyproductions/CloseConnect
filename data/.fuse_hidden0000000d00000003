@@ -1,5 +1,5 @@
 /* ============================================================================
-   SCHOOL CONFIG, edit this file to set up a new school.
+   SCHOOL CONFIG  —  edit this file to set up a new school.
    ----------------------------------------------------------------------------
    Everything that is specific to one school lives here: its name, tagline,
    colors, and logo text. Nothing about "USD" is hard-coded anywhere else, so
@@ -23,7 +23,7 @@ window.CC_SCHOOL = {
 
   // A second, smaller line of intro copy.
   intro:
-    "Every program, resource, and opportunity at USD, career help, tutoring, entrepreneurship, wellness, funding, and more, organized so you can actually find what you need, when you need it.",
+    "Every program, resource, and opportunity at USD — career help, tutoring, entrepreneurship, wellness, funding, and more — organized so you can actually find what you need, when you need it.",
 
   // Colors. Swap these for another school's palette later.
   // Defaults are USD's deep blue with a friendly lighter blue accent.
@@ -44,10 +44,10 @@ window.CC_SCHOOL = {
 
   // Footer note. Good place for a "who made this / feedback" line.
   footerNote:
-    "Resourceful is a student project. Spot a broken link or a resource we’re missing? Let us know, this list grows with your help.",
+    "Resourceful is a student project. Spot a broken link or a resource we’re missing? Let us know — this list grows with your help.",
 
   // AI advisor daily question limit per visitor (cost control while unlicensed).
-  // Flip aiUnlimited to true, e.g. once the school licenses CloseConnect, to
+  // Flip aiUnlimited to true — e.g. once the school licenses CloseConnect — to
   // remove the cap entirely. aiDailyLimit is the number of questions per day.
   aiDailyLimit: 5,
   aiUnlimited: false
