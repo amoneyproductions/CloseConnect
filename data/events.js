@@ -36,7 +36,7 @@ window.CC_EVENTS = [
     when: "Held twice a year, once each fall and once each spring (exact dates posted on Handshake)",
     note: "On-campus events to meet employers hiring for jobs and internships.",
     link: "https://www.sandiego.edu/careers/events/",
-    findAt: "On the Career Development Center's events page; exact fair dates also post in Handshake."
+    findAt: "On the Career Development Center's events page; exact fair dates are also posted in Handshake."
   },
   {
     title: "V2 (Venture Vetting) Pitch Competition",
