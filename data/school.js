@@ -23,7 +23,7 @@ window.CC_SCHOOL = {
 
   // A second, smaller line of intro copy.
   intro:
-    "Every program, resource, and opportunity at USD, career help, tutoring, entrepreneurship, wellness, funding, and more, organized so you can actually find what you need, when you need it.",
+    "Every USD resource in one place, from tutoring and career help to funding and wellness. Find yours in seconds.",
 
   // Colors. Swap these for another school's palette later.
   // Defaults are USD's deep blue with a friendly lighter blue accent.
