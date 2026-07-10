@@ -62,6 +62,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Academic and career advising built for business majors, peer advisors, course planning, and business career services.",
+    details:
+      "For Knauss (business) students, on the 2nd floor of the Knauss Center. Offers peer advising, course and major planning, and business-specific career help in one place. TO USE: drop in or book a peer advisor for course planning, and use business career services for resume reviews and industry advising. A smart first stop before you meet your faculty advisor for registration.",
+    keywords: ["business", "advising", "course planning", "peer advisor", "knauss", "career", "major"],
     link: "https://www.sandiego.edu/business/student-experience/business-student-success-center/",
     school: "USD",
     location: "Floor 2, Knauss Center for Business Education"
@@ -72,6 +75,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "A dedicated career liaison and the CONNECT program for engineering and CS students to build professional skills before graduation.",
+    details:
+      "For engineering and CS students. A dedicated engineering career liaison plus the CONNECT program help you build professional skills, resumes, and employer relationships before graduation. TO USE: meet the engineering career liaison early (not senior year) to plan internships and co-ops, and use Handshake for postings. Pairs well with the main Career Development Center.",
+    keywords: ["engineering", "computer science", "career", "connect", "internship", "co-op", "professional", "resume"],
     link: "https://www.sandiego.edu/engineering/student-resources/career-readiness/",
     school: "USD"
   },
@@ -109,6 +115,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Your go-to for non-academic questions like financial aid, billing, and registration. Serves undergrad and grad students, with a Torero Connect Counselor to help you navigate it.",
+    details:
+      "The front door for anything non-academic: financial aid, billing, registration, records, and general 'who do I even ask' questions, and a Torero Connect Counselor can route you to the right office. TO USE: search the USD Knowledge Base for step-by-step answers, or visit UC 126 (walk-ins welcome) or call (619) 260-2700. Most tasks (register, pay a bill, get a transcript) start in MySanDiego under the Torero Hub tab.",
+    keywords: ["torero hub", "one stop", "financial aid", "billing", "registration", "records", "help", "who do i ask"],
+    links: [
+      { label: "USD Knowledge Base (how-tos)", url: "https://usdkb.sandiego.edu/s/" }
+    ],
     link: "https://www.sandiego.edu/torero-hub/",
     school: "USD"
   },
@@ -151,6 +163,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "A student org for anyone curious about starting things, events, speakers, and people who like building. Find it in the business student org directory.",
+    details:
+      "Open to anyone who likes building things, you do not need to be a business major. Expect events, guest speakers, workshops, and a community of student founders. TO JOIN: find it on the business school's student-organization directory or the campus 'Join an Org' page, then just show up to a meeting.",
+    keywords: ["entrepreneur", "startup", "club", "student org", "founder", "join", "build"],
+    links: [
+      { label: "Join an org", url: "https://www.sandiego.edu/involvement/student-orgs/join-an-org/" }
+    ],
     link: "https://www.sandiego.edu/business/student-experience/student-organizations/",
     school: "USD",
     verify: true
@@ -177,6 +195,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Real international business consulting projects for credit and experience, great résumé material and a tight community.",
+    details:
+      "A selective student org that runs real international-business consulting projects for course credit and hands-on experience, strong resume material and a close community. TO JOIN: applications usually open at the start of the year, find SIBC on the business student-organizations page for the current process and deadline.",
+    keywords: ["international business", "consulting", "sibc", "club", "credit", "experience", "join"],
     link: "https://www.sandiego.edu/business/student-experience/student-organizations/student-international-business-council.php",
     school: "USD"
   },
@@ -221,6 +242,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Peer tutoring specifically for logic courses. A lifesaver if symbolic logic isn’t clicking.",
+    details:
+      "Free drop-in peer tutoring specifically for logic courses (the symbolic/philosophy logic that trips a lot of people up). No appointment, just come to Founders Hall 160 during posted hours with your problem sets and questions. Check the tutoring-and-centers page for the current schedule.",
+    keywords: ["logic", "symbolic logic", "philosophy", "tutor", "drop in", "phil"],
     link: "https://www.sandiego.edu/cas/student-resources/tutoring-and-centers.php",
     school: "USD",
     location: "Founders Hall 160",
@@ -249,6 +273,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "A federally funded program with extra academic support, advising, and mentoring for eligible first-gen, low-income, or disabled students.",
+    details:
+      "A federal TRiO program giving eligible students a support network most people don't get: dedicated academic advising, tutoring, mentoring, workshops, and sometimes grant aid and grad-school prep. WHO QUALIFIES: students who are first-generation, meet income guidelines, or have a documented disability. TO JOIN: you apply and must meet eligibility, contact the office (UC 113) to check if you qualify and start an application. Spots are limited, so reach out early.",
+    keywords: ["trio", "first generation", "first gen", "low income", "disability", "advising", "mentoring", "tutoring", "support"],
     link: "https://www.sandiego.edu/student-support-services/",
     school: "USD",
     location: "UC 113"
@@ -292,6 +319,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Wellness education and substance-use support, programs, prevention, and one-on-one help to keep life balanced.",
+    details:
+      "The prevention-and-education side of wellness, separate from medical care (Health Center) and therapy (Counseling Center). Offers programming and one-on-one coaching on stress, sleep, alcohol and other drugs, and overall balance. TO USE: drop by UC 161 or request a wellness-coaching session. Also the place to turn if you want to support a friend who's struggling.",
+    keywords: ["wellness", "coaching", "stress", "sleep", "alcohol", "drugs", "substance", "prevention", "balance", "health promotion"],
     link: "https://www.sandiego.edu/health-wellness/",
     school: "USD",
     location: "UC 161"
@@ -322,6 +352,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "ACM, SHPE, the Cybersecurity Student Association, Theta Tau, SAE, and more, find your people and build projects outside of class.",
+    details:
+      "Clubs like ACM (computing), SHPE (Hispanic engineers), the Cybersecurity Student Association, Theta Tau (engineering fraternity), and SAE, where you build real projects and meet people in your field. TO JOIN: browse them in the Involvement directory ('Join an Org') or ask in the engineering school, most welcome newcomers any time, no experience required.",
+    keywords: ["engineering", "computer science", "club", "acm", "shpe", "cybersecurity", "theta tau", "sae", "join", "project"],
+    links: [
+      { label: "Join an org", url: "https://www.sandiego.edu/involvement/student-orgs/join-an-org/" }
+    ],
     link: "https://www.sandiego.edu/involvement/directory/",
     school: "USD"
   },
@@ -331,6 +367,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Every engineering student is assigned a faculty advisor to help with course planning and staying on track to graduate.",
+    details:
+      "Every engineering student has an assigned FACULTY advisor for course planning and staying on track to graduate. TO USE: meet your advisor before each registration window to plan classes and check prerequisites, the advising page explains who your advisor is and how to reach them. For internships and career planning, pair this with Engineering Career Readiness (CONNECT).",
+    keywords: ["engineering", "advising", "advisor", "course planning", "registration", "prerequisites", "graduate"],
     link: "https://www.sandiego.edu/engineering/student-resources/advising.php",
     school: "USD"
   },
@@ -373,6 +412,9 @@ window.CC_RESOURCES = [
     audiences: ["alumni"],
     description:
       "Keep your USD email and Google tools after graduation. (Exact alumni policy is worth confirming with ITS.)",
+    details:
+      "You keep your USD Google email and Workspace tools after you graduate, but there's a catch: you have to sign in at least once every 6 months from a desktop (mobile alone doesn't count) or the account can be deactivated. If it lapses, contact ITS. Back up anything important (files, emails) before graduation just in case.",
+    keywords: ["alumni", "email", "google", "workspace", "graduate", "account", "its", "keep email"],
     link: "https://www.sandiego.edu/its/support/software/gsuite/",
     school: "USD",
     verify: true
@@ -383,6 +425,12 @@ window.CC_RESOURCES = [
     audiences: ["alumni"],
     description:
       "Borrow from Copley Library with your alumni card and tap into databases like JSTOR and HeinOnline through the Torero Network.",
+    details:
+      "As an alum you can still borrow from Copley Library with your alumni card and get off-campus access to select research databases (JSTOR, HeinOnline, and more) through the Torero Network. TO SET UP: register for alumni library access on the library's alumni page, then log in through the Torero Network to reach the databases.",
+    keywords: ["alumni", "library", "copley", "database", "jstor", "heinonline", "borrow", "research", "torero network"],
+    links: [
+      { label: "Alumni benefits", url: "https://www.sandiego.edu/alumni/benefits/" }
+    ],
     link: "https://www.sandiego.edu/library/services/alumni.php",
     school: "USD"
   },
@@ -392,6 +440,13 @@ window.CC_RESOURCES = [
     audiences: ["alumni"],
     description:
       "Member savings, Bartell Hotels (15% off), the Columbia Sportswear employee store, and the USD Alumni Insurance Program.",
+    details:
+      "Every USD grad is a lifetime member of the Alumni Association, no dues. Perks include member savings like Bartell Hotels (15% off), the Columbia Sportswear employee store, and the USD Alumni Insurance Program, plus career and library benefits. TO USE: see the full current list on the Benefits page and grab your digital alumni membership card.",
+    keywords: ["alumni", "benefits", "perks", "discounts", "savings", "insurance", "membership card", "bartell", "columbia"],
+    links: [
+      { label: "Benefits information", url: "https://www.sandiego.edu/alumni/benefits/benefits-information.php" },
+      { label: "Alumni membership card", url: "https://www.sandiego.edu/alumni/benefits/membership-card.php" }
+    ],
     link: "https://www.sandiego.edu/alumni/benefits/",
     school: "USD"
   },
@@ -403,6 +458,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate", "alumni"],
     description:
       "A searchable FAQ for almost any USD question, tech help, accounts, services. When in doubt, search here first.",
+    details:
+      "A searchable library of step-by-step how-to articles for almost any USD task: accounts and passwords, MySanDiego, registration, financial aid, transcripts, wifi, printing, and more, plus a central list of official forms. WHEN STUCK: search here first; it usually has the exact steps or points you to the right office.",
+    keywords: ["knowledge base", "faq", "how to", "help", "tech", "password", "wifi", "account", "forms", "usdkb"],
     link: "https://usdkb.sandiego.edu/",
     school: "USD"
   },
@@ -433,6 +491,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "The full directory of USD student organizations across every interest. The fastest way to find your community.",
+    details:
+      "The full directory of USD clubs and organizations across every interest, the fastest way to find your people. TO JOIN: browse the Involvement directory, use 'Join an Org' to see how each one signs up, and go to a meeting, new members are welcome year-round (the involvement fair each fall is a great entry point). Want to start one that doesn't exist yet? Register a new org through Student Activities & Involvement.",
+    keywords: ["clubs", "organizations", "orgs", "involvement", "community", "join", "start a club", "directory", "learning communities"],
+    links: [
+      { label: "Join an org", url: "https://www.sandiego.edu/involvement/student-orgs/join-an-org/" },
+      { label: "Student orgs (start one)", url: "https://www.sandiego.edu/involvement/student-orgs/" }
+    ],
     link: "https://www.sandiego.edu/involvement/directory/",
     school: "USD"
   },
@@ -444,6 +509,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "USD’s campus-wide pitch competition. Hundreds join the V2 Learning Series, and 10 finalists pitch real angel investors for up to $25,000 in seed money.",
+    details:
+      "USD's campus-wide pitch competition, open to any student with an idea (not just business majors). Hundreds join the V2 Learning Series workshops, and about 10 finalists pitch real angel investors for up to $25,000 in seed funding. TO ENTER: watch for the application each year through the Knauss School and the Entrepreneurship & Innovation Catalyzer, and sharpen your pitch through the Learning Series and free advising at The Brink SBDC.",
+    keywords: ["v2", "venture vetting", "pitch", "competition", "startup", "seed money", "investors", "entrepreneur", "funding"],
     link: "https://www.sandiego.edu/business/",
     school: "USD"
   },
@@ -477,6 +545,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Design, build, and race an off-road vehicle with USD’s Torero Racing team, competing against schools worldwide. Hands-on engineering teamwork all year.",
+    details:
+      "Design, build, and race an off-road vehicle with USD's Torero Racing team, competing against schools worldwide, real machining, fabrication, and teamwork all year. TO JOIN: reach out through the Baja SAE / student-innovation page; open to students who want hands-on experience, not only mechanical-engineering majors (they need people for business, media, and logistics too).",
+    keywords: ["baja", "sae", "torero racing", "engineering", "build", "race", "team", "hands on", "makerspace"],
     link: "https://www.sandiego.edu/engineering/student-innovation/sae-baja/",
     school: "USD"
   },
@@ -488,6 +559,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Home base for student founders in the Knauss Center, a startup incubator and makerspace that runs the V2 competition, the Torero Ventures Lab, and more.",
+    details:
+      "The home base for student founders in the Knauss Center, an incubator and makerspace that runs the V2 pitch competition, the Torero Ventures Lab, and other founder programs. TO USE: stop in to work on your venture, join a program, or get connected to mentors and The Brink SBDC. A great starting point if you have an idea and don't know step one.",
+    keywords: ["entrepreneur", "startup", "incubator", "catalyzer", "founder", "v2", "ventures lab", "makerspace", "mentor"],
     link: "https://www.sandiego.edu/business/",
     school: "USD"
   },
@@ -513,6 +587,8 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Prototyping labs and makerspaces, including Donald’s Garage and the Belanich Engineering Center, plus the E-Track program, where students build and test real projects together.",
+    details:
+      "Prototyping labs and makerspaces (Donald's Garage, the Belanich Engineering Center) plus the E-Track program where students build and test real projects. TO USE: complete any required safety and tool training first, then book time or drop in to use the equipment; ask the engineering student-innovation office about access, hours, and how to join E-Track.",
     keywords: ["engineering", "computer science", "build", "prototype", "team up", "technology", "project", "collaborate"],
     link: "https://www.sandiego.edu/engineering/student-innovation/",
     school: "USD"
@@ -541,6 +617,9 @@ window.CC_RESOURCES = [
     audiences: ["graduate"],
     description:
       "Academic support and referrals gathered for grad students in one place, from the Graduate & Law Student Handbook to accommodations, tutoring, and food assistance.",
+    details:
+      "A one-stop roundup of academic support for grad students, pulled from the Graduate & Law Student Handbook: tutoring, the SOLES graduate writing center, accommodations (through the Disability office), and basic-needs help like the food pantry. TO USE: start here to find the right grad-specific service, then book directly with it. Handy when you're not sure a resource even applies to grad students, most do.",
+    keywords: ["graduate", "grad student", "academic support", "tutoring", "writing", "accommodations", "handbook", "referral"],
     link: "https://www.sandiego.edu/grad-life/student-services/academic-support.php",
     school: "USD"
   },
@@ -550,6 +629,12 @@ window.CC_RESOURCES = [
     audiences: ["graduate"],
     description:
       "Free writing coaching, workshops, and one-on-one sessions built for grad students, online or on campus, so busy schedules aren’t a barrier.",
+    details:
+      "Free writing coaching built for grad students, online or on campus, so distance and busy schedules aren't a barrier. Coaches give feedback on grad-level writing (papers, theses, dissertations) and run workshops on style, structure, and citations. TO BOOK: schedule online at sandiego.mywconline.com, or call (619) 260-4581 or email writingcenter@sandiego.edu.",
+    keywords: ["graduate", "writing", "coaching", "thesis", "dissertation", "soles", "appointment", "wconline", "workshop"],
+    links: [
+      { label: "Book a session (WCOnline)", url: "https://sandiego.mywconline.com/" }
+    ],
     link: "https://www.sandiego.edu/soles/students-and-alumni/current-students/writing-center.php",
     school: "USD"
   },
@@ -559,6 +644,9 @@ window.CC_RESOURCES = [
     audiences: ["graduate"],
     description:
       "Career coaching, interview prep, and the exclusive #HireUSDLaw job board for USD School of Law students.",
+    details:
+      "Career services built specifically for USD Law students: one-on-one coaching, resume and interview prep, and the exclusive #HireUSDLaw job board. TO USE: book a coaching appointment through Law Careers early, legal employers recruit on law-school timelines (often a year ahead), and check #HireUSDLaw for postings and on-campus interviews.",
+    keywords: ["law", "career", "legal", "job", "interview", "coaching", "hireusdlaw", "professional development"],
     link: "https://www.sandiego.edu/law/careers/students/services/",
     school: "USD"
   },
@@ -568,6 +656,9 @@ window.CC_RESOURCES = [
     audiences: ["graduate"],
     description:
       "Bar-exam prep strategy sessions, the 1L Fellows mentorship program, and academic improvement plans for USD law students.",
+    details:
+      "Academic support for law students plus bar-exam prep. Offers the 1L Fellows program (paired with a successful upper-year mentor for guidance and tutoring), course-specific study sessions, individual academic plans, and bar-prep strategy meetings that cover timelines, the MPRE, and the moral-character application. TO USE: connect through the Academic Success & Bar Programs office, especially during 1L year and as you approach the bar exam.",
+    keywords: ["law", "bar exam", "academic success", "1l", "fellows", "mentor", "mpre", "study", "bar prep"],
     link: "https://www.sandiego.edu/law/student-affairs/bar-programs/",
     school: "USD"
   },
@@ -577,6 +668,9 @@ window.CC_RESOURCES = [
     audiences: ["graduate"],
     description:
       "Wellness programs, accommodations, and parental resources tailored to the realities of law school, through USD Law Student Affairs.",
+    details:
+      "Support tailored to the realities of law school, through USD Law Student Affairs: wellness programming, academic accommodations, and parent/caregiver resources. TO USE: reach out to Law Student Affairs for support or to set up accommodations. The campus Counseling Center is also free to law students, and in a crisis you can call or text 988.",
+    keywords: ["law", "wellness", "accommodations", "support", "student affairs", "counseling", "mental health", "parent"],
     link: "https://www.sandiego.edu/law/student-affairs/student-support/",
     school: "USD"
   },
@@ -970,6 +1064,11 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Live and study alongside students who share an interest, themed communities for first-year and transfer students that blend residence life with academics.",
+    details:
+      "Themed residential communities where first-year and transfer students live together and share academic and social programming around a common interest. It's one of the easiest ways to make friends fast. TO JOIN: choose an LLC as part of your housing application, there's usually a short interest question and a deadline, and spots are limited, so apply early.",
+    links: [
+      { label: "Apply for housing (choose an LLC)", url: "https://www.sandiego.edu/residential-life/apply/" }
+    ],
     keywords: ["living learning", "llc", "first year", "transfer", "community", "residence", "themed"],
     link: "https://www.sandiego.edu/learning-communities/llc/",
     school: "USD"
@@ -1022,6 +1121,8 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "A newer on-campus wellness center run with Palomar Health, convenient medical care and wellness services that complement the Student Health Center.",
+    details:
+      "A newer three-story wellness center built with Palomar Health, designed to connect physical activity, nutrition, mental health, and a sense of belonging in one place. Houses group fitness, recreation programs, counseling, and health-and-wellness programming, complementing the Student Health Center (medical care) and Counseling Center (therapy). TO USE: drop in with your Torero ID and check the center's page for current hours and how to sign up for classes and programs.",
     keywords: ["wellness", "health", "medical", "clinic", "care", "palomar", "sick"],
     link: "https://www.sandiego.edu/wellness/wellness-center/",
     school: "USD"
