@@ -50,6 +50,19 @@ exports.handler = async function () {
       }
       if (res.status === 404 || res.status === 410 || res.status >= 500) {
         broken.push("HTTP " + res.status + ", " + u);
+      } else {
+        // Soft-404 catch: some sites (USD included) serve a "Page Not Found"
+        // screen with a 200 status, so status codes alone miss dead links.
+        var finalUrl = res.url || u;
+        if (/\/404(\.php)?($|[/?#])/i.test(finalUrl)) {
+          broken.push("soft 404 (redirected to a 404 page), " + u);
+        } else {
+          var body = "";
+          try { body = await res.text(); } catch (e2) {}
+          if (/<title>[^<]*(?:404|page not found)[^<]*<\/title>/i.test(body)) {
+            broken.push("soft 404 (page reads “not found”), " + u);
+          }
+        }
       }
     } catch (e) {
       broken.push((e.name === "AbortError" ? "timeout" : "unreachable") + ", " + u);

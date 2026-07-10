@@ -417,7 +417,7 @@
         };
       }),
       events: (window.CC_EVENTS || []).map(function (e) {
-        return { title: e.title, when: e.when, note: e.note };
+        return { title: e.title, when: e.when, note: e.note, findAt: e.findAt };
       })
     };
 
@@ -813,6 +813,12 @@
       n.textContent = ev.note || "";
       body.appendChild(t);
       body.appendChild(n);
+      if (ev.findAt) {
+        var f = document.createElement("p");
+        f.className = "event-find";
+        f.textContent = "Where to find it: " + ev.findAt;
+        body.appendChild(f);
+      }
       row.appendChild(when);
       row.appendChild(body);
       frag.appendChild(row);
