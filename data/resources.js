@@ -81,6 +81,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Specialized advising for any major heading toward med school, nursing, or another health profession. Keeps you on track for the requirements.",
+    details:
+      "Open to ANY major, you can be a business or English major and still go pre-med. WHAT TO DO: meet with the pre-health advisor early to map the prerequisite courses (bio, chem, physics, etc.), plan for the entrance exam (MCAT/DAT and similar), and line up clinical/volunteer experience. When you apply to professional school, USD's pre-health advising helps with the committee/health-professions letter, so stay connected through junior and senior year. Book through the pre-health advising office; see the pre-medical page for the detailed track.",
+    keywords: ["pre-health", "pre-med", "medical school", "nursing", "mcat", "dat", "committee letter", "prerequisites", "health professions", "advising"],
+    links: [
+      { label: "Pre-medical track & steps", url: "https://www.sandiego.edu/cas/student-resources/advising/pre-health/pre-medical.php" },
+      { label: "Pre-health resources", url: "https://www.sandiego.edu/cas/student-resources/advising/pre-health/resources/" }
+    ],
     link: "https://www.sandiego.edu/cas/student-resources/advising/pre-health/",
     school: "USD"
   },
@@ -90,6 +97,9 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Guidance for students planning on law school, course choices, the application timeline, and the LSAT.",
+    details:
+      "No 'pre-law' major required, law schools take every major, so this is about strategy. WHAT TO DO: meet the pre-law advisor to pick courses that build reading, writing, and analysis, plan your LSAT timing (and prep), and map the application timeline (letters of rec, personal statement, and applying through LSAC in the fall a year before you'd start). Ask about admissions events with USD's own School of Law. Book through the pre-law advisor via the page below.",
+    keywords: ["pre-law", "law school", "lsat", "lsac", "application", "personal statement", "timeline", "advising"],
     link: "https://www.sandiego.edu/cas/student-resources/advising/pre-law.php",
     school: "USD"
   },
@@ -151,6 +161,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "USD’s innovation hub and San Diego’s top-ranked accelerator. Programs like the Lean Essential Sprint help aspiring founders test and launch their ideas with real mentorship.",
+    details:
+      "One of the country's top-ranked SBDCs, and it's FREE and confidential, open to USD students and community founders. WHAT YOU GET: one-on-one advising on business planning, market research, pitch prep, and getting funding-ready, plus programs like the Lean Essential Sprint to test an idea fast. TO START: fill out the request on the Get Started page and you'll be matched with an advisor, no cost and no equity taken. Especially worth it if you're prepping for the Fowler Business Concept Challenge or the V2 pitch competition.",
+    keywords: ["entrepreneur", "startup", "business advising", "sbdc", "the brink", "mentor", "pitch", "market research", "funding", "launch", "free advising"],
+    links: [
+      { label: "Get started (request free advising)", url: "https://www.sandiego.edu/sbdc/get-started.php" },
+      { label: "Online resources", url: "https://www.sandiego.edu/sbdc/services/online-resources.php" }
+    ],
     link: "https://www.sandiego.edu/sbdc/",
     school: "USD"
   },
@@ -480,7 +497,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "USD’s home for social innovation, changemaker courses, designated clubs, scholarships, and the fall Changemaker Challenge. A great place to find teammates for impact projects.",
-    keywords: ["team up", "connect", "interdisciplinary", "social impact", "community", "competition", "collaborate"],
+    details:
+      "USD's home base for social innovation and impact projects, and one of the best places on campus to find teammates across different majors. WAYS TO GET INVOLVED: join the Changemaker Student Committee, work or hang out at The Hive (the student changemaker space), take changemaker-designated courses, or enter a challenge, the Changemaker Challenge, the Global Social Innovation Challenge, or the V2 pitch competition. Start on the Students page to see what's open right now.",
+    keywords: ["team up", "connect", "interdisciplinary", "social impact", "community", "competition", "collaborate", "changemaker", "the hive", "social innovation", "get involved"],
+    links: [
+      { label: "The Hive (student space)", url: "https://www.sandiego.edu/changemaker/students/the-hive/" },
+      { label: "Changemaker Student Committee", url: "https://www.sandiego.edu/changemaker/students/changemaker-student-committee.php" }
+    ],
     link: "https://www.sandiego.edu/changemaker/students/",
     school: "USD"
   },
@@ -502,6 +525,12 @@ window.CC_RESOURCES = [
     audiences: ["graduate"],
     description:
       "The office and community hub for grad and law students, programs, events, and advocacy, based at the Graduate & Law Student Commons.",
+    details:
+      "Your home base as a grad or law student, at the Graduate & Law Student Commons (SLP 401). WHAT THEY DO: social and professional events, a lounge and study space, advocacy for grad-student needs, and a front door to the grad-specific services you might not know exist (grad academic support, the SOLES writing center, wellness). If you're new or feeling disconnected from a mostly-undergrad campus, start here to plug into your people. SLP 401.",
+    keywords: ["graduate", "grad student", "law student", "grad life", "commons", "events", "community", "advocacy"],
+    links: [
+      { label: "Grad student services & support", url: "https://www.sandiego.edu/grad-life/student-services/" }
+    ],
     link: "https://www.sandiego.edu/grad-life/",
     school: "USD",
     location: "Graduate & Law Student Commons, SLP 401"
@@ -615,7 +644,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Find and get funded for research with faculty, including the Summer Undergraduate Research Experience (SURE) and travel grants to present your work.",
-    keywords: ["research", "faculty", "sure", "lab", "grant", "conference"],
+    details:
+      "You don't need to be a senior or a science major to do research. HOW TO GET STARTED: find a faculty member whose work interests you (check department pages or ask a professor you like) and ask to get involved, then apply for funding through the Office of Undergraduate Research. Key programs: PURE, a summer program for incoming first-gen/low-income students with a stipend and housing; SURE, a paid summer research experience with a faculty mentor; plus travel grants to present your work at conferences. Deadlines are posted on the Student Funding Opportunities page, apply early. New to it all? Start on the Prospective Students page.",
+    keywords: ["research", "faculty", "sure", "pure", "lab", "grant", "conference", "mentor", "funding", "get involved", "stipend"],
+    links: [
+      { label: "Student funding (SURE, travel grants)", url: "https://www.sandiego.edu/ugresearch/about/student-funding-opportunities.php" },
+      { label: "New to research? Start here", url: "https://www.sandiego.edu/ugresearch/prospective-students/" }
+    ],
     link: "https://www.sandiego.edu/ugresearch/",
     school: "USD"
   },
@@ -709,7 +744,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Support for military-connected students and veterans, VA education benefits, ROTC, and community through the Epstein Family Military Center.",
-    keywords: ["veteran", "military", "va", "benefits", "rotc", "gi bill", "service member"],
+    details:
+      "Home base for veterans and military-connected students, benefits help, community, and a place to study. USING VA BENEFITS (GI Bill, etc.): you must submit a Request to Certify every semester so USD's Campus Certifying Official can report your enrollment to the VA, this is the step that releases your funding. Provide your Certificate of Eligibility (COE) by the first day of class, and tell the certifying official within a week if your credit load or eligibility changes. USD is also Yellow Ribbon and pre-posts Post-9/11 / Yellow Ribbon amounts to your account each term. Questions: Epstein Family Military Center.",
+    keywords: ["veteran", "military", "va", "benefits", "rotc", "gi bill", "service member", "certify", "yellow ribbon", "post 9/11", "certificate of eligibility"],
+    links: [
+      { label: "VA educational benefits", url: "https://www.sandiego.edu/military/benefits-administration/" },
+      { label: "Request to Certify (each semester)", url: "https://www.sandiego.edu/military/benefits-administration/request-to-certify.php" }
+    ],
     link: "https://www.sandiego.edu/military/",
     school: "USD"
   },
@@ -767,7 +808,14 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "USD's student government, it represents students, funds student organizations, and runs campus events and programming. A direct way to lead and get involved.",
-    keywords: ["student government", "involvement", "leadership", "clubs", "events", "programming"],
+    details:
+      "Beyond elections and events, ASG is how most students get two things: CLUBS and MONEY. TO START A CLUB: register a new student organization through Student Activities & Involvement (the Student Orgs page has the steps and a list of existing clubs to join). TO FUND A CLUB EVENT: you'll usually complete an Event Venue Request (EvR) first, then submit a funding request to the ASG budget committee, every form is on the finance Forms page. ASG also gives Academic Grants to help you attend a conference or present research. Help: Involvement Consultants, SLP 308, (619) 260-4802, usdinvolvement@gmail.com.",
+    keywords: ["student government", "involvement", "leadership", "clubs", "events", "programming", "start a club", "funding", "budget", "academic grant", "asg"],
+    links: [
+      { label: "Start or find a club (Student Orgs)", url: "https://www.sandiego.edu/involvement/student-orgs/" },
+      { label: "Funding request forms", url: "https://www.sandiego.edu/associated-student-government/finance/forms.php" },
+      { label: "Academic grants (conferences)", url: "https://www.sandiego.edu/associated-student-government/academic-grants.php" }
+    ],
     link: "https://www.sandiego.edu/associated-students/",
     school: "USD"
   },
@@ -777,7 +825,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Career and major exploration built for College of Arts & Sciences students, figure out your path and connect your major to a career.",
-    keywords: ["career", "major exploration", "arts and sciences", "compass", "advising"],
+    details:
+      "COMPASS is the College of Arts & Sciences career-readiness program, and it's a graduation requirement for CAS undergrads, so it's worth starting early instead of scrambling senior year. HOW IT WORKS: your Career Readiness Portal turns on in MySanDiego about 3 to 4 weeks after you declare your major; log in there to work through the milestones (self-assessment, resume, exploring careers, gaining experience). Pair it with the Career Development Center for resume reviews and Handshake. Questions: careers@sandiego.edu, (619) 260-4654.",
+    keywords: ["career", "major exploration", "arts and sciences", "compass", "advising", "career readiness", "graduation requirement", "portal"],
+    links: [
+      { label: "Career readiness (CAS)", url: "https://www.sandiego.edu/cas/student-resources/career-readiness/" }
+    ],
     link: "https://www.sandiego.edu/cas/student-resources/career-readiness/compass.php",
     school: "USD"
   },
