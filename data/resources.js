@@ -108,6 +108,14 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "On- and off-campus jobs plus Federal Work-Study info. A solid way to earn while you’re enrolled.",
+    details:
+      "Two kinds of on-campus jobs: Federal Work-Study (if it's part of your aid award) and regular 'casual' department jobs anyone can take, no aid needed. TO FIND A JOB: browse openings on the Student Employment pages (separate lists for work-study and non-work-study) and apply directly to the department; work-study also runs a job fair each fall. Career jobs and internships live in Handshake (sandiego.joinhandshake.com). Once hired you'll complete onboarding paperwork (I-9, etc.) before your first shift. Questions go through the Torero Hub, (619) 260-2700.",
+    keywords: ["job", "on campus job", "student employment", "work study", "handshake", "hiring", "part time", "earn money", "casual worker"],
+    links: [
+      { label: "Federal Work-Study jobs", url: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/federal-work-study/opportunities.php" },
+      { label: "Non-work-study on-campus jobs", url: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/non-federal-work-study/" },
+      { label: "Handshake (jobs & internships)", url: "https://www.sandiego.edu/careers/handshake/undergraduate/" }
+    ],
     link: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/",
     school: "USD"
   },
@@ -163,6 +171,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Free peer tutoring for any kind of academic writing, any major and any level. Bring an essay at any stage, even just an outline.",
+    details:
+      "Free for all students, any subject, any stage from brainstorm to final draft. TO BOOK: make an appointment online at sandiego.mywconline.com (create an account with your USD email, then pick a time); drop-ins are welcome when a slot is open. Typical hours are Mon to Wed 9 a.m. to 7 p.m., Thu 9 a.m. to 1 p.m. and 2 to 7 p.m., Fri 9 a.m. to 2 p.m. (check the site for the current term). Founders Hall 190B, (619) 260-4581, writingcenter@sandiego.edu.",
+    keywords: ["writing center", "essay", "paper", "tutor", "appointment", "wconline", "proofread", "draft", "thesis"],
+    links: [
+      { label: "Book a session (WCOnline)", url: "https://sandiego.mywconline.com/" },
+      { label: "Writing Center info", url: "https://www.sandiego.edu/cas/centers/writing-center/" }
+    ],
     link: "https://www.sandiego.edu/cas/student-resources/tutoring-and-centers.php",
     school: "USD",
     location: "Founders Hall 190B"
@@ -173,6 +188,12 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Drop-in peer tutoring for lower-level math courses. No appointment needed, just show up when you’re stuck.",
+    details:
+      "Free peer-to-peer tutoring for lower-division math (and often the math inside stats, econ, and science courses). No appointment, just walk in during posted hours and bring your textbook, notes, and the problems you're stuck on. Hours change each semester, so check the Mathematics Learning Center page for the current schedule. Serra Hall 310.",
+    keywords: ["math", "tutor", "math center", "drop in", "calculus", "algebra", "statistics", "learning center"],
+    links: [
+      { label: "Math Learning Center (hours)", url: "https://www.sandiego.edu/cas/centers/math-learning-center/" }
+    ],
     link: "https://www.sandiego.edu/cas/math/tutoring.php",
     school: "USD",
     location: "Serra Hall 310"
@@ -194,6 +215,13 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "Academic support for 1st- and 2nd-year students, peer advising, study strategies, and help if you land on academic probation.",
+    details:
+      "The go-to for 1st and 2nd year students and anyone who needs an academic reset. They offer peer advising, success coaching, and study-skill help, and they're the office that supports you if you land on ACADEMIC PROBATION, where you'll typically meet with a success coach, build a plan, and check in through the semester. TO GET HELP: contact the office (UC 114) to set up peer advising or coaching. For tutoring in a specific course, USD uses the KNACK app, log in with your USD account and book a tutor for free. To CHANGE OR DECLARE A MAJOR, meet with your academic advising office and submit a change-of-major form (College of Arts & Sciences advising: Founders Hall 117, drop-ins Mon to Thu 2 to 3 p.m., casadvising@sandiego.edu, (619) 260-4545). Center for Student Success: UC 114.",
+    keywords: ["academic probation", "probation", "peer advising", "success coach", "study skills", "tutoring", "knack", "change major", "declare major", "advisor", "advising", "academic help"],
+    links: [
+      { label: "Course tutoring (KNACK)", url: "https://www.sandiego.edu/student-support-services/services/tutors/" },
+      { label: "Academic advising drop-ins & appointments", url: "https://www.sandiego.edu/cas/student-resources/advising/college-advising-drop-in-hours.php" }
+    ],
     link: "https://www.sandiego.edu/center-student-success/",
     school: "USD",
     location: "UC 114"
@@ -232,9 +260,10 @@ window.CC_RESOURCES = [
     description:
       "Free, confidential counseling for USD students, individual and group sessions, plus walk-in hours. No cost to you.",
     details:
-      "Free and confidential for enrolled students, individual and group counseling, psychiatric consultation, and walk-in hours, all at no cost. When the office is closed, USD offers TimelyCare telehealth for after-hours support. In a crisis you can call or text 988 (Suicide & Crisis Lifeline) or text HOME to 741741. Front desk: (619) 260-4655.",
+      "Free and confidential for enrolled students, individual and group counseling, psychiatric consultation, and walk-in hours, all at no cost. TO START: call (619) 260-4655 or use walk-in hours (about 11 a.m. to 3 p.m. weekdays, later on Wednesdays when classes are in session) for a brief initial assessment, then they match you to the right care, on campus or in the community. When the office is closed, USD offers TimelyCare telehealth for after-hours support, and the on-call counselor is reachable through Public Safety at (619) 260-2222. In a crisis you can call or text 988 (Suicide & Crisis Lifeline) or text HOME to 741741. Serra Hall 300, (619) 260-4655.",
     links: [
-      { label: "How to access services & hours", url: "https://www.sandiego.edu/counseling-center/services/contact-us-office-hours.php" }
+      { label: "How to access services & hours", url: "https://www.sandiego.edu/counseling-center/services/contact-us-office-hours.php" },
+      { label: "Accessing counseling services (step-by-step)", url: "https://usdkb.sandiego.edu/s/article/Accessing-Counseling-Services" }
     ],
     link: "https://www.sandiego.edu/counseling-center/",
     school: "USD",
@@ -256,6 +285,14 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "On-campus medical care for everyday illness, checkups, and more. Close, convenient, and built for students.",
+    details:
+      "On-campus medical care in Maher Hall 140 for illness, checkups, vaccines, labs, sexual and reproductive health, and more, staffed by physicians and nurse practitioners. TO BE SEEN: book through the online patient portal at mywellness.sandiego.edu (log in with your USD account) or call to schedule; same-day/urgent needs are usually handled by phone first. Bring your ID and insurance card, many visits are low or no cost and they can bill insurance for labs and medications. After hours, use the on-call advice line, and for emergencies call Public Safety (619) 260-2222 or 911. Student Health Center: Maher Hall 140.",
+    keywords: ["health center", "doctor", "sick", "appointment", "patient portal", "vaccine", "labs", "insurance", "medical", "birth control", "std testing"],
+    links: [
+      { label: "Patient portal (book an appointment)", url: "https://mywellness.sandiego.edu/" },
+      { label: "Hours & location", url: "https://www.sandiego.edu/health-center/about/hours-location.php" },
+      { label: "Health Center FAQs", url: "https://www.sandiego.edu/health-center/frequently-asked-questions.php" }
+    ],
     link: "https://www.sandiego.edu/health-center/",
     school: "USD",
     location: "Maher Hall 140"
@@ -353,13 +390,25 @@ window.CC_RESOURCES = [
     school: "USD"
   },
   {
-    name: "One Stop Student Center",
+    name: "One Stop Student Center (Torero Hub)",
     category: "General",
     audiences: ["undergrad", "graduate"],
     description:
-      "Financial aid, the registrar, and student accounts in one place, now part of the Torero Hub.",
+      "Financial aid, the registrar, and student accounts in one place, now part of the Torero Hub. Where you go to register, add/drop, get transcripts, and check your degree progress.",
+    details:
+      "The Torero Hub (UC 126) combines the Registrar, Financial Aid, and Student Accounts. Most tasks start at my.sandiego.edu under the Torero Hub tab. Common ones: REGISTER / ADD / DROP a class: log in to MySanDiego, open the Torero Hub tab, go to Registration during your assigned registration window; once the window closes you can't add/drop online, so email torerohub@sandiego.edu to request the change. CHECK DEGREE PROGRESS: use Degree Works, your live audit of what you've completed and still need. ORDER A TRANSCRIPT: through the Registrar (about $10 each). ENROLLMENT VERIFICATION, name/personal-info changes, and APPLYING FOR GRADUATION all live under Student Records. When you're not sure how to do a task, the USD Knowledge Base has step-by-step articles for almost everything. Torero Hub: UC 126, (619) 260-2700, torerohub@sandiego.edu (registrar@sandiego.edu, option 5, for records).",
+    keywords: ["registrar", "register", "add drop", "add/drop", "withdraw", "transcript", "degree works", "graduation", "apply to graduate", "enrollment verification", "student records", "one stop", "torero hub", "mysandiego"],
+    links: [
+      { label: "All Torero Hub forms (central list)", url: "https://usdkb.sandiego.edu/s/topic/0TO4y0000009PEnGAM/forms" },
+      { label: "Registration (add/drop) & tips", url: "https://www.sandiego.edu/torero-hub/registration/" },
+      { label: "Degree Works (degree audit)", url: "https://www.sandiego.edu/torero-hub/registration/degree-works.php" },
+      { label: "Apply for graduation", url: "https://www.sandiego.edu/torero-hub/graduation/" },
+      { label: "Student records (transcripts, verification)", url: "https://www.sandiego.edu/torero-hub/student-records/" },
+      { label: "USD Knowledge Base (step-by-step how-tos)", url: "https://usdkb.sandiego.edu/s/" }
+    ],
     link: "https://www.sandiego.edu/torero-hub/",
-    school: "USD"
+    school: "USD",
+    location: "Hahn UC 126"
   },
   {
     name: "Clubs, Orgs & Learning Communities",
@@ -535,7 +584,14 @@ window.CC_RESOURCES = [
     audiences: ["undergrad", "graduate"],
     description:
       "Intramural leagues, sport clubs, fitness and group classes, and outdoor adventures, 30+ rec classes each semester, open to all skill levels.",
-    keywords: ["intramural", "fitness", "gym", "sports", "recreation", "outdoor", "community"],
+    details:
+      "Your Torero ID gets you into the gym and group fitness for free. INTRAMURALS: create a free account on IMLeagues (campusrecreation.sandiego.edu/IMLeague) to join or start a team, most sports run in short seasons each semester. REC CLASSES: browse and register for credit and non-credit classes (surf, scuba, yoga, and more) on the Recreation Classes page. SPORT CLUBS & OUTDOOR ADVENTURES: sign up through their pages for competitive clubs or guided trips. Questions: (619) 260-4533, campusrecreation@sandiego.edu.",
+    keywords: ["intramural", "fitness", "gym", "sports", "recreation", "outdoor", "community", "imleagues", "group fitness", "rec class", "sport club"],
+    links: [
+      { label: "Intramurals (IMLeagues sign-up)", url: "https://campusrecreation.sandiego.edu/IMLeague" },
+      { label: "Recreation classes (register)", url: "https://www.sandiego.edu/campus-recreation/recreation-classes/" },
+      { label: "Memberships & access", url: "https://www.sandiego.edu/campus-recreation/about/memberships.php" }
+    ],
     link: "https://www.sandiego.edu/campus-recreation/",
     school: "USD"
   },
@@ -623,8 +679,13 @@ window.CC_RESOURCES = [
     description:
       "USD ranks #1 in the nation for study abroad, 75+ programs in 44 countries, many led by USD faculty, across every major.",
     details:
-      "The International Center (Serra Hall 201) is your one-stop shop for going abroad, from a full semester to short faculty-led trips, USD even has its own Madrid Center. Browse programs and start an application through the International Center.",
-    keywords: ["study abroad", "international", "global", "travel", "madrid", "semester abroad"],
+      "Based in the International Center (Serra Hall 201). Everything runs through your online 'My Study Abroad' application portal, where each program lists the courses that are already pre-approved to transfer back to USD automatically. If a course you want is NOT on that pre-approved list, or you need to change your schedule once you're already abroad, here is the exact process: (1) Get the official course syllabus from the host program. (2) Send it to the USD department or program that owns that subject and ask the chair or a faculty advisor to review it for equivalency; for Core credit, the department forwards it to the Core Curriculum Committee (CCC) for approval. (3) Once it's approved, submit or update it through your My Study Abroad portal so the International Center can log the credit. Do this before the program's add/drop deadline, and always loop in your USD academic advisor so the new course still counts toward your degree and Core. If you're unsure who reviews a course or you're stuck, call or visit the International Center, they walk students through this constantly. International Center, Serra Hall 201, (619) 260-4598.",
+    keywords: ["study abroad", "international", "global", "travel", "madrid", "semester abroad", "course approval", "credit transfer", "change schedule", "not pre-approved", "core credit", "petition", "syllabus"],
+    links: [
+      { label: "My Study Abroad portal (course approvals)", url: "https://www.sandiego.edu/international/study-abroad/my-application.php" },
+      { label: "Academics abroad & credit transfer", url: "https://www.sandiego.edu/international/study-abroad/academics-abroad/" },
+      { label: "Study abroad policies", url: "https://www.sandiego.edu/international/study-abroad/policies.php" }
+    ],
     link: "https://www.sandiego.edu/international/study-abroad/",
     school: "USD",
     location: "Serra Hall 201"
@@ -838,8 +899,16 @@ window.CC_RESOURCES = [
     audiences: ["undergrad"],
     description:
       "On-campus housing and residential education, from finding your hall and roommate to the programs and support that make where you live a community.",
-    keywords: ["housing", "dorm", "residence", "roommate", "residential", "living", "community"],
-    link: "https://www.sandiego.edu/student-experience/housing.php",
+    details:
+      "Handles applications, room selection, roommates, and room changes. TO APPLY: complete the housing application and contract for your term (fall/spring) through Residential Life's apply page, watch the posted deadlines because your application time affects your room-selection slot. ROOMMATES: use the roommate-matching process to search and request specific roommates before selection. ALREADY LIVING ON CAMPUS AND WANT TO MOVE: submit a Room Change Request (there's a set process and window). MAINTENANCE: report anything broken with a work-order request so facilities can fix it. Applications, contracts, and e-forms are all on the Applications & Forms page. Check the FAQ first, it answers most questions.",
+    keywords: ["housing", "dorm", "residence", "roommate", "residential", "living", "community", "apply", "room change", "maintenance", "contract", "room selection"],
+    links: [
+      { label: "Apply for housing", url: "https://www.sandiego.edu/residential-life/apply/" },
+      { label: "Applications, contracts & e-forms", url: "https://www.sandiego.edu/residential-life/apply/applications-and-forms.php" },
+      { label: "Room change request process", url: "https://www.sandiego.edu/residential-life/residential-resources/room-change-request-process.php" },
+      { label: "Housing FAQs", url: "https://www.sandiego.edu/residential-life/faqs/" }
+    ],
+    link: "https://www.sandiego.edu/residential-life/",
     school: "USD"
   },
   {
@@ -883,10 +952,14 @@ window.CC_RESOURCES = [
     categories: ["General"],
     audiences: ["undergrad", "graduate"],
     description:
-      "Grants, scholarships, work-study, and loans, how to apply (FAFSA or the Dream Act app), check your aid, and find money for school.",
+      "Grants, scholarships, work-study, and loans, how to apply (FAFSA or the Dream Act app), check your aid, appeal an award, and find money for school.",
     details:
-      "USD awards $160M+ in grants and scholarships a year, and 75%+ of undergrads get some aid. Merit scholarships are usually automatic at admission; need-based aid uses the FAFSA or the California/USD Dream Act Application. Questions go through the One Stop (UC 126) or (619) 260-2700.",
-    keywords: ["financial aid", "scholarship", "fafsa", "grant", "loan", "work study", "money", "tuition", "dream act"],
+      "USD awards $160M+ in grants and scholarships a year and 75%+ of undergrads get some aid. Merit scholarships are usually automatic at admission; need-based aid uses the FAFSA (USD school code 010395) or the California/USD Dream Act Application, submitted every year by the priority deadline. CHECK OR ACCEPT your aid at my.sandiego.edu, Torero Hub tab, Financial Aid, and clear any items under 'Financial Aid Requirements' (missing documents hold up your money). APPEAL: if your family's finances changed or your award isn't enough, appeals are submitted through MySanDiego under Financial Aid Requirements and take about 3 to 4 weeks. If you lose aid over grades (Satisfactory Academic Progress / SAP), you submit the SAP Appeal form, a SAP Academic Plan, and an appeal letter to the Office of Financial Aid. WORK-STUDY: apply through the Student Employment tab in MySanDiego, then apply to work-study jobs once you're awarded. Questions: One Stop / Financial Aid, UC 126, (619) 260-2700, usdofas@sandiego.edu.",
+    keywords: ["financial aid", "scholarship", "fafsa", "grant", "loan", "work study", "money", "tuition", "dream act", "appeal", "sap", "satisfactory academic progress", "special circumstances", "deadline", "verification"],
+    links: [
+      { label: "How to appeal your aid (appeal types)", url: "https://www.sandiego.edu/torero-hub/financial-aid/appeal-types.php" },
+      { label: "Federal Work-Study student guide", url: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/federal-work-study/student-guide.php" }
+    ],
     link: "https://www.sandiego.edu/torero-hub/financial-aid/",
     school: "USD"
   },
