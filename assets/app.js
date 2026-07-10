@@ -274,12 +274,32 @@
   };
   function catMeta(name) { return CAT_META[name] || { key: "default" }; }
 
+  // Clean line icons (non-emoji) per category. Inherit color via currentColor.
+  var ICONS = {
+    academic: '<path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 0 4 21V5.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v15.5h5.5A1.5 1.5 0 0 1 20 21V5.5Z"/>',
+    community: '<circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M17.5 14.3a5.5 5.5 0 0 1 3 4.7"/>',
+    entrepreneurship: '<path d="M9.5 18h5"/><path d="M10.5 21h3"/><path d="M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.1.8 2.4h6c0-1.3.2-1.8.8-2.4A6 6 0 0 0 12 3Z"/>',
+    career: '<rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/>',
+    wellness: '<path d="M12 20s-6.5-4.2-6.5-9A3.3 3.3 0 0 1 12 7.4 3.3 3.3 0 0 1 18.5 11c0 4.8-6.5 9-6.5 9Z"/>',
+    general: '<path d="M12 3l1.9 5.6L19.5 10 13.9 12 12 17.5 10.1 12 4.5 10l5.6-1.4L12 3Z"/>',
+    engineering: '<path d="M8.5 8l-4 4 4 4"/><path d="M15.5 8l4 4-4 4"/><path d="M13.5 6l-3 12"/>',
+    alumni: '<path d="M12 4l9 4-9 4-9-4 9-4Z"/><path d="M6.5 10.5V14c0 1.4 2.5 2.8 5.5 2.8s5.5-1.4 5.5-2.8v-3.5"/><path d="M21 8.2V13"/>',
+    competitions: '<path d="M8 4h8v4.2a4 4 0 0 1-8 0V4Z"/><path d="M8 5.2H5v1a3 3 0 0 0 3 3"/><path d="M16 5.2h3v1a3 3 0 0 1-3 3"/><path d="M9.5 20h5"/><path d="M12 13v4"/><path d="M10 20l.6-3M14 20l-.6-3"/>',
+    all: '<rect x="4" y="4" width="7" height="7" rx="1.6"/><rect x="13" y="4" width="7" height="7" rx="1.6"/><rect x="4" y="13" width="7" height="7" rx="1.6"/><rect x="13" y="13" width="7" height="7" rx="1.6"/>',
+    default: '<circle cx="12" cy="12" r="7"/>'
+  };
+  function catIconSvg(key) {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" ' +
+      'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[key] || ICONS.default) + "</svg>";
+  }
+
   function makeChip(value, label) {
     var b = document.createElement("button");
     b.className = "chip" + (value === state.category ? " is-active" : "");
     b.type = "button";
-    b.textContent = label;
-    b.setAttribute("data-cat", value === "all" ? "all" : catMeta(value).key);
+    var chipKey = value === "all" ? "all" : catMeta(value).key;
+    b.innerHTML = '<span class="chip-ico">' + catIconSvg(chipKey) + "</span>" + escapeHtml(label);
+    b.setAttribute("data-cat", chipKey);
     b.setAttribute("data-category", value);
     b.setAttribute("aria-pressed", value === state.category ? "true" : "false");
     b.addEventListener("click", function () {
@@ -599,10 +619,11 @@
       var tags = document.createElement("div");
       tags.className = "card-tags";
       cats.forEach(function (cat) {
+        var mk = catMeta(cat).key;
         var tag = document.createElement("span");
         tag.className = "card-tag";
-        tag.setAttribute("data-cat", catMeta(cat).key);
-        tag.textContent = cat;
+        tag.setAttribute("data-cat", mk);
+        tag.innerHTML = '<span class="tag-ico">' + catIconSvg(mk) + "</span>" + escapeHtml(cat);
         tags.appendChild(tag);
       });
       card.appendChild(tags);
@@ -729,12 +750,19 @@
       submitFeedback(name, vote);
       wrap.innerHTML = '<span class="fb-thanks">Thanks, noted!</span>';
     }
-    [["up", "Yes"], ["down", "No"]].forEach(function (v) {
+    var THUMB =
+      '<svg class="fb-ico" viewBox="0 0 24 24" aria-hidden="true">' +
+      '<path d="M13.5 9V5.6a2 2 0 0 0-2-2 .8.8 0 0 0-.73.47L8 10.2V20h8.9a1.6 1.6 0 0 0 1.57-1.28l1.2-6A1.6 1.6 0 0 0 18.1 9H13.5Z" ' +
+      'fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>' +
+      '<path d="M8 10.2H5.6A1.1 1.1 0 0 0 4.5 11.3v7.6A1.1 1.1 0 0 0 5.6 20H8" ' +
+      'fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>';
+    [["up", "Helpful"], ["down", "Not helpful"]].forEach(function (v) {
       var b = document.createElement("button");
-      b.className = "fb-btn";
+      b.className = "fb-btn fb-btn--" + v[0];
       b.type = "button";
-      b.textContent = v[1];
-      b.setAttribute("aria-label", v[0] === "up" ? "Helpful" : "Not helpful");
+      b.innerHTML = THUMB;
+      b.setAttribute("aria-label", v[1]);
+      b.setAttribute("title", v[1]);
       b.addEventListener("click", function () { send(v[0]); });
       wrap.appendChild(b);
     });
