@@ -44,7 +44,7 @@ window.CC_SCHOOL = {
 
   // Footer note. Good place for a "who made this / feedback" line.
   footerNote:
-    "Resourceful is a student project. Spot a broken link or a resource we’re missing? Let us know, this list grows with your help.",
+    "Resourceful is an independent guide to everything USD. Spot a broken link or a resource we’re missing? Let us know, this list grows with your help.",
 
   // AI advisor daily question limit per visitor (cost control while unlicensed).
   // Flip aiUnlimited to true, e.g. once the school licenses CloseConnect, to
