@@ -377,7 +377,7 @@ window.CC_RESOURCES = [
   /* ----------------------------- ALUMNI ----------------------------- */
   {
     name: "USD Alumni Association",
-    category: "Alumni",
+    categories: ["Community"],
     audiences: ["alumni"],
     description:
       "Automatic lifetime membership for every USD grad, networking events, 23+ regional Torero Clubs, Homecoming, and alumni scholarships.",
@@ -393,7 +393,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Alumni Career Development Benefits",
-    category: "Alumni",
+    categories: ["Career"],
     audiences: ["alumni"],
     description:
       "Grads keep free, lifelong access to career coaching, USD career events, and the Torero mentor network through the Career Development Center.",
@@ -408,7 +408,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Alumni Email & Google Workspace",
-    category: "Alumni",
+    categories: ["General"],
     audiences: ["alumni"],
     description:
       "Keep your USD email and Google tools after graduation. (Exact alumni policy is worth confirming with ITS.)",
@@ -421,7 +421,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Alumni Library Access",
-    category: "Alumni",
+    categories: ["Academic Support"],
     audiences: ["alumni"],
     description:
       "Borrow from Copley Library with your alumni card and tap into databases like JSTOR and HeinOnline through the Torero Network.",
@@ -436,7 +436,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "Alumni Discounts & Perks",
-    category: "Alumni",
+    categories: ["General"],
     audiences: ["alumni"],
     description:
       "Member savings, Bartell Hotels (15% off), the Columbia Sportswear employee store, and the USD Alumni Insurance Program.",
@@ -1000,7 +1000,7 @@ window.CC_RESOURCES = [
   },
   {
     name: "SOLES Alumni Travel Programs",
-    categories: ["Community", "Alumni"],
+    categories: ["Community"],
     audiences: ["alumni", "graduate"],
     description:
       "Cross-cultural, educational travel experiences for alumni of USD's School of Leadership and Education Sciences, see the world with fellow Toreros.",
