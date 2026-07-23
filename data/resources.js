@@ -843,7 +843,8 @@ window.CC_RESOURCES = [
       "Part of the Changemaker Hub. Runs course-based service-learning across ~150 classes with 130+ community partners, plus programs like the Youth Engagement Initiative (tutoring K–12 in Linda Vista) and the MICAH summer fellowship. A great way to get involved off campus and build leadership.",
     keywords: ["volunteer", "community", "service", "social justice", "get involved"],
     link: "https://www.sandiego.edu/mccasa/",
-    school: "USD"
+    school: "USD",
+    location: "Student Life Pavilion, 3rd floor"
   },
   {
     name: "United Front Multicultural Commons",
@@ -873,7 +874,8 @@ window.CC_RESOURCES = [
       { label: "Memberships & access", url: "https://www.sandiego.edu/campus-recreation/about/memberships.php" }
     ],
     link: "https://www.sandiego.edu/campus-recreation/",
-    school: "USD"
+    school: "USD",
+    location: "Jenny Craig Pavilion & Sports Center"
   },
   {
     name: "Changemaker Design Lab",
@@ -932,7 +934,8 @@ window.CC_RESOURCES = [
       "Fellowships fund graduate study, research, English teaching abroad, and language study; some also recognize undergrad research or public service. Deadlines fall throughout the year and some need a campus endorsement, so start early. Email nationalfellowships@sandiego.edu · BEC 117.",
     keywords: ["fellowship", "fulbright", "scholarship", "grant", "research", "study abroad", "grad school"],
     link: "https://www.sandiego.edu/cas/student-resources/scholarships/fellowships.php",
-    school: "USD"
+    school: "USD",
+    location: "BEC 117"
   },
 
   /* ------------------ MORE WELLNESS / BASIC NEEDS ------------------ */
@@ -959,7 +962,8 @@ window.CC_RESOURCES = [
       "CARE advocates offer confidential support and can walk you through your options and resources, whether or not you choose to report. All CARE/Wellness services are free for enrolled students. If you or a friend needs help, start here.",
     keywords: ["assault", "violence", "harassment", "advocate", "confidential", "safety", "title ix", "support"],
     link: "https://www.sandiego.edu/care/get-help.php",
-    school: "USD"
+    school: "USD",
+    location: "University Center 161"
   },
 
   /* ------------------ GLOBAL & POPULATION-SPECIFIC ------------------ */
@@ -1052,7 +1056,8 @@ window.CC_RESOURCES = [
       "Call (619) 260-7777 for non-emergency help or a safety escort across campus. Over 100 blue-light phones auto-dial campus emergency dispatch. Public Safety handles patrols, emergencies, and lost-and-found.",
     keywords: ["safety", "escort", "emergency", "public safety", "blue light", "security"],
     link: "https://www.sandiego.edu/safety/",
-    school: "USD"
+    school: "USD",
+    location: "Hughes Administration Center 150"
   },
   {
     name: "Torero Renaissance Scholars",
@@ -1093,7 +1098,8 @@ window.CC_RESOURCES = [
       { label: "Academic grants (conferences)", url: "https://www.sandiego.edu/associated-student-government/academic-grants.php" }
     ],
     link: "https://www.sandiego.edu/associated-students/",
-    school: "USD"
+    school: "USD",
+    location: "Student Life Pavilion, SLP 308"
   },
   {
     name: "COMPASS, Career Readiness (Arts & Sciences)",
@@ -1184,7 +1190,8 @@ window.CC_RESOURCES = [
       "Beyond weekly Mass, University Ministry runs retreats like the Search Retreat (a phone-free weekend in the Julian mountains) and the Silent Retreat, plus interfaith programming and service. Students of all faiths, and those still figuring it out, are welcome.",
     keywords: ["ministry", "faith", "spiritual", "retreat", "mass", "religion", "community", "catholic", "interfaith"],
     link: "https://www.sandiego.edu/ministry/",
-    school: "USD"
+    school: "USD",
+    location: "University Center 238"
   },
   {
     name: "Fraternity & Sorority Life",
@@ -1196,7 +1203,8 @@ window.CC_RESOURCES = [
       "Nine sororities and eight fraternities across the Panhellenic, Interfraternity, and Multicultural Greek Councils. Greek Week and philanthropy events are highlights, and it's a big way to find community and leadership on campus.",
     keywords: ["greek", "fraternity", "sorority", "community", "recruitment", "leadership", "belonging"],
     link: "https://www.sandiego.edu/fraternity-sorority-life/",
-    school: "USD"
+    school: "USD",
+    location: "Student Life Pavilion, 3rd floor"
   },
   {
     name: "Torero Closet (Professional Attire)",
@@ -1296,7 +1304,8 @@ window.CC_RESOURCES = [
       { label: "Financial aid checklist (what's still needed)", url: "https://usdkb.sandiego.edu/s/article/Completing-My-Financial-Aid-Application-Checklist" }
     ],
     link: "https://www.sandiego.edu/torero-hub/financial-aid/",
-    school: "USD"
+    school: "USD",
+    location: "Hahn UC 126 (Torero Hub)"
   },
   {
     name: "Student Wellness Center (Palomar Health)",
