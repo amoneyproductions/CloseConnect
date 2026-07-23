@@ -54,7 +54,8 @@ window.CC_RESOURCES = [
       { label: "T.E.A.M. networking platform", url: "https://mentoring.sandiego.edu/" }
     ],
     link: "https://www.sandiego.edu/careers/",
-    school: "USD"
+    school: "USD",
+    location: "Manchester Hall 101"
   },
   {
     name: "Knauss Business Student Success Center",
@@ -465,6 +466,161 @@ window.CC_RESOURCES = [
     school: "USD"
   },
   {
+    name: "Tech Help & Accounts (ITS)",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Set up your USD account, reset a password, get on the wifi, log into Canvas, and print, plus a real help desk when tech breaks.",
+    details:
+      "Information Technology Services (ITS) runs your USD accounts and campus tech. COMMON FIXES: claim or reset your USDOne account and MySanDiego password at my.sandiego.edu (look for 'Register/Claim your USDOne account'); get on wifi by joining 'eduroam' and signing in with your full USD email and password; log into Canvas at canvas.sandiego.edu with those same credentials; and print on campus through Wepa. WHEN SOMETHING BREAKS: the ITS Help Desk is your one call for logins, laptops, printers, and classroom tech, at (619) 260-7900 or help@sandiego.edu, open Monday to Thursday 7 a.m. to 6 p.m. and Friday 7 a.m. to 5 p.m., with after-hours support available too. Step-by-step articles for all of it live in the Knowledge Base.",
+    keywords: ["it", "its", "tech", "help desk", "password", "reset password", "usdone", "mysandiego", "wifi", "eduroam", "canvas", "printing", "wepa", "account", "login", "email", "locked out"],
+    links: [
+      { label: "Claim or reset your account (USDOne)", url: "https://usdkb.sandiego.edu/s/article/USDOne-Information-and-Instructions" },
+      { label: "Connect to WiFi (eduroam)", url: "https://usdkb.sandiego.edu/s/article/Connecting-to-Eduroam" },
+      { label: "Log into Canvas", url: "https://usdkb.sandiego.edu/s/article/How-do-I-log-into-Canvas" },
+      { label: "IT Help Desk", url: "https://usdkb.sandiego.edu/s/topic/0TO4y000000wn0bGAA/help-desk" }
+    ],
+    link: "https://usdkb.sandiego.edu/s/topic/0TO4y0000009PDwGAM/it-services",
+    school: "USD"
+  },
+  {
+    name: "Campus Maps & Building Hours",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Where a building is, and when it's open. The fastest way to find a room, an office, or today's hours.",
+    details:
+      "Not sure where a building is or whether an office is open right now? WHERE: the interactive campus map (sandiego.edu/maps) shows every building and lets you search by name. HOURS: most offices run about Monday to Friday, 8 a.m. to 5 p.m. during the semester, but hours shift during summer, breaks, and finals, so check the source. The Auxiliary Services hours page lists current hours for dining, the Torero Store, and the Mail Center in one place, and Copley Library keeps its own live hours page (it stays open late during the term). When in doubt, call the specific office, its number is on the resource here in Resourceful.",
+    keywords: ["map", "maps", "where is", "location", "building", "hours", "open", "directions", "find", "room", "what time"],
+    links: [
+      { label: "Interactive campus map", url: "https://www.sandiego.edu/maps/" },
+      { label: "Dining, store & mail hours (Auxiliary)", url: "https://www.sandiego.edu/auxiliary/hours/services.php" },
+      { label: "Copley Library hours", url: "https://www.sandiego.edu/library/visit/hours.php" }
+    ],
+    link: "https://www.sandiego.edu/maps/",
+    school: "USD"
+  },
+  {
+    name: "Torero Dining & Meal Plans",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Where to eat on campus, how meal plans and Dining Dollars work, and how to buy or change a plan.",
+    details:
+      "Campus dining runs on your Torero ID or the MyUSD Mobile app. MEAL PLANS: buy or change one online through MySanDiego (My Torero Services), plans are tax-free, and Dining Dollars roll from fall to spring but expire at the end of spring. Meal plans start at dinner the night before undergraduate classes begin. Where to eat, menus, and each venue's hours are on the dining site and the Auxiliary Services hours page. Questions go to Dining Services.",
+    keywords: ["dining", "food", "meal plan", "dining dollars", "eat", "torero cash", "cafeteria", "hours", "campus cash", "restaurant"],
+    links: [
+      { label: "Dining venues & menus", url: "https://www.sandiego.edu/dining/" },
+      { label: "Current dining hours", url: "https://www.sandiego.edu/auxiliary/hours/services.php" }
+    ],
+    link: "https://www.sandiego.edu/dining/",
+    school: "USD"
+  },
+  {
+    name: "Torero ID & Campus Card",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Your Torero ID card, get one, replace a lost one, add Campus Cash, and use it for dining, printing, and building access.",
+    details:
+      "Your Torero ID is your key to campus: building and residence-hall access, meal plans, Campus Cash, printing, and the library. LOST OR DAMAGED CARD: report it and get a replacement through Campus Card Services (a fee usually applies). ADD MONEY: load Campus Cash online to spend at dining and the Torero Store. New students get their first card at the start of the year. See the Campus Card site for how-tos and the office's current hours.",
+    keywords: ["id", "torero id", "campus card", "one card", "lost id", "replace id", "campus cash", "building access", "printing", "card"],
+    links: [
+      { label: "Campus Card Services", url: "https://www.sandiego.edu/campus-card/" },
+      { label: "Torero ID cards (get/replace)", url: "https://www.sandiego.edu/campus-card/services/university-id-cards.php" }
+    ],
+    link: "https://www.sandiego.edu/campus-card/",
+    school: "USD"
+  },
+  {
+    name: "Torero Store (Bookstore)",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Textbooks and course materials, plus USD gear, supplies, and tech. Buy, rent, or find what a class requires.",
+    details:
+      "The Torero Store is USD's bookstore for required course materials (buy or rent, new or used), school supplies, laptops and tech, and Torero apparel and gifts. TO FIND YOUR BOOKS: look up your courses on the store site to see exactly what each class requires. Order online for pickup or shipping. Store hours are on the store site and the Auxiliary Services hours page.",
+    keywords: ["bookstore", "torero store", "textbooks", "course materials", "books", "rent", "supplies", "merch", "gear", "laptop"],
+    links: [
+      { label: "Torero Store (books & gear)", url: "https://www.usdtorerostores.com/" },
+      { label: "Store hours (Auxiliary)", url: "https://www.sandiego.edu/auxiliary/hours/services.php" }
+    ],
+    link: "https://www.usdtorerostores.com/",
+    school: "USD"
+  },
+  {
+    name: "Mail Center",
+    categories: ["General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Get your packages and mail on campus. Where to pick up, your mailing address, and hours.",
+    details:
+      "The Mail Center handles student mail and packages. You'll get a notification when a package arrives, then pick it up with your Torero ID. Open about Monday to Friday, 8 a.m. to 5 p.m. (confirm current hours on the Auxiliary Services page). Not sure of your campus mailing address or how to have something shipped to you? The Mail Center site has the format and details. mailcenter@sandiego.edu, (619) 260-2204.",
+    keywords: ["mail", "package", "mailroom", "mail center", "shipping", "address", "pickup", "amazon", "delivery"],
+    links: [
+      { label: "Mail Center (address & pickup)", url: "https://www.sandiego.edu/mail-center/" },
+      { label: "Mail Center hours (Auxiliary)", url: "https://www.sandiego.edu/auxiliary/hours/services.php" }
+    ],
+    link: "https://www.sandiego.edu/mail-center/",
+    school: "USD"
+  },
+  {
+    name: "Title IX Office",
+    categories: ["Wellness", "General"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Report or get support for sex discrimination, sexual misconduct, harassment, or relationship violence, and understand your options.",
+    details:
+      "The Title IX Office handles reports of sex discrimination, sexual misconduct, sexual harassment, and relationship violence, and can put supportive measures in place (like academic or housing accommodations) whether or not you file a formal complaint. FILING IS YOUR CHOICE: a report gives the office notice so they can offer help; a complaint asks them to start a process. For confidential support first, CARE (Campus Assault Resources & Education) advocates are free and do not trigger a report. In an emergency, call Public Safety at (619) 260-2222 or 911. Title IX Office: Maher Hall 101, TitleIX@sandiego.edu, (619) 260-4594.",
+    keywords: ["title ix", "title 9", "sexual misconduct", "sexual assault", "harassment", "discrimination", "relationship violence", "report", "accommodations", "care", "safety"],
+    links: [
+      { label: "Title IX (reporting & options)", url: "https://www.sandiego.edu/titleix/" },
+      { label: "Confidential support (CARE)", url: "https://www.sandiego.edu/care/" }
+    ],
+    link: "https://www.sandiego.edu/titleix/",
+    school: "USD",
+    location: "Maher Hall 101"
+  },
+  {
+    name: "LGBTQ+ & Allies Commons",
+    categories: ["Community", "Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A home base and community for LGBTQ+ students and allies, with programs, support, and a space to belong.",
+    details:
+      "One of USD's cultural commons and a welcoming space for LGBTQ+ students and allies. Come by to hang out, join programs and student orgs, find support and resources, or just have a place where you belong. On the cultural-commons floor of the Student Life Pavilion (4th floor), alongside the other identity commons. See the site for hours and current programming.",
+    keywords: ["lgbtq", "lgbtq+", "queer", "gay", "trans", "pride", "gender", "sexuality", "commons", "belonging", "community", "allies"],
+    link: "https://www.sandiego.edu/lgbtq/",
+    school: "USD",
+    location: "Student Life Pavilion, 4th floor"
+  },
+  {
+    name: "Women's Commons",
+    categories: ["Community", "Wellness"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A space and community centered on women and gender equity, with programs, support, and connection.",
+    details:
+      "A cultural commons focused on women, gender equity, and empowerment, and open to all students. Drop in for community, programming, mentorship, and support, or to get involved with related student orgs. On the cultural-commons floor of the Student Life Pavilion (4th floor). Check the site for hours and events.",
+    keywords: ["women", "womens commons", "gender", "equity", "feminism", "commons", "belonging", "community", "support"],
+    link: "https://www.sandiego.edu/womens-commons/",
+    school: "USD",
+    location: "Student Life Pavilion, 4th floor"
+  },
+  {
+    name: "Black Student Resource Commons (BSRC)",
+    categories: ["Community", "Academic Support"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A home base for Black students, with community, mentorship, academic support, and a space to belong.",
+    details:
+      "The BSRC is a community and support space centered on Black students at USD. It offers mentorship, connection to Black student organizations, academic and personal support, and programming throughout the year, and it's open to all who want to engage. On the cultural-commons floor of the Student Life Pavilion (4th floor). See the site for hours and how to get involved.",
+    keywords: ["black", "bsrc", "african american", "black student", "mentorship", "commons", "belonging", "community", "support", "identity"],
+    link: "https://www.sandiego.edu/bsrc/",
+    school: "USD",
+    location: "Student Life Pavilion, 4th floor"
+  },
+  {
     name: "One Stop Student Center (Torero Hub)",
     category: "General",
     audiences: ["undergrad", "graduate"],
@@ -479,6 +635,7 @@ window.CC_RESOURCES = [
       { label: "Degree Works (degree audit)", url: "https://www.sandiego.edu/torero-hub/registration/degree-works.php" },
       { label: "Apply for graduation", url: "https://www.sandiego.edu/torero-hub/graduation/" },
       { label: "Student records (transcripts, verification)", url: "https://www.sandiego.edu/torero-hub/student-records/" },
+      { label: "Academic calendar & deadlines", url: "https://www.sandiego.edu/academics/academic-calendars.php" },
       { label: "USD Knowledge Base (step-by-step how-tos)", url: "https://usdkb.sandiego.edu/s/" }
     ],
     link: "https://www.sandiego.edu/torero-hub/",
@@ -755,10 +912,15 @@ window.CC_RESOURCES = [
     description:
       "Get research help from a librarian by chat, text, or email, with 24/7 after-hours chat, plus subject specialists and 190+ research databases.",
     details:
-      "Use the Ask-A-Librarian link on the library homepage for quick help, or book a session with a subject specialist for in-depth, discipline-specific research. Copley holds 180,000+ e-books and 190+ databases. (619) 260-4799.",
-    keywords: ["library", "research", "librarian", "database", "citation", "sources", "copley"],
+      "Use the Ask-A-Librarian link on the library homepage for quick help, or book a session with a subject specialist for in-depth, discipline-specific research. Copley holds 180,000+ e-books and 190+ databases. The building has quiet and group study spaces and stays open late during the term, check the live hours page before a late-night visit. (619) 260-4799.",
+    keywords: ["library", "research", "librarian", "database", "citation", "sources", "copley", "study space", "hours", "quiet"],
+    links: [
+      { label: "Library hours", url: "https://www.sandiego.edu/library/visit/hours.php" },
+      { label: "Study spaces", url: "https://www.sandiego.edu/library/visit/spaces.php" }
+    ],
     link: "https://www.sandiego.edu/library/services/research-help-and-tools.php",
-    school: "USD"
+    school: "USD",
+    location: "Copley Library"
   },
   {
     name: "National Fellowships Office",
@@ -1130,7 +1292,8 @@ window.CC_RESOURCES = [
     keywords: ["financial aid", "scholarship", "fafsa", "grant", "loan", "work study", "money", "tuition", "dream act", "appeal", "sap", "satisfactory academic progress", "special circumstances", "deadline", "verification"],
     links: [
       { label: "How to appeal your aid (appeal types)", url: "https://www.sandiego.edu/torero-hub/financial-aid/appeal-types.php" },
-      { label: "Federal Work-Study student guide", url: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/federal-work-study/student-guide.php" }
+      { label: "Federal Work-Study student guide", url: "https://www.sandiego.edu/torero-hub/financial-aid/student-employment/federal-work-study/student-guide.php" },
+      { label: "Financial aid checklist (what's still needed)", url: "https://usdkb.sandiego.edu/s/article/Completing-My-Financial-Aid-Application-Checklist" }
     ],
     link: "https://www.sandiego.edu/torero-hub/financial-aid/",
     school: "USD"

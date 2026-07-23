@@ -166,6 +166,19 @@
     try { localStorage.setItem(aiDayKey(), String(aiUsedToday() + 1)); }
     catch (e) {}
   }
+  // Owner unlock: ?owner=<school.ownerKey> unlocks this browser for good;
+  // ?owner=off re-locks it. Otherwise, return whether this browser is unlocked.
+  function isOwner() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.has("owner")) {
+        var v = params.get("owner");
+        if (v === "off") localStorage.removeItem("cc_owner");
+        else if (school.ownerKey && v === school.ownerKey) localStorage.setItem("cc_owner", "1");
+      }
+      return localStorage.getItem("cc_owner") === "1";
+    } catch (e) { return false; }
+  }
 
   // Animated "sun" loader (USD-blue tribal sun): rays rotate, bullseye pulses.
   var SUN_LOADER = (function () {
@@ -378,7 +391,8 @@
     if (q.length < 6) { exitSpecial(); return; } // nothing to ask
 
     // Daily limit reached, explain and let them keep browsing.
-    if (aiUsedToday() >= AI_LIMIT) {
+    // (Owners are unlimited — see isOwner / ?owner= unlock.)
+    if (!isOwner() && aiUsedToday() >= AI_LIMIT) {
       specialMode = true;
       setActiveTab("all");
       setEventsVisible(false);
@@ -402,7 +416,7 @@
     els.advisor.innerHTML =
       '<div class="advisor-spinner" role="status" aria-label="Searching">' + CC_SPINNER_SVG + '</div>';
 
-    aiBumpToday(); // count this question against today's limit
+    if (!isOwner()) aiBumpToday(); // count this question (owners are unlimited)
 
     var payload = {
       question: q,

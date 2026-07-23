@@ -50,5 +50,11 @@ window.CC_SCHOOL = {
   // Flip aiUnlimited to true, e.g. once the school licenses CloseConnect, to
   // remove the cap entirely. aiDailyLimit is the number of questions per day.
   aiDailyLimit: 5,
-  aiUnlimited: false
+  aiUnlimited: false,
+
+  // Owner unlock: visit the site once with ?owner=THISVALUE to give THIS browser
+  // unlimited questions (stored locally). Visit with ?owner=off to turn it back off.
+  // Change this to your own secret word. (Note: it's client-side, so it's a soft
+  // unlock, not real security — but it's perfect for giving yourself no cap.)
+  ownerKey: "amoney-unlimited"
 };
