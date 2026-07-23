@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resourceful — Usage</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --navy:#0a3a66; --blue:#2b6cb0; --egg:#f1efe6; --ink:#232a31; --muted:#5f6b78;
+      --card:#ffffff; --line:#e6e2d8;
+      --serif:"Playfair Display","Times New Roman",Georgia,serif;
+      --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--egg);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:920px;margin:0 auto;padding:40px 24px 64px}
+    header.top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+    h1{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--navy);margin:0;letter-spacing:-0.01em}
+    .sub{color:var(--muted);font-size:0.95rem;margin:2px 0 26px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
+    .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 20px;box-shadow:0 10px 30px rgba(20,30,45,0.05)}
+    .stat .n{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--navy);line-height:1}
+    .stat .l{color:var(--muted);font-size:0.85rem;margin-top:8px;text-transform:uppercase;letter-spacing:0.05em;font-weight:600}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px 24px;box-shadow:0 10px 30px rgba(20,30,45,0.05);margin-bottom:22px}
+    .panel h2{font-family:var(--serif);font-size:1.25rem;color:var(--navy);margin:0 0 4px}
+    .panel .hint{color:var(--muted);font-size:0.85rem;margin:0 0 18px}
+    .chart{display:flex;align-items:flex-end;gap:6px;height:180px;padding-top:8px}
+    .bar{flex:1;min-width:6px;background:linear-gradient(180deg,var(--blue),var(--navy));border-radius:5px 5px 0 0;position:relative}
+    .bar span{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:0.7rem;color:var(--muted);white-space:nowrap}
+    .chart-x{display:flex;gap:6px;margin-top:8px}
+    .chart-x div{flex:1;text-align:center;font-size:0.62rem;color:var(--muted);overflow:hidden;white-space:nowrap}
+    ol.top{list-style:none;margin:0;padding:0}
+    ol.top li{display:flex;align-items:center;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+    ol.top li:first-child{border-top:0}
+    ol.top .rank{width:22px;color:var(--muted);font-weight:700;font-size:0.85rem}
+    ol.top .name{flex:1;font-weight:600}
+    ol.top .meter{flex:1.4;height:8px;background:var(--egg);border-radius:99px;overflow:hidden}
+    ol.top .meter i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--navy));border-radius:99px}
+    ol.top .count{width:36px;text-align:right;color:var(--navy);font-weight:700}
+    .msg{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;color:var(--muted)}
+    .msg input{padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:1rem;font-family:var(--sans);margin:12px 8px 0}
+    .msg button{padding:11px 18px;border:0;border-radius:10px;background:var(--navy);color:#fff;font-weight:700;cursor:pointer;font-size:0.95rem}
+    .foot{color:var(--muted);font-size:0.8rem;margin-top:10px}
+    @media(max-width:640px){.cards{grid-template-columns:1fr 1fr}h1{font-size:1.6rem}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>Resourceful — Usage</h1>
+      <div class="sub" id="asOf"></div>
+    </header>
+    <p class="sub">Anonymous usage. No student names or messages are stored, only counts.</p>
+    <div id="content"><div class="msg" id="loading">Loading…</div></div>
+  </div>
+
+  <script>
+  (function(){
+    function qs(name){ try{ return new URLSearchParams(location.search).get(name)||""; }catch(e){ return ""; } }
+    var key = qs("key");
+    var content = document.getElementById("content");
+
+    function askForKey(note){
+      content.innerHTML =
+        '<div class="msg"><div>'+(note||"Enter your stats key to view the numbers.")+'</div>'+
+        '<div><input id="k" type="text" placeholder="your STATS_KEY" /><button id="go">View</button></div>'+
+        '<p class="foot">This is the same secret you set as STATS_KEY in Netlify.</p></div>';
+      document.getElementById("go").onclick=function(){
+        var v=document.getElementById("k").value.trim();
+        if(v) location.search="?key="+encodeURIComponent(v);
+      };
+      document.getElementById("k").addEventListener("keydown",function(e){ if(e.key==="Enter") document.getElementById("go").click(); });
+    }
+
+    function esc(s){ return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];}); }
+
+    function render(data){
+      var total = data.totalQuestions||0;
+      var byDay = data.byDay||{};
+      var days = Object.keys(byDay).sort();
+      var daysActive = days.length;
+      var peak = 0; days.forEach(function(d){ if(byDay[d]>peak) peak=byDay[d]; });
+      var top = data.topResources||[];
+
+      document.getElementById("asOf").textContent = "as of " + new Date().toLocaleDateString();
+
+      // last 30 days for the chart
+      var recent = days.slice(-30);
+      var max = 1; recent.forEach(function(d){ if(byDay[d]>max) max=byDay[d]; });
+      var bars = recent.map(function(d){
+        var h = Math.max(4, Math.round((byDay[d]/max)*160));
+        return '<div class="bar" style="height:'+h+'px"><span>'+byDay[d]+'</span></div>';
+      }).join("");
+      var xlabels = recent.map(function(d){ var p=d.split("-"); return '<div>'+p[1]+'/'+p[2]+'</div>'; }).join("");
+
+      var topMax = top.length ? top[0].count : 1;
+      var topHtml = top.map(function(r,i){
+        var w = Math.round((r.count/topMax)*100);
+        return '<li><span class="rank">'+(i+1)+'</span><span class="name">'+esc(r.name)+'</span>'+
+               '<span class="meter"><i style="width:'+w+'%"></i></span><span class="count">'+r.count+'</span></li>';
+      }).join("");
+
+      content.innerHTML =
+        '<div class="cards">'+
+          '<div class="stat"><div class="n">'+total.toLocaleString()+'</div><div class="l">Questions asked</div></div>'+
+          '<div class="stat"><div class="n">'+daysActive+'</div><div class="l">Days used</div></div>'+
+          '<div class="stat"><div class="n">'+peak+'</div><div class="l">Busiest day</div></div>'+
+        '</div>'+
+        '<div class="panel"><h2>Questions per day</h2><p class="hint">Last '+recent.length+' day'+(recent.length===1?"":"s")+' with activity.</p>'+
+          (recent.length? '<div class="chart">'+bars+'</div><div class="chart-x">'+xlabels+'</div>' : '<p class="hint">No questions yet, check back once students start using it.</p>')+
+        '</div>'+
+        '<div class="panel"><h2>Most-requested resources</h2><p class="hint">What students are actually looking for.</p>'+
+          (top.length? '<ol class="top">'+topHtml+'</ol>' : '<p class="hint">Nothing yet.</p>')+
+        '</div>';
+    }
+
+    if(!key){ askForKey(); return; }
+    fetch("/.netlify/functions/stats?key="+encodeURIComponent(key))
+      .then(function(r){
+        if(r.status===401){ askForKey("That key didn't work. Try again."); return null; }
+        if(!r.ok) throw new Error("status "+r.status);
+        return r.json();
+      })
+      .then(function(data){ if(data) render(data); })
+      .catch(function(){
+        content.innerHTML='<div class="msg">Couldn’t load stats right now. If this keeps happening, the storage may need enabling in Netlify.</div>';
+      });
+  })();
+  </script>
+</body>
+</html>

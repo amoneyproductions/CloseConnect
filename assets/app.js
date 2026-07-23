@@ -180,6 +180,20 @@
     } catch (e) { return false; }
   }
 
+  // Anonymous usage logging for proof-of-use stats. Stores no student text,
+  // only that a question was asked and which resources were recommended.
+  // Fire-and-forget: never blocks the UI, never surfaces an error.
+  function logStats(picks) {
+    try {
+      fetch("/.netlify/functions/stats", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ picks: Array.isArray(picks) ? picks.slice(0, 8) : [] }),
+        keepalive: true
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
   // Animated "sun" loader (USD-blue tribal sun): rays rotate, bullseye pulses.
   var SUN_LOADER = (function () {
     var rays = "", N = 16, i, a, tipR;
@@ -447,6 +461,10 @@
       .then(function (data) {
         els.askAi.disabled = false;
         renderAdvisor(data, q);
+        var picks = (data && Array.isArray(data.recommendations))
+          ? data.recommendations.map(function (x) { return x && x.name; }).filter(Boolean)
+          : [];
+        logStats(picks);
       })
       .catch(function () {
         // Never leave the student stranded, fall back to the concept matcher.
@@ -458,6 +476,7 @@
           '<p class="advisor-note">Couldn’t reach the advisor just now, here are keyword matches instead.</p>';
         state.query = q;
         render();
+        logStats([]); // still count the question
       });
   }
 
