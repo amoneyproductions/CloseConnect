@@ -263,7 +263,7 @@ body {
   width: 64px;
   height: 64px;
   color: #003b70; /* crisp USD navy */
-  animation: cc-sun-spin 2.2s linear infinite;
+  animation: cc-sun-spin 2.9s linear infinite;
 }
 @keyframes cc-sun-spin {
   0%   { transform: rotate(0deg)   scale(1); }
