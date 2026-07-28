@@ -12,7 +12,13 @@
    No npm dependencies, uses the built-in fetch (Netlify Node 18+).
    ============================================================================ */
 
+const { getStore } = require("@netlify/blobs");
+
 const MODEL = "claude-haiku-4-5-20251001"; // fast + inexpensive; swap if desired.
+// Max advisor questions per IP per day. Override with the ADVISOR_DAILY_LIMIT
+// env var in Netlify without touching code. This is a server-side backstop so
+// the browser-side cap can't just be bypassed to run up the API bill.
+const DAILY_LIMIT = parseInt(process.env.ADVISOR_DAILY_LIMIT || "10", 10);
 
 exports.handler = async function (event) {
   if (event.httpMethod !== "POST") {
@@ -35,6 +41,28 @@ exports.handler = async function (event) {
   const resources = Array.isArray(body.resources) ? body.resources.slice(0, 80) : [];
   if (!question) return json(400, { error: "No question provided." });
   if (!resources.length) return json(400, { error: "No resources provided." });
+
+  // --- Per-IP daily rate limit (cost/abuse protection) ---
+  // Fails open if storage is unavailable, so a storage hiccup never takes the
+  // advisor down; the Anthropic spend cap is the final backstop.
+  try {
+    const h = event.headers || {};
+    const ip = (h["x-nf-client-connection-ip"] ||
+      (h["x-forwarded-for"] || "").split(",")[0] || "unknown").trim();
+    const day = new Date().toISOString().slice(0, 10);
+    const store = getStore("resourceful-ratelimit");
+    const rlKey = day + ":" + ip;
+    const count = parseInt((await store.get(rlKey)) || "0", 10);
+    if (count >= DAILY_LIMIT) {
+      return json(429, {
+        error: "You've reached today's question limit. Please try again tomorrow, " +
+          "or browse the resources directly, they're all still here."
+      });
+    }
+    await store.set(rlKey, String(count + 1));
+  } catch (e) {
+    // storage unavailable: allow the request through
+  }
 
   // Only send the model what it needs.
   const catalog = resources.map(function (r) {
@@ -92,8 +120,10 @@ exports.handler = async function (event) {
     });
 
     if (!resp.ok) {
+      // Log the upstream detail server-side; never leak it to the browser.
       const errText = await resp.text();
-      return json(502, { error: "The advisor had trouble responding.", detail: errText.slice(0, 300) });
+      console.error("Anthropic error", resp.status, errText.slice(0, 500));
+      return json(502, { error: "The advisor had trouble responding. Please try again in a moment." });
     }
 
     const data = await resp.json();

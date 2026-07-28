@@ -455,6 +455,11 @@
       body: JSON.stringify(payload)
     })
       .then(function (res) {
+        if (res.status === 429) {
+          return res.json().then(function (d) {
+            throw { rate: true, msg: (d && d.error) || "You've reached today's question limit." };
+          });
+        }
         if (!res.ok) throw new Error("status " + res.status);
         return res.json();
       })
@@ -466,9 +471,17 @@
           : [];
         logStats(picks);
       })
-      .catch(function () {
-        // Never leave the student stranded, fall back to the concept matcher.
+      .catch(function (err) {
         els.askAi.disabled = false;
+        // Hit the daily limit: show the friendly cap message, not a failure.
+        if (err && err.rate) {
+          els.advisor.hidden = false;
+          els.advisor.innerHTML =
+            '<div class="advisor-head"><span class="advisor-badge advisor-badge--muted">Daily limit reached</span></div>' +
+            '<p class="advisor-note">' + escapeHtml(err.msg) + '</p>';
+          return;
+        }
+        // Otherwise never leave the student stranded, fall back to keyword matches.
         specialMode = true;
         els.advisor.hidden = false;
         els.advisor.innerHTML =
