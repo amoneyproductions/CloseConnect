@@ -542,6 +542,7 @@ a.event-title:hover { color: var(--accent); text-decoration: underline; }
 }
 /* ---- Category color system (soft, cohesive tints) ---- */
 .card-tag[data-cat="academic"]        { background: #eef2fb; color: #3b4a86; }
+.card-tag[data-cat="research"]        { background: #e6f1f4; color: #1c6b78; }
 .card-tag[data-cat="community"]       { background: #eaf5ee; color: #3c7350; }
 .card-tag[data-cat="entrepreneurship"]{ background: #fbf1e6; color: #96601f; }
 .card-tag[data-cat="career"]          { background: #eef0fb; color: #474d90; }
@@ -552,6 +553,7 @@ a.event-title:hover { color: var(--accent); text-decoration: underline; }
 .card-tag[data-cat="competitions"]    { background: #fbeef1; color: #97425c; }
 /* Chips show a soft category tint border on hover; active stays accent for clarity */
 .chip[data-cat="academic"]:hover        { border-color: #3b4a86; color: #3b4a86; }
+.chip[data-cat="research"]:hover        { border-color: #1c6b78; color: #1c6b78; }
 .chip[data-cat="community"]:hover       { border-color: #3c7350; color: #3c7350; }
 .chip[data-cat="entrepreneurship"]:hover{ border-color: #96601f; color: #96601f; }
 .chip[data-cat="career"]:hover          { border-color: #474d90; color: #474d90; }

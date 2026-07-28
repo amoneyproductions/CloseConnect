@@ -289,6 +289,7 @@
   // and scannable. Colors themselves live in styles.css (via data-cat).
   var CAT_META = {
     "Academic Support": { key: "academic" },
+    "Research":         { key: "research" },
     "Community":        { key: "community" },
     "Entrepreneurship": { key: "entrepreneurship" },
     "Career":           { key: "career" },
@@ -303,6 +304,7 @@
   // Clean line icons (non-emoji) per category. Inherit color via currentColor.
   var ICONS = {
     academic: '<path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 0 4 21V5.5Z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v15.5h5.5A1.5 1.5 0 0 1 20 21V5.5Z"/>',
+    research: '<path d="M9 3h6"/><path d="M10 3v6l-4.6 8.1A2 2 0 0 0 7.1 20h9.8a2 2 0 0 0 1.7-2.9L14 9V3"/><path d="M8 14h8"/>',
     community: '<circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3 3 0 0 1 0 6"/><path d="M17.5 14.3a5.5 5.5 0 0 1 3 4.7"/>',
     entrepreneurship: '<path d="M9.5 18h5"/><path d="M10.5 21h3"/><path d="M12 3a6 6 0 0 0-3.8 10.6c.6.6.8 1.1.8 2.4h6c0-1.3.2-1.8.8-2.4A6 6 0 0 0 12 3Z"/>',
     career: '<rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5"/><path d="M3 12.5h18"/>',

@@ -893,23 +893,59 @@ window.CC_RESOURCES = [
   /* ------------------ MORE ACADEMIC SUPPORT ------------------ */
   {
     name: "Office of Undergraduate Research",
-    categories: ["Academic Support"],
+    categories: ["Research"],
     audiences: ["undergrad"],
     description:
-      "Find and get funded for research with faculty, including the Summer Undergraduate Research Experience (SURE) and travel grants to present your work.",
+      "Do research or creative work with a faculty mentor, and get funded for it. USD runs two paid summer programs, STAR and BURST, plus support to present your work.",
     details:
-      "You don't need to be a senior or a science major to do research. HOW TO GET STARTED: find a faculty member whose work interests you (check department pages or ask a professor you like) and ask to get involved, then apply for funding through the Office of Undergraduate Research. Key programs: PURE, a summer program for incoming first-gen/low-income students with a stipend and housing; SURE, a paid summer research experience with a faculty mentor; plus travel grants to present your work at conferences. Deadlines are posted on the Student Funding Opportunities page, apply early. New to it all? Start on the Prospective Students page.",
-    keywords: ["research", "faculty", "sure", "pure", "lab", "grant", "conference", "mentor", "funding", "get involved", "stipend"],
+      "You don't need to be a senior or a science major to do research. HOW TO GET STARTED: find a faculty member whose work interests you (check department pages or ask a professor you like) and ask to get involved, then apply for funding through the Office of Undergraduate Research (OUR). The two summer funding programs are BURST (for students new to research) and STAR (for students with more experience, and most creative-works projects); both are a full-time 10-week summer project with a USD faculty mentor, with a $6,000 student stipend, up to $500 in supplies, and a 50% summer housing discount. You need a faculty mentor lined up before you apply, and applications run on an annual cycle that closes months before summer, so check the dates early. New to it all? Start on the Prospective Students page, or drop into OUR office hours in Maher Hall 252.",
+    keywords: ["research", "faculty", "star", "burst", "creative works", "lab", "grant", "conference", "mentor", "funding", "get involved", "stipend", "summer research"],
     links: [
-      { label: "Student funding (SURE, travel grants)", url: "https://www.sandiego.edu/ugresearch/about/student-funding-opportunities.php" },
+      { label: "STAR & BURST summer research", url: "https://www.sandiego.edu/ugresearch/students/star-burst.php" },
       { label: "New to research? Start here", url: "https://www.sandiego.edu/ugresearch/prospective-students/" }
     ],
     link: "https://www.sandiego.edu/ugresearch/",
+    school: "USD",
+    location: "Maher Hall 252"
+  },
+  {
+    name: "STAR & BURST Summer Research",
+    categories: ["Research"],
+    audiences: ["undergrad"],
+    description:
+      "USD's two paid summer research programs. Spend 10 weeks on a research or creative-works project with a faculty mentor and earn a $6,000 stipend.",
+    details:
+      "STAR and BURST are USD's summer undergraduate research funding programs, run by the Office of Undergraduate Research. BURST (Beginning Undergraduate Research Student Training) is for students new to research; STAR (Summer Training in Advanced Research) is for students with more experience, and is usually the better fit for creative-works projects. Both are a full-time, 10-week summer project (40 hours a week) with a USD faculty mentor. Awardees get a $6,000 stipend, up to $500 in supplies, and a 50% discount on summer campus housing. HOW TO APPLY: (1) line up a faculty mentor first, this is required; (2) choose STAR or BURST with your mentor using the 'STAR or BURST?' guidance; (3) submit the application, for BURST the mentor writes most of it, for STAR the student writes the project statement. Applications run on an annual cycle and close months before summer, so start early. Questions? OUR holds office hours in Maher Hall 252.",
+    keywords: ["star", "burst", "summer research", "research funding", "stipend", "faculty mentor", "creative works", "undergraduate research", "paid research", "our"],
+    links: [
+      { label: "STAR & BURST overview", url: "https://www.sandiego.edu/ugresearch/students/star-burst.php" },
+      { label: "STAR guidelines", url: "https://www.sandiego.edu/ugresearch/students/star-scholars.php" },
+      { label: "BURST guidelines", url: "https://www.sandiego.edu/ugresearch/students/burst-scholars.php" }
+    ],
+    link: "https://www.sandiego.edu/ugresearch/students/star-burst.php",
+    school: "USD",
+    location: "Maher Hall 252"
+  },
+  {
+    name: "Institutional Review Board (IRB)",
+    categories: ["Research"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "If your research involves people (surveys, interviews, experiments), you need IRB approval before you collect data. This is where the forms and training live.",
+    details:
+      "Any research with human participants, surveys, interviews, focus groups, or experiments, must be reviewed and approved by USD's Institutional Review Board (IRB) BEFORE you collect any data. HOW IT WORKS: (1) Talk to your faculty advisor first; a student application is a collaboration with them. (2) Complete the required CITI human-subjects training (link on the IRB site). (3) Get access to Cayuse, USD's IRB application system: if it's your first time, fill out the first-time-researcher form on the IRB 'Getting Started' page with your USD email, then allow up to a week for your account. (4) Submit your application in Cayuse, reached through the MySanDiego portal. There are four review levels, Not-Human-Subjects, Exempt, Expedited, and Full, based on your study's risk. WHERE THE FORMS ARE: the IRB Forms page has every template, and the Submission Guides page walks you through each step. Questions: irb@sandiego.edu.",
+    keywords: ["irb", "institutional review board", "human subjects", "research ethics", "cayuse", "citi training", "survey", "interview", "consent", "thesis", "dissertation", "research approval", "forms"],
+    links: [
+      { label: "IRB forms", url: "https://www.sandiego.edu/irb/forms/" },
+      { label: "Getting started (first-time researchers)", url: "https://www.sandiego.edu/irb/getting-started/" },
+      { label: "Submission guides", url: "https://www.sandiego.edu/irb/submission-guides.php" }
+    ],
+    link: "https://www.sandiego.edu/irb/",
     school: "USD"
   },
   {
     name: "Copley Library, Research Help",
-    categories: ["Academic Support"],
+    categories: ["Research", "Academic Support"],
     audiences: ["undergrad", "graduate"],
     description:
       "Get research help from a librarian by chat, text, or email, with 24/7 after-hours chat, plus subject specialists and 190+ research databases.",

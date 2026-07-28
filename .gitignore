@@ -9,3 +9,6 @@ node_modules/
 # Local env files
 .env
 .env.*
+
+# Pitch materials — kept locally, not part of the website
+Pitch-Package/
