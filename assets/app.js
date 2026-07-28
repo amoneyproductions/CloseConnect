@@ -635,6 +635,8 @@
   function makeCard(r, why) {
     var card = document.createElement("article");
     card.className = "card";
+    var firstCat = categoriesOf(r)[0];
+    if (firstCat) card.setAttribute("data-cat", catMeta(firstCat).key);
 
     var top = document.createElement("div");
     top.className = "card-top";
