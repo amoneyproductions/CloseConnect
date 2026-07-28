@@ -229,7 +229,7 @@
     } else {
       els.brandLogo.textContent = productName;
     }
-    els.brandSchool.textContent = school.name ? "· " + school.name : "";
+    els.brandSchool.textContent = school.name ? school.name : "";
     els.heroTagline.textContent = school.tagline || "";
     els.heroIntro.textContent = school.intro || "";
     els.footerNote.textContent = school.footerNote || "";
