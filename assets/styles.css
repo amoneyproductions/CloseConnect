@@ -71,7 +71,7 @@ body {
   gap: 12px;
   margin-bottom: 22px;
 }
-.brand-mark { width: 42px; height: 42px; color: var(--primary); display: block; }
+.brand-mark { width: 48px; height: 48px; display: block; }
 .brand-wordmark { display: flex; align-items: baseline; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .brand-logo {
   font-family: var(--serif);
