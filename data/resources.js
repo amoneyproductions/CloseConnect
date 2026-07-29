@@ -58,6 +58,39 @@ window.CC_RESOURCES = [
     location: "Manchester Hall 101"
   },
   {
+    name: "CareerShift (find contacts at any company)",
+    category: "Career",
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "USD pays for CareerShift, a tool that finds real people at any company you search, with their email and LinkedIn. One of the best-kept secrets for reaching a human instead of a job portal.",
+    details:
+      "CareerShift is a licensed tool USD gives you for free, and most students never hear about it. WHAT IT DOES: search any company and it surfaces actual employees with their job titles, email addresses, and LinkedIn profiles, so you can reach a real person instead of dropping a resume into a void. It also pulls job listings from across the web and lets you build target-company lists and track your outreach. HOW TO GET IN: open the USD CareerShift link below, then register or log in with your USD email to unlock full access (USD's school code is already built into the link). Add your major and interests, then search a company to pull up contacts. Pair it with the networking and resume guides on the Career Resources page. Questions: Career Development Center, Manchester Hall 101, careers@sandiego.edu.",
+    keywords: ["careershift", "career shift", "networking", "contacts", "email", "linkedin", "cold outreach", "job search", "recruiter", "informational interview", "company research", "find people", "alumni"],
+    links: [
+      { label: "Open CareerShift (log in with USD email)", url: "https://www.careershift.com/?sc=Sandiego" },
+      { label: "All career resources & guides", url: "https://www.sandiego.edu/careers/undergraduate/resources.php" }
+    ],
+    link: "https://www.careershift.com/?sc=Sandiego",
+    school: "USD"
+  },
+  {
+    name: "Career Guides & Job-Search Tools",
+    category: "Career",
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "One page with every USD career tool and guide: resume and cover-letter samples, interview prep, and job-search platforms. Skip the Handshake homepage and go straight here.",
+    details:
+      "The Career Development Center's Career Resources page collects everything in one spot so you don't have to dig. RESUME & COVER LETTERS: editable Torero Career Guide samples, plus full resume and cover-letter guides with examples. INTERVIEWS: Big Interview for AI-graded practice, plus a prep guide. JOB-SEARCH TOOLS: Handshake (start here), CareerShift (find contacts at companies), GoinGlobal (jobs abroad), Forage (virtual work experiences), and Parker Dewey (paid micro-internships). EXPLORE MAJORS AND CAREERS: TypeFocus, Firsthand, and 'What Can I Do With This Major.' Everything is linked from the one page below, and most tools just need your USD login.",
+    keywords: ["career resources", "resume", "cover letter", "interview", "big interview", "goinglobal", "forage", "parker dewey", "micro-internship", "job search", "guides", "samples", "career center", "handshake"],
+    links: [
+      { label: "Career Resources page (all tools & guides)", url: "https://www.sandiego.edu/careers/undergraduate/resources.php" },
+      { label: "Resume guide & samples (PDF)", url: "https://catcher.sandiego.edu/items/careers/tcg-resume-guide-samples.pdf" },
+      { label: "Cover letter guide & samples (PDF)", url: "https://www.sandiego.edu/careers/documents/tcg-cover-letter-guide-samples.pdf" }
+    ],
+    link: "https://www.sandiego.edu/careers/undergraduate/resources.php",
+    school: "USD"
+  },
+  {
     name: "Knauss Business Student Success Center",
     categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
