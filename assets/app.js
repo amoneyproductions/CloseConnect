@@ -134,6 +134,14 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
     });
   }
+  // Render resource details with ALL-CAPS section labels bolded and each on its
+  // own line, so long descriptions read as tidy titled sections.
+  function formatDetails(s) {
+    var esc = escapeHtml(String(s || ""));
+    esc = esc.replace(/\b([A-Z][A-Z0-9]*(?: [A-Z0-9]+)*:)/g, "<strong>$1</strong>");
+    esc = esc.replace(/\s*<strong>/g, "<br><br><strong>").replace(/^(?:<br>)+/, "");
+    return esc;
+  }
   function hideAdvisor() {
     els.advisor.hidden = true;
     els.advisor.innerHTML = "";
@@ -719,7 +727,7 @@
       if (r.details) {
         var dtext = document.createElement("p");
         dtext.className = "card-details-text";
-        dtext.textContent = r.details;
+        dtext.innerHTML = formatDetails(r.details);
         panel.appendChild(dtext);
       }
       if (r.links && r.links.length) {
