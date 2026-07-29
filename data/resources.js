@@ -944,6 +944,38 @@ window.CC_RESOURCES = [
     school: "USD"
   },
   {
+    name: "McNair Scholars Program (TRIO)",
+    categories: ["Research"],
+    audiences: ["undergrad"],
+    description:
+      "A federally funded program that prepares first-gen, income-eligible, and underrepresented undergrads for PhD study, with paid summer research, a faculty mentor, and grad-school prep.",
+    details:
+      "USD's TRIO McNair Scholars Program helps high-achieving undergraduates who are underrepresented in graduate education get into and succeed in doctoral programs. WHAT YOU GET: a paid, faculty-mentored summer research experience, help preparing for and applying to graduate school (personal statements, GRE prep, choosing programs), conference travel to present your work, and a close cohort of fellow scholars. WHO QUALIFIES: you generally need to be a US citizen or permanent resident committed to earning a PhD, and either first-generation AND income-eligible, or from a group underrepresented in graduate education. HOW TO START: check the eligibility and application details on the Prospective Students page and reach out to the McNair office early, cohorts are small and competitive.",
+    keywords: ["mcnair", "trio", "phd", "graduate school", "grad school", "first gen", "first-generation", "low income", "underrepresented", "summer research", "gre", "doctorate", "research"],
+    links: [
+      { label: "About McNair", url: "https://www.sandiego.edu/mcnair-scholars/about/" },
+      { label: "Prospective students & eligibility", url: "https://www.sandiego.edu/mcnair-scholars/prospective.php" }
+    ],
+    link: "https://www.sandiego.edu/mcnair-scholars/",
+    school: "USD"
+  },
+  {
+    name: "Honors Program Thesis & Research",
+    categories: ["Research"],
+    audiences: ["undergrad"],
+    description:
+      "Every USD Honors student completes an independent research thesis with a faculty advisor. Here's how the thesis works and where to find the guidelines and examples.",
+    details:
+      "If you're in the USD Honors Program, an independent thesis is the capstone: an original research or creative project in your major, guided by a Faculty Thesis Advisor. HOW IT WORKS: develop a project with a faculty advisor, enroll in the Honors Thesis Seminar (HNRS 495) in your final year, and produce both a written thesis and an oral presentation to faculty and peers. Past theses have ranged from peer-reviewed science to a novel to a documentary. WHERE TO LOOK: the Honors Research page explains the process, the Thesis Guidelines have the timeline and requirements, and you can browse past USD Honors theses in the digital archive for real examples. Line up your advisor and topic early, ideally junior year.",
+    keywords: ["honors", "thesis", "honors program", "capstone", "independent research", "faculty advisor", "hnrs 495", "creative project", "research"],
+    links: [
+      { label: "Honors research & thesis", url: "https://www.sandiego.edu/honors/research.php" },
+      { label: "Past Honors theses (examples)", url: "https://digital.sandiego.edu/honors_theses/" }
+    ],
+    link: "https://www.sandiego.edu/honors/",
+    school: "USD"
+  },
+  {
     name: "Copley Library, Research Help",
     categories: ["Research", "Academic Support"],
     audiences: ["undergrad", "graduate"],
