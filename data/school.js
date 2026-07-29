@@ -49,12 +49,14 @@ window.CC_SCHOOL = {
   // AI advisor daily question limit per visitor (cost control while unlicensed).
   // Flip aiUnlimited to true, e.g. once the school licenses CloseConnect, to
   // remove the cap entirely. aiDailyLimit is the number of questions per day.
-  aiDailyLimit: 5,
+  aiDailyLimit: 10,
   aiUnlimited: false,
 
-  // Owner unlock: visit the site once with ?owner=THISVALUE to give THIS browser
-  // unlimited questions (stored locally). Visit with ?owner=off to turn it back off.
-  // Change this to your own secret word. (Note: it's client-side, so it's a soft
-  // unlock, not real security — but it's perfect for giving yourself no cap.)
+  // Owner unlock (unlimited questions for YOU only):
+  // Visit the site once with ?owner=YOUR_SECRET to store the key in this browser;
+  // visit with ?owner=off to remove it. For TRUE unlimited access, that secret must
+  // match the OWNER_KEY environment variable set in Netlify (the server checks it and
+  // skips the daily limit). Keep the Netlify OWNER_KEY private, that is what makes it
+  // yours alone; everyone else stays capped at aiDailyLimit.
   ownerKey: "amoney-unlimited"
 };

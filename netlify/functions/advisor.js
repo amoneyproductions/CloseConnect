@@ -42,10 +42,16 @@ exports.handler = async function (event) {
   if (!question) return json(400, { error: "No question provided." });
   if (!resources.length) return json(400, { error: "No resources provided." });
 
+  // --- Owner bypass: unlimited questions for the owner only ---
+  // The browser sends the key it was unlocked with; unlimited access is granted
+  // only if it matches the private OWNER_KEY env var set in Netlify.
+  var ownerKey = String(body.ownerKey || "");
+  var isOwner = !!process.env.OWNER_KEY && ownerKey === process.env.OWNER_KEY;
+
   // --- Per-IP daily rate limit (cost/abuse protection) ---
   // Fails open if storage is unavailable, so a storage hiccup never takes the
   // advisor down; the Anthropic spend cap is the final backstop.
-  try {
+  if (!isOwner) try {
     const h = event.headers || {};
     const ip = (h["x-nf-client-connection-ip"] ||
       (h["x-forwarded-for"] || "").split(",")[0] || "unknown").trim();

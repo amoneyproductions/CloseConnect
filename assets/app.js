@@ -174,19 +174,21 @@
     try { localStorage.setItem(aiDayKey(), String(aiUsedToday() + 1)); }
     catch (e) {}
   }
-  // Owner unlock: ?owner=<school.ownerKey> unlocks this browser for good;
-  // ?owner=off re-locks it. Otherwise, return whether this browser is unlocked.
-  function isOwner() {
+  // Owner unlock: visiting with ?owner=<secret> stores that key in this browser and
+  // sends it with each advisor request; the server grants unlimited only if it matches
+  // the private OWNER_KEY env var. ?owner=off clears it. Returns the stored key ("" if none).
+  function ownerToken() {
     try {
       var params = new URLSearchParams(window.location.search);
       if (params.has("owner")) {
         var v = params.get("owner");
-        if (v === "off") localStorage.removeItem("cc_owner");
-        else if (school.ownerKey && v === school.ownerKey) localStorage.setItem("cc_owner", "1");
+        if (v === "off") localStorage.removeItem("cc_owner_key");
+        else if (v) localStorage.setItem("cc_owner_key", v);
       }
-      return localStorage.getItem("cc_owner") === "1";
-    } catch (e) { return false; }
+      return localStorage.getItem("cc_owner_key") || "";
+    } catch (e) { return ""; }
   }
+  function isOwner() { return !!ownerToken(); }
 
   // Anonymous usage logging for proof-of-use stats. Stores no student text,
   // only that a question was asked and which resources were recommended.
@@ -456,7 +458,8 @@
       }),
       events: (window.CC_EVENTS || []).map(function (e) {
         return { title: e.title, when: e.when, note: e.note, findAt: e.findAt };
-      })
+      }),
+      ownerKey: ownerToken()
     };
 
     fetch("/.netlify/functions/advisor", {
