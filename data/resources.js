@@ -122,6 +122,128 @@ window.CC_RESOURCES = [
     school: "USD"
   },
   {
+    name: "GoinGlobal (jobs & internships abroad)",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Country-by-country career guides, international job and internship listings, and a searchable H-1B visa-sponsor database. Free through USD.",
+    details:
+      "GoinGlobal helps you work abroad, or find US employers who sponsor international grads. WHAT IT DOES: country career guides (work culture, resume norms, where to look), international and US job and internship listings, and an H-1B sponsor database so you can target employers that hire international students. HOW TO GET IN: open it from the USD link below and sign in with your USD account.",
+    keywords: ["goinglobal", "abroad", "international jobs", "h1b", "visa sponsor", "work abroad", "country guide", "internship", "career"],
+    links: [
+      { label: "GoinGlobal (via USD)", url: "https://sandiego.joinhandshake.com/articles/1353" }
+    ],
+    link: "https://sandiego.joinhandshake.com/articles/1353",
+    school: "USD"
+  },
+  {
+    name: "Big Interview (practice interviews)",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Rehearse job interviews with AI feedback and a big library of real questions by industry and role. Free through USD.",
+    details:
+      "Big Interview lets you practice interviewing before the real thing. WHAT IT DOES: record answers to real interview questions and get AI feedback on pacing and filler words, work through step-by-step interview training, and practice question sets tailored to your industry and role. HOW TO GET IN: open the USD Big Interview link below and create an account with your USD email.",
+    keywords: ["big interview", "interview practice", "mock interview", "ai feedback", "interview prep", "behavioral questions", "career"],
+    links: [
+      { label: "Big Interview (USD)", url: "https://sandiego.biginterview.com/" }
+    ],
+    link: "https://sandiego.biginterview.com/",
+    school: "USD"
+  },
+  {
+    name: "Forage (virtual work experiences)",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "Free 5 to 6 hour virtual job simulations from real, well-known companies. A resume booster when you can't land an internship yet.",
+    details:
+      "Forage offers free, self-paced virtual work experiences built by real companies. WHAT IT DOES: complete short (about 5 to 6 hour) job simulations that mirror actual tasks at a company, then earn a certificate you can add to your resume and LinkedIn. Great for exploring a field or standing out with limited experience. HOW TO GET IN: open USD's Forage link below and sign up, every experience is free.",
+    keywords: ["forage", "virtual work experience", "job simulation", "resume", "certificate", "explore careers", "no experience", "career"],
+    links: [
+      { label: "USD Forage experiences", url: "https://www.theforage.com/landing/University%20of%20San%20Diego/5xQBLX35GBYN5dbkx/All%20Experiences" }
+    ],
+    link: "https://www.theforage.com/landing/University%20of%20San%20Diego/5xQBLX35GBYN5dbkx/All%20Experiences",
+    school: "USD"
+  },
+  {
+    name: "Parker Dewey Micro-Internships",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Short, paid, remote professional projects (often 10 to 40 hours) for real companies. A fast way to earn experience and money without a full internship.",
+    details:
+      "Micro-Internships are short, paid professional assignments you complete remotely for real companies. WHAT IT DOES: apply to bite-size projects (marketing, research, data, operations, and more), get paid, and build experience and contacts without a full-summer commitment. HOW TO GET IN: sign up on USD's Parker Dewey page below with your USD email and start applying to projects.",
+    keywords: ["parker dewey", "micro-internship", "micro internship", "paid project", "remote", "freelance", "experience", "career"],
+    links: [
+      { label: "Parker Dewey (USD)", url: "http://info.parkerdewey.com/sandiego" }
+    ],
+    link: "http://info.parkerdewey.com/sandiego",
+    school: "USD"
+  },
+  {
+    name: "Interstride (international students)",
+    categories: ["Career", "Community"],
+    audiences: ["undergrad", "graduate"],
+    description:
+      "A career platform built for international students: visa and immigration info, employers that sponsor, and a job search filtered for you. Free through USD.",
+    details:
+      "Interstride supports international students through the US job search and immigration maze. WHAT IT DOES: find employers that sponsor visas, get guidance on OPT, CPT, and H-1B, search jobs open to international students, and use webinars and tools built for your situation. HOW TO GET IN: open USD's Interstride link below and sign in with your USD account.",
+    keywords: ["interstride", "international students", "visa", "opt", "cpt", "h1b", "immigration", "sponsor", "career"],
+    links: [
+      { label: "Interstride (USD)", url: "https://www.interstride.com/sandiego" }
+    ],
+    link: "https://www.interstride.com/sandiego",
+    school: "USD"
+  },
+  {
+    name: "Firsthand (industry & employer research)",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "Formerly Vault. Deep profiles of industries, companies, and career paths to research before you apply or interview. Free through USD.",
+    details:
+      "Firsthand (formerly Vault) is for researching where you want to work. WHAT IT DOES: read insider profiles of industries, specific employers, and career paths, plus rankings and day-in-the-life guides, so you can target the right roles and sound informed in interviews. HOW TO GET IN: open USD's Firsthand link below and sign in with your USD account.",
+    keywords: ["firsthand", "vault", "industry research", "company research", "employer", "career paths", "profiles", "career"],
+    links: [
+      { label: "Firsthand (USD)", url: "https://sandiego.firsthand.co/" }
+    ],
+    link: "https://sandiego.firsthand.co/",
+    school: "USD"
+  },
+  {
+    name: "Career & Major Exploration Tools",
+    categories: ["Career", "Academic Support"],
+    audiences: ["undergrad"],
+    description:
+      "Not sure what to major in or do after graduation? Free assessments and guides that connect your interests to majors and careers.",
+    details:
+      "A set of free tools for figuring out direction. TYPEFOCUS: interest, values, and personality quizzes that suggest related majors and careers. WHAT CAN I DO WITH THIS MAJOR: see common career paths and industries for any major. ROADTRIP NATION: watch real people describe how they got into their fields (email careers@sandiego.edu for the access code). Start with whichever fits your question, then book a career counselor to talk it through.",
+    keywords: ["explore", "major", "undecided", "typefocus", "personality", "assessment", "what can i do with this major", "roadtrip nation", "career exploration", "interests"],
+    links: [
+      { label: "TypeFocus (USD)", url: "https://typefocus.com/userLogin/NkJHQkJCNzI=" },
+      { label: "What Can I Do With This Major", url: "https://whatcanidowiththismajor.com/" },
+      { label: "RoadTrip Nation (USD)", url: "https://roadtripnation.com/edu/sandiego" }
+    ],
+    link: "https://www.sandiego.edu/careers/undergraduate/resources.php",
+    school: "USD"
+  },
+  {
+    name: "USD Career Outcomes (First Destination)",
+    categories: ["Career"],
+    audiences: ["undergrad", "graduate", "alumni"],
+    description:
+      "See where USD grads actually landed, employers, job titles, salaries, and grad schools, from the last five years. Useful for setting targets.",
+    details:
+      "The First Destination Survey shows real outcomes for recent USD graduates. WHAT IT DOES: search by major to see where grads went to work or to grad school, common job titles and employers, and reported salary ranges. Use it to set realistic targets, find employers who hire from your major, and back up your own plans. WHERE: open the outcomes search below.",
+    keywords: ["outcomes", "first destination", "salary", "where grads work", "employers", "starting salary", "grad school", "by major", "career"],
+    links: [
+      { label: "Career outcomes search", url: "https://www.sandiego.edu/outcomes/careers/search/" }
+    ],
+    link: "https://www.sandiego.edu/outcomes/careers/search/",
+    school: "USD"
+  },
+  {
     name: "Knauss Business Student Success Center",
     categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
