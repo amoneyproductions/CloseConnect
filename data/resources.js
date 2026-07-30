@@ -91,6 +91,22 @@ window.CC_RESOURCES = [
     school: "USD"
   },
   {
+    name: "Summer Internship Award",
+    categories: ["Career", "Research"],
+    audiences: ["undergrad"],
+    description:
+      "Up to $3,000 from USD to make a summer internship, research, or career-related community-service experience affordable, especially unpaid or low-paid ones. Applications open each spring.",
+    details:
+      "The Summer Internship Award helps undergrads afford a summer internship, undergraduate research, or career-related community service they otherwise could not take, especially unpaid or low-paid ones. AWARD: up to $3,000 from the Career Development Center, paid in two disbursements, to offset living and transportation costs (it does not replace wages); recipients also get a 50% discount on shared summer on-campus housing. WHO CAN APPLY: full-time undergrads who are not incoming freshmen or graduating seniors, are not on probation, and will return full-time in the fall; students with high financial need are prioritized. THE INTERNSHIP: must be career-related, at least 6 weeks and 240 hours total, and can be in person, remote, or hybrid. HOW TO APPLY: you need an internship already secured (bring your offer letter or an email from the employer), then submit the application, which opens each spring and requires your USD email login. DEADLINE: applications run in the spring (for 2026, March 23 to April 19), and dates shift each year, so check early. Questions: careers@sandiego.edu.",
+    keywords: ["summer internship award", "internship funding", "unpaid internship", "stipend", "3000", "financial need", "cdev", "career development center", "summer", "funding", "research funding", "community service"],
+    links: [
+      { label: "Summer Internship Award details & apply", url: "https://www.sandiego.edu/careers/undergraduate/awards/summer-internships.php" },
+      { label: "All Career Development awards", url: "https://www.sandiego.edu/careers/undergraduate/awards/" }
+    ],
+    link: "https://www.sandiego.edu/careers/undergraduate/awards/summer-internships.php",
+    school: "USD"
+  },
+  {
     name: "Knauss Business Student Success Center",
     categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
