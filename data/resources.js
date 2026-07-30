@@ -107,6 +107,21 @@ window.CC_RESOURCES = [
     school: "USD"
   },
   {
+    name: "Social Innovation Internship Program",
+    categories: ["Career", "Community"],
+    audiences: ["undergrad"],
+    description:
+      "A purpose-driven internship that places USD students with San Diego organizations tackling social and environmental problems. Campus-wide and open to all majors.",
+    details:
+      "A hands-on, purpose-driven internship that places USD students with mission-driven businesses and nonprofits across San Diego working on social and environmental challenges. WHAT YOU GET: real in-person experience, a wider professional network, and work that genuinely contributes to organizations making an impact. WHO IT IS FOR: it is campus-wide and interdisciplinary, open to all majors, and run jointly by the Center for Social Innovation and the Career Development Center. HOW TO GET INVOLVED: applications open by cohort, so apply through the program page below, or contact the Career Development Center at careers@sandiego.edu to ask about the current cohort and timeline.",
+    keywords: ["social innovation", "internship", "impact", "nonprofit", "social impact", "environment", "sustainability", "community", "center for social innovation", "mission-driven", "career"],
+    links: [
+      { label: "Program details & apply", url: "https://www.sandiego.edu/careers/undergraduate/awards/social-innovation.php" }
+    ],
+    link: "https://www.sandiego.edu/careers/undergraduate/awards/social-innovation.php",
+    school: "USD"
+  },
+  {
     name: "Knauss Business Student Success Center",
     categories: ["Career", "Academic Support"],
     audiences: ["undergrad"],
