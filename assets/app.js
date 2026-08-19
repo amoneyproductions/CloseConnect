@@ -204,6 +204,21 @@
     } catch (e) {}
   }
 
+  // Count a flyer/QR scan when the page is opened with ?ref=... Fire-and-forget:
+  // never blocks the UI, never surfaces an error. Powers the flyer stats.
+  function pingRef() {
+    try {
+      var ref = new URLSearchParams(window.location.search).get("ref");
+      if (!ref) return;
+      fetch("/.netlify/functions/stats", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ event: "scan", ref: String(ref).slice(0, 60) }),
+        keepalive: true
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
   // Animated "sun" loader (USD-blue tribal sun): rays rotate, bullseye pulses.
   var SUN_LOADER = (function () {
     var rays = "", N = 16, i, a, tipR;
@@ -889,6 +904,7 @@
 
   /* ---- Init ---- */
   function init() {
+    pingRef();
     applySchool();
     pruneAudienceTabs();
     buildCategoryFilters();

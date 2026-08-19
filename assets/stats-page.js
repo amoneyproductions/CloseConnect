@@ -47,6 +47,14 @@
              '<span class="meter"><i style="width:' + w + '%"></i></span><span class="count">' + r.count + '</span></li>';
     }).join("");
 
+    var scans = data.flyerScans || [];
+    var scanMax = scans.length ? scans[0].count : 1;
+    var scanHtml = scans.map(function (r, i) {
+      var w = Math.round((r.count / scanMax) * 100);
+      return '<li><span class="rank">' + (i + 1) + '</span><span class="name">' + esc(r.name) + '</span>' +
+             '<span class="meter"><i style="width:' + w + '%"></i></span><span class="count">' + r.count + '</span></li>';
+    }).join("");
+
     content.innerHTML =
       '<div class="cards">' +
         '<div class="stat"><div class="n">' + total.toLocaleString() + '</div><div class="l">Questions asked</div></div>' +
@@ -58,6 +66,9 @@
       '</div>' +
       '<div class="panel"><h2>Most-requested resources</h2><p class="hint">What students are actually looking for.</p>' +
         (top.length ? '<ol class="top">' + topHtml + '</ol>' : '<p class="hint">Nothing yet.</p>') +
+      '</div>' +
+      '<div class="panel"><h2>Flyer scans</h2><p class="hint">QR scans by flyer, from the ?ref tag on each poster.</p>' +
+        (scans.length ? '<ol class="top">' + scanHtml + '</ol>' : '<p class="hint">No flyer scans yet.</p>') +
       '</div>';
   }
 
