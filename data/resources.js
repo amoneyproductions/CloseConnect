@@ -841,7 +841,7 @@ window.CC_RESOURCES = [
       { label: "Join an org", url: "https://www.sandiego.edu/involvement/student-orgs/join-an-org/" },
       { label: "Student orgs (start one)", url: "https://www.sandiego.edu/involvement/student-orgs/" }
     ],
-    link: "https://www.sandiego.edu/involvement/directory/",
+    link: "https://www.sandiego.edu/involvement/student-orgs/",
     school: "USD"
   },
 
